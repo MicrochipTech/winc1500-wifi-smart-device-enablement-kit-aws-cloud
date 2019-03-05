@@ -1,0 +1,9 @@
+newmtl blinn2SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.19 0.19 0.19
+Tf 1.00 1.00 1.00
+map_Kd texurenew.png
+bump -mm 1 0.112902 bum.png -bm 1
+Ni 1.00
+Ks 0.50 0.50 0.50

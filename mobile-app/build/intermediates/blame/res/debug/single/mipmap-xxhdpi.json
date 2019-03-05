@@ -1,0 +1,34 @@
+[
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_launcher.png",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_visibility_black.png",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\res\\mipmap-xxhdpi\\ic_visibility_black.png"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\cognito.png",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\res\\mipmap-xxhdpi\\cognito.png"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_visibility_off_black.png",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\res\\mipmap-xxhdpi\\ic_visibility_off_black.png"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\cognito.png",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\res\\mipmap-xxhdpi\\cognito.png"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_visibility_off_black.png",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\res\\mipmap-xxhdpi\\ic_visibility_off_black.png"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_visibility_black.png",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\res\\mipmap-xxhdpi\\ic_visibility_black.png"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_launcher.png",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    }
+]

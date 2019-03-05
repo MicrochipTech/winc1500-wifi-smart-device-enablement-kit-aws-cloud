@@ -1,0 +1,29 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Resources:
+  MyPolicy:
+    Properties:
+      PolicyDocument:
+        Statement:
+        - Action:
+          - iot:Connect
+          Effect: Allow
+          Resource:
+          - '*'
+        - Action:
+          - iot:Publish
+          Effect: Allow
+          Resource:
+          - '*'
+        - Action:
+          - iot:Subscribe
+          Effect: Allow
+          Resource:
+          - '*'
+        - Action:
+          - iot:Receive
+          Effect: Allow
+          Resource:
+          - '*'
+        Version: '2012-10-17'
+      PolicyName: WiFiSmartDeviceAppPolicy
+    Type: AWS::IoT::Policy

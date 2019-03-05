@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Atmel Studio Solution File, Format Version 11.00
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "saml21g18b_sensor_board_demo_JITR", "saml21g18b_sensor_board_demo\saml21g18b_sensor_board_demo_JITR.cproj", "{86D5EDF3-C07F-41E2-A949-F4F56662B786}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ARM = Debug|ARM
+		Release|ARM = Release|ARM
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{86D5EDF3-C07F-41E2-A949-F4F56662B786}.Debug|ARM.ActiveCfg = Debug|ARM
+		{86D5EDF3-C07F-41E2-A949-F4F56662B786}.Debug|ARM.Build.0 = Debug|ARM
+		{86D5EDF3-C07F-41E2-A949-F4F56662B786}.Release|ARM.ActiveCfg = Release|ARM
+		{86D5EDF3-C07F-41E2-A949-F4F56662B786}.Release|ARM.Build.0 = Release|ARM
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

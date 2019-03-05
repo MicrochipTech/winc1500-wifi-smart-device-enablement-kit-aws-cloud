@@ -1,0 +1,58 @@
+AWSTemplateFormatVersion: 2010-09-09
+Resources:
+  CloudFormationLambdaTriggerCustomSkill:
+    Properties:
+      Action: lambda:InvokeFunction
+      EventSourceToken: amzn1.ask.skill.4423090f-5672-4664-928a-867717fcf29d
+      FunctionName:
+        Ref: CloudFormationLambdaforAlexaCustom
+      Principal: alexa-appkit.amazon.com
+    Type: AWS::Lambda::Permission
+  CloudFormationLambdaTriggerSmartHomeSkill:
+    Properties:
+      Action: lambda:InvokeFunction
+      EventSourceToken: amzn1.ask.skill.ec159213-f91a-4f2e-8080-fd0a534cc0af
+      FunctionName:
+        Ref: CloudFormationLambdaforAlexaSmartHome
+      Principal: alexa-connectedhome.amazon.com
+    Type: AWS::Lambda::Permission
+  CloudFormationLambdaforAlexaCustom:
+    Properties:
+      Code:
+        S3Bucket: test835611
+        S3Key: 68a943ec915ba4d4ac724dceacab2624
+      FunctionName: LambdaforAlexaCustomSkill
+      Handler: index.handler
+      Role:
+        Fn::GetAtt:
+        - LambdaForBasicExecution
+        - Arn
+      Runtime: nodejs6.10
+    Type: AWS::Lambda::Function
+  CloudFormationLambdaforAlexaSmartHome:
+    Properties:
+      Code:
+        S3Bucket: test835611
+        S3Key: 68a943ec915ba4d4ac724dceacab2624
+      FunctionName: LambdaforAlexaSmartHomeSkill
+      Handler: index.handler
+      Role:
+        Fn::GetAtt:
+        - LambdaForBasicExecution
+        - Arn
+      Runtime: nodejs6.10
+    Type: AWS::Lambda::Function
+  LambdaForBasicExecution:
+    Properties:
+      AssumeRolePolicyDocument:
+        Statement:
+        - Action: sts:AssumeRole
+          Effect: Allow
+          Principal:
+            Service: lambda.amazonaws.com
+        Version: '2012-10-17'
+      ManagedPolicyArns:
+      - arn:aws:iam::aws:policy/CloudWatchLogsFullAccess
+      - arn:aws:iam::aws:policy/AWSLambdaFullAccess
+      RoleName: lambda_basic_execution_1
+    Type: AWS::IAM::Role

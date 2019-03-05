@@ -1,0 +1,485 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "sensor board",
+            "intents": [
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "LEDStateChangeIntent",
+                    "slots": [
+                        {
+                            "name": "lightState",
+                            "type": "LIST_OF_STATE"
+                        }
+                    ],
+                    "samples": [
+                        "turn the light {lightState}",
+                        "{lightState} the light",
+                        "turn {lightState} the light"
+                    ]
+                },
+                {
+                    "name": "WhatsLEDStatusIntent",
+                    "slots": [
+                        {
+                            "name": "lightType",
+                            "type": "LIGHT_TYPE"
+                        }
+                    ],
+                    "samples": [
+                        "what is the light {lightType}",
+                        "what's is the {lightType}"
+                    ]
+                },
+                {
+                    "name": "WhatsButtonStatusIntent",
+                    "slots": [],
+                    "samples": [
+                        "What are the button state",
+                        "what are the button status"
+                    ]
+                },
+                {
+                    "name": "WhatsSensorStatusIntent",
+                    "slots": [
+                        {
+                            "name": "sensorType",
+                            "type": "SENSOR_TYPE"
+                        }
+                    ],
+                    "samples": [
+                        "what is the {sensorType}"
+                    ]
+                },
+                {
+                    "name": "GPIOControl",
+                    "slots": [
+                        {
+                            "name": "ioState",
+                            "type": "SET_CLEAR"
+                        },
+                        {
+                            "name": "port",
+                            "type": "PORT"
+                        },
+                        {
+                            "name": "number",
+                            "type": "NUMBERS"
+                        }
+                    ],
+                    "samples": [
+                        "{ioState} P {port} {number}",
+                        "{ioState} PORT {port} {number}"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "LIST_OF_STATE",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "on"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "off"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "open"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "close"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "red"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "green"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "yellow"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "white"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "LIGHT_TYPE",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "color"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "state"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "SENSOR_TYPE",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "humidity"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "temperature"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "NUMBERS",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "31"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "30"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "29"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "28"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "27"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "26"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "25"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "24"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "23"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "22"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "21"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "20"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "19"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "18"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "17"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "16"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "15"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "14"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "13"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "12"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "11"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "10"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "9"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "8"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "7"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "6"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "5"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "4"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "3"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "2"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "1"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "0"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "SET_CLEAR",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "set"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "clear"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "PORT",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "Z"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Y"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "X"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "W"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "V"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "U"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "T"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "S"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "R"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Q"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "P"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "O"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "N"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "M"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "L"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "K"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "J"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "I"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "H"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "G"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "F"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "E"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "D"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "C"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "B"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "A"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

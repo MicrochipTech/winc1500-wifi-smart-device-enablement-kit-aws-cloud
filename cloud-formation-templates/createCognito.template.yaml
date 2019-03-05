@@ -1,0 +1,243 @@
+AWSTemplateFormatVersion: 2010-09-09
+Resources:
+  LambdaForCloudFormation:
+    Type: 'AWS::IAM::Role'
+    Properties:
+      RoleName: LambdaForCloudFormation
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          -
+            Effect: Allow
+            Action: 'sts:AssumeRole'
+            Principal:
+              Service: lambda.amazonaws.com
+      Policies:
+        -
+          PolicyName: WriteCloudWatchLogs
+          PolicyDocument: 
+            Version: '2012-10-17'
+            Statement: 
+              -
+                Effect: Allow
+                Action:
+                  - 'logs:CreateLogGroup'
+                  - 'logs:CreateLogStream'
+                  - 'logs:PutLogEvents'
+                Resource: 'arn:aws:logs:*:*:*'
+        -
+          PolicyName: UpdateUserPoolClient
+          PolicyDocument: 
+            Version: '2012-10-17'
+            Statement: 
+              -
+                Effect: Allow
+                Action: 'cognito-idp:UpdateUserPoolClient'
+                Resource: 'arn:aws:cognito-idp:*:*:userpool/*'
+        -
+          PolicyName: ManageUserPoolDomain
+          PolicyDocument: 
+            Version: '2012-10-17'
+            Statement: 
+              -
+                Effect: Allow
+                Action: 'cognito-idp:CreateUserPoolDomain'
+                Resource: 'arn:aws:cognito-idp:*:*:userpool/*'
+              -
+                Effect: Allow
+                Action: 'cognito-idp:DeleteUserPoolDomain'
+                Resource: 'arn:aws:cognito-idp:*:*:userpool/*'
+              -
+                Effect: Allow
+                Action: 'cognito-idp:DescribeUserPoolDomain'
+                Resource: '*'
+        -
+          PolicyName: InvokeLambdaFunction
+          PolicyDocument: 
+            Version: '2012-10-17'
+            Statement: 
+              -
+                Effect: Allow
+                Action: 'lambda:InvokeFunction'
+                Resource: 'arn:aws:lambda:*:*:function:*'
+  CloudFormationSendResponse:
+    Type: 'AWS::Lambda::Function'
+    Properties:
+      FunctionName: CloudFormationSendResponse
+      Runtime: nodejs8.10
+      Code: ./CloudFormationSendResponse
+      Handler: index.handler
+      Role: !GetAtt LambdaForCloudFormation.Arn
+  CloudFormationCognitoUserPoolClientSettings:
+    Type: 'AWS::Lambda::Function'
+    Properties:
+      FunctionName: CloudFormationCognitoUserPoolClientSettings
+      Runtime: nodejs8.10
+      Code: ./CloudFormationCognitoUserPoolClientSettings.js
+      Handler: CloudFormationCognitoUserPoolClientSettings.handler
+      Role: !GetAtt LambdaForCloudFormation.Arn
+    DependsOn: CloudFormationSendResponse
+  CloudFormationCognitoUserPoolDomain:
+    Type: 'AWS::Lambda::Function'
+    Properties:
+      FunctionName: CloudFormationCognitoUserPoolDomain
+      Runtime: nodejs8.10
+      Code: ./CloudFormationCognitoUserPoolDomain.js
+      Handler: CloudFormationCognitoUserPoolDomain.handler
+      Role: !GetAtt LambdaForCloudFormation.Arn
+    DependsOn: CloudFormationSendResponse
+  
+  UserPool:
+    Type: 'AWS::Cognito::UserPool'
+    Properties:
+      UserPoolName: WiFiSmartDeviceUserPool
+  WiFISmartDeviceForAlexaSmartHomeSkillClient:
+    Type: 'AWS::Cognito::UserPoolClient'
+    Properties:
+      ClientName: WiFISmartDeviceForAlexaSmartHomeSkill
+      GenerateSecret: true
+      UserPoolId: !Ref UserPool
+  WiFISmartDeviceForAlexaSmartHomeSkillClientSettings:
+    Type: 'Custom::CognitoUserPoolClientSettings'
+    Properties:
+      ServiceToken: !GetAtt CloudFormationCognitoUserPoolClientSettings.Arn
+      UserPoolId: !Ref UserPool
+      UserPoolClientId: !Ref WiFISmartDeviceForAlexaSmartHomeSkillClient
+      SupportedIdentityProviders:
+        - COGNITO
+      CallbackURL: 'https://layla.amazon.com/api/skill/link/M2TDOWMJ3J2LNM,https://alexa.amazon.co.jp/api/skill/link/M2TDOWMJ3J2LNM,https://pitangui.amazon.com/api/skill/link/M2TDOWMJ3J2LNM'
+      LogoutURL: ''
+      AllowedOAuthFlowsUserPoolClient: true
+      AllowedOAuthFlows:
+        - code
+      AllowedOAuthScopes:
+        - openid
+        - phone
+        - email
+        - profile
+        - aws.cognito.signin.user.admin
+  WiFISmartDeviceForAlexaCustomSkillClient:
+    Type: 'AWS::Cognito::UserPoolClient'
+    Properties:
+      ClientName: WiFISmartDeviceForAlexaCustomSkill
+      GenerateSecret: true
+      UserPoolId: !Ref UserPool
+  WiFISmartDeviceForAlexaCustomSkillClientSettings:
+    Type: 'Custom::CognitoUserPoolClientSettings'
+    Properties:
+      ServiceToken: !GetAtt CloudFormationCognitoUserPoolClientSettings.Arn
+      UserPoolId: !Ref UserPool
+      UserPoolClientId: !Ref WiFISmartDeviceForAlexaCustomSkillClient
+      SupportedIdentityProviders:
+        - COGNITO
+      CallbackURL: 'https://layla.amazon.com/api/skill/link/M2TDOWMJ3J2LNM,https://alexa.amazon.co.jp/api/skill/link/M2TDOWMJ3J2LNM,https://pitangui.amazon.com/api/skill/link/M2TDOWMJ3J2LNM'
+      LogoutURL: ''
+      AllowedOAuthFlowsUserPoolClient: true
+      AllowedOAuthFlows:
+        - code
+      AllowedOAuthScopes:
+        - openid
+        - phone
+        - email
+        - profile
+        - aws.cognito.signin.user.admin
+  UserPoolDomain:
+    Type: 'Custom::CognitoUserPoolDomain'
+    Properties:
+      ServiceToken: !GetAtt CloudFormationCognitoUserPoolDomain.Arn
+      UserPoolId: !Ref UserPool
+      Domain: 'userpool-test-018903'
+
+  # Creates a federeated Identity pool
+  IdentityPool:
+    Type: "AWS::Cognito::IdentityPool"
+    Properties:
+      IdentityPoolName: WiFiSmartDeviceIdentity
+      AllowUnauthenticatedIdentities: true
+      CognitoIdentityProviders: 
+        - ClientId: !Ref WiFISmartDeviceForAlexaSmartHomeSkillClient
+          ProviderName: !GetAtt UserPool.ProviderName
+        - ClientId: !Ref WiFISmartDeviceForAlexaCustomSkillClient
+          ProviderName: !GetAtt UserPool.ProviderName
+
+  # Create a role for unauthorized acces to AWS resources. Very limited access. Only allows users in the previously created Identity Pool
+  CognitoUnAuthorizedRole:
+    Type: "AWS::IAM::Role"
+    Properties:
+      RoleName: Cognito_WiFiSmartDeviceIdentity_Unauth_Role
+      AssumeRolePolicyDocument: 
+        Version: "2012-10-17"
+        Statement:
+          - Effect: "Allow"
+            Principal: 
+              Federated: "cognito-identity.amazonaws.com"
+            Action: 
+              - "sts:AssumeRoleWithWebIdentity"
+            Condition:
+              StringEquals: 
+                "cognito-identity.amazonaws.com:aud": !Ref IdentityPool
+              "ForAnyValue:StringLike":
+                "cognito-identity.amazonaws.com:amr": unauthenticated
+      Policies:
+        - PolicyName: "policy_for_mobile_app"
+          PolicyDocument: 
+            Version: "2012-10-17"
+            Statement: 
+              - Effect: "Allow"
+                Action:
+                  - "iot:AttachPrincipalPolicy"
+                  - "iot:CreateKeysAndCertificate"
+                Resource: "*"
+      ManagedPolicyArns:
+      - arn:aws:iam::aws:policy/AmazonDynamoDBFullAccess 
+
+  # Create a role for authorized acces to AWS resources. Control what your user can access. This example only allows Lambda invokation
+  # Only allows users in the previously created Identity Pool
+  CognitoAuthorizedRole:
+    Type: "AWS::IAM::Role"
+    Properties:
+      RoleName: Cognito_WiFiSmartDeviceIdentity_Auth_Role
+      AssumeRolePolicyDocument: 
+        Version: "2012-10-17"
+        Statement:
+          - Effect: "Allow"
+            Principal: 
+              Federated: "cognito-identity.amazonaws.com"
+            Action: 
+              - "sts:AssumeRoleWithWebIdentity"
+            Condition:
+              StringEquals: 
+                "cognito-identity.amazonaws.com:aud": !Ref IdentityPool
+              "ForAnyValue:StringLike":
+                "cognito-identity.amazonaws.com:amr": authenticated
+      Policies:
+        - PolicyName: "policy_for_mobile_app"
+          PolicyDocument: 
+            Version: "2012-10-17"
+            Statement: 
+              - Effect: "Allow"
+                Action:
+                  - "iot:AttachPrincipalPolicy"
+                  - "iot:CreateKeysAndCertificate"
+                Resource: "*"
+      ManagedPolicyArns:
+      - arn:aws:iam::aws:policy/AmazonDynamoDBFullAccess 
+  
+  # Assigns the roles to the Identity Pool
+  IdentityPoolRoleMapping:
+    Type: "AWS::Cognito::IdentityPoolRoleAttachment"
+    Properties:
+      IdentityPoolId: !Ref IdentityPool
+      Roles:
+        authenticated: !GetAtt CognitoAuthorizedRole.Arn
+        unauthenticated: !GetAtt CognitoUnAuthorizedRole.Arn
+
+Outputs:
+  UserPoolId:
+    Value: !Ref UserPool
+    Export:
+      Name: "UserPool::Id"
+  UserPoolClientId:
+    Value: !Ref WiFISmartDeviceForAlexaCustomSkillClient
+    Export:
+      Name: "WiFISmartDeviceForAlexaCustomSkillClient::Id"

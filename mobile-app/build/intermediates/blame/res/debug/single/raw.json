@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\raw\\device_obj",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\res\\raw\\device_obj"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\raw\\device_mtl",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\res\\raw\\device_mtl"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\raw\\device_obj",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\res\\raw\\device_obj"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\raw\\device_mtl",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\res\\raw\\device_mtl"
+    }
+]

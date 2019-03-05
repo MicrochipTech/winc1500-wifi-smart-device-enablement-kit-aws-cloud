@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/action_QR_code"
+        android:orderInCategory="100"
+
+        android:title="Scan QR code"/>
+    <item
+        android:id="@+id/action_addDevice"
+        android:orderInCategory="100"
+        android:title="Add device"/>
+    <item
+        android:id="@+id/action_site"
+        android:orderInCategory="100"
+        android:title="dummy"/>
+   
+
+</menu>

@@ -1,0 +1,50 @@
+[
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\menu\\activity_user_menu.xml",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\res\\menu\\activity_user_menu.xml"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\menu\\activity_main_drawer.xml",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\res\\menu\\activity_main_drawer.xml"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\menu\\devicelist_login.xml",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\res\\menu\\devicelist_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\menu\\activity_gatewaylist_drawer.xml",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\res\\menu\\activity_gatewaylist_drawer.xml"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\menu\\activity_user_drawer.xml",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\res\\menu\\activity_user_drawer.xml"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\menu\\devicelist_login.xml",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\res\\menu\\devicelist_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\menu\\activity_main_drawer.xml",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\res\\menu\\activity_main_drawer.xml"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\menu\\activity_gatewaylist_drawer.xml",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\res\\menu\\activity_gatewaylist_drawer.xml"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\menu\\activity_user_menu.xml",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\res\\menu\\activity_user_menu.xml"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\menu\\activity_user_drawer.xml",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\res\\menu\\activity_user_drawer.xml"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\menu\\devicelist_menu.xml",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\res\\menu\\devicelist_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\menu\\devicelist_menu.xml",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\res\\menu\\devicelist_menu.xml"
+    }
+]

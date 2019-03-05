@@ -1,0 +1,9 @@
+CUSTOMER_SPECIFIC_ENDPOINT=a3adakhi3icyv9.iot.us-east-1.amazonaws.com
+COGNITO_POOL_ID=us-east-1:c4f36b6a-84c7-4acd-b143-0665f9fbd9f9
+AWS_IOT_POLICY_NAME=secure-wifi-board-mobile-app-policy
+AWS_IOT_REGION=us-east-1
+COGNITO_USER_POOL_ID=us-east-1_h69ZCLKJr
+COGNITO_REGION=us-east-1
+COGNITO_CLIENT_ID=2l8mk3r49t49ebk8gj5mlad81a
+COGNITO_CLIENT_SECRET=n3637ufueg9kdt2r76bfg36ln156dcfsfaqpehss3jiajrob98g
+

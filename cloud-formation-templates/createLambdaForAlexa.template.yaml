@@ -1,0 +1,49 @@
+AWSTemplateFormatVersion: 2010-09-09
+Resources:
+  LambdaForBasicExecution:
+    Type: 'AWS::IAM::Role'
+    Properties:
+      RoleName: lambda_basic_execution
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          -
+            Effect: Allow
+            Action: 'sts:AssumeRole'
+            Principal:
+              Service: lambda.amazonaws.com
+      ManagedPolicyArns:
+      - arn:aws:iam::aws:policy/CloudWatchLogsFullAccess 
+      - arn:aws:iam::aws:policy/AWSLambdaFullAccess
+  CloudFormationLambdaforAlexaCustom:
+    Type: 'AWS::Lambda::Function'
+    Properties:
+      FunctionName: WiFi-Smart-Device-Kit-Custom-Skill
+      Runtime: nodejs6.10
+      Code: ./alexa-smart-home-skill.zip
+      Handler: index.handler
+      Role: !GetAtt LambdaForBasicExecution.Arn
+  CloudFormationLambdaTriggerCustomSkill:
+    Type: 'AWS::Lambda::Permission'
+    Properties:
+      Action: 'lambda:InvokeFunction'
+      FunctionName: !Ref CloudFormationLambdaforAlexaCustom
+      Principal: 'alexa-appkit.amazon.com'
+      EventSourceToken: 'amzn1.ask.skill.4423090f-5672-4664-928a-867717fcf29d'
+  CloudFormationLambdaforAlexaSmartHome:
+    Type: 'AWS::Lambda::Function'
+    Properties:
+      FunctionName: WiFi-Smart-Device-Kit-Smart-Home-Skill
+      Runtime: nodejs6.10
+      Code: ./alexa-smart-home-skill.zip
+      Handler: index.handler
+      Role: !GetAtt LambdaForBasicExecution.Arn
+  CloudFormationLambdaTriggerSmartHomeSkill:
+    Type: 'AWS::Lambda::Permission'
+    Properties:
+      Action: 'lambda:InvokeFunction'
+      FunctionName: !Ref CloudFormationLambdaforAlexaSmartHome
+      Principal: 'alexa-connectedhome.amazon.com'
+      EventSourceToken: 'amzn1.ask.skill.ec159213-f91a-4f2e-8080-fd0a534cc0af'
+  
+  

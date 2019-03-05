@@ -1,0 +1,15 @@
+AWSTemplateFormatVersion: 2010-09-09
+Resources:
+  usersTable:
+    Properties:
+      AttributeDefinitions:
+      - AttributeName: thingID
+        AttributeType: S
+      KeySchema:
+      - AttributeName: thingID
+        KeyType: HASH
+      ProvisionedThroughput:
+        ReadCapacityUnits: '5'
+        WriteCapacityUnits: '5'
+      TableName: SensorBoardAcctTable
+    Type: AWS::DynamoDB::Table

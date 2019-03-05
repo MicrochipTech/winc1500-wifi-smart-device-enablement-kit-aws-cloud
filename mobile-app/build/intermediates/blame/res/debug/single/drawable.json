@@ -1,0 +1,706 @@
+[
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\text_border_error.xml",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\res\\drawable\\text_border_error.xml"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\forward.png",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\res\\drawable\\forward.png"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\button_more.png",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\res\\drawable\\button_more.png"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\volume_up.png",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\res\\drawable\\volume_up.png"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\button_more.png",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\res\\drawable\\button_more.png"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\border_layer_list.xml",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\res\\drawable\\border_layer_list.xml"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_getcode_shape.xml",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\res\\drawable\\btn_getcode_shape.xml"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\button_selector.xml",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\res\\drawable\\button_selector.xml"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\winc1500_secure_wifi_board.jpg",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\res\\drawable\\winc1500_secure_wifi_board.jpg"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\mspk.jpg",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\res\\drawable\\mspk.jpg"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_spinner_textfield_background_material.xml",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_spinner_textfield_background_material.xml"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_text_cursor_material.xml",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_text_cursor_material.xml"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\barcode_frame.png",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\res\\drawable\\barcode_frame.png"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\sync.png",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\res\\drawable\\sync.png"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_thumb_material.xml",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_seekbar_thumb_material.xml"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\button_selector.xml",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\res\\drawable\\button_selector.xml"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\uv_icon.png",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\res\\drawable\\uv_icon.png"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\button_blue_long.png",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\res\\drawable\\button_blue_long.png"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\uv_icon.png",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\res\\drawable\\uv_icon.png"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_dark.xml",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_item_background_holo_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\new_disconnect.png",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\res\\drawable\\new_disconnect.png"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\mite_saw.jpg",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\res\\drawable\\mite_saw.jpg"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_check_material.xml",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_btn_check_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\winc1500_secure_wifi_board.jpg",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\res\\drawable\\winc1500_secure_wifi_board.jpg"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\text_border_selected.xml",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\res\\drawable\\text_border_selected.xml"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\side_nav_bar.xml",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\res\\drawable\\side_nav_bar.xml"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\add.png",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\res\\drawable\\add.png"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\round_button.xml",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\res\\drawable\\round_button.xml"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_indicator_material.xml",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_ratingbar_indicator_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\igateway_icon.png",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\res\\drawable\\igateway_icon.png"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\provision_kit.png",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\res\\drawable\\provision_kit.png"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\button_pressed.xml",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\res\\drawable\\button_pressed.xml"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_thumb_material.xml",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_seekbar_thumb_material.xml"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_menu_black.xml",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\res\\drawable\\ic_menu_black.xml"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\return_icon.png",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\res\\drawable\\return_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\provision_kit.png",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\res\\drawable\\provision_kit.png"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\humidity_icon2.png",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\res\\drawable\\humidity_icon2.png"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_textfield_search_material.xml",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_textfield_search_material.xml"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\vacuum.png",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\res\\drawable\\vacuum.png"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\igateway_icon.png",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\res\\drawable\\igateway_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\not_checked.png",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\res\\drawable\\not_checked.png"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_default_mtrl_shape.xml",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_btn_default_mtrl_shape.xml"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\sync.png",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\res\\drawable\\sync.png"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_light.xml",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_list_selector_holo_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_switch_thumb_material.xml",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_switch_thumb_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_fab_background.xml",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.1.1\\res\\drawable\\design_fab_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\add.png",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\res\\drawable\\add.png"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\button_success.xml",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\res\\drawable\\button_success.xml"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\new_disconnect.png",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\res\\drawable\\new_disconnect.png"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\mspk.jpg",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\res\\drawable\\mspk.jpg"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_account_circle_white.png",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\res\\drawable\\ic_account_circle_white.png"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\check_box_selector.xml",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\res\\drawable\\check_box_selector.xml"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\barcode_laser_line.png",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\res\\drawable\\barcode_laser_line.png"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\return_icon.png",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\res\\drawable\\return_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\light_icon.png",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\res\\drawable\\light_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\mite_saw.jpg",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\res\\drawable\\mite_saw.jpg"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\text_border_selector.xml",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\res\\drawable\\text_border_selector.xml"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\checked.png",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\res\\drawable\\checked.png"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\wifi_icon.png",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\res\\drawable\\wifi_icon.png"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\wifi_icon.png",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\res\\drawable\\wifi_icon.png"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_launcher.png",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\res\\drawable\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\volume_dn.png",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\res\\drawable\\volume_dn.png"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_menu_black.xml",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\res\\drawable\\ic_menu_black.xml"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_tab_indicator_material.xml",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_tab_indicator_material.xml"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\play_pause.png",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\res\\drawable\\play_pause.png"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\side_nav_bar.xml",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\res\\drawable\\side_nav_bar.xml"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\spk_setting.png",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\res\\drawable\\spk_setting.png"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_internal_bg.xml",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_cab_background_internal_bg.xml"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_dark.xml",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_list_selector_holo_dark.xml"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\backward.png",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\res\\drawable\\backward.png"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\backward.png",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\res\\drawable\\backward.png"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\fourth.png",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\res\\drawable\\fourth.png"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\forward.png",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\res\\drawable\\forward.png"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_dark.xml",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_list_selector_background_transition_holo_dark.xml"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_small_material.xml",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_ratingbar_small_material.xml"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\fourth.png",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\res\\drawable\\fourth.png"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\nodevice.png",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\res\\drawable\\nodevice.png"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\temperature_icon2.jpg",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\res\\drawable\\temperature_icon2.jpg"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_text_cursor_material.xml",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_text_cursor_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_account_circle_white1.png",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\res\\drawable\\ic_account_circle_white1.png"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\mchp_logo.jpg",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\res\\drawable\\mchp_logo.jpg"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_launcher.png",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\res\\drawable\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\temperature_icon2.jpg",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\res\\drawable\\temperature_icon2.jpg"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\pressure_icon.png",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\res\\drawable\\pressure_icon.png"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_snackbar_background.xml",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.1.1\\res\\drawable\\design_snackbar_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_check_material.xml",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_btn_check_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_top_material.xml",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_cab_background_top_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\checked.png",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\res\\drawable\\checked.png"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\light_intensity_icon.png",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\res\\drawable\\light_intensity_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_dark.xml",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_item_background_holo_dark.xml"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\texurenew.png",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\res\\drawable\\texurenew.png"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_account_circle_white.png",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\res\\drawable\\ic_account_circle_white.png"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\play_pause.png",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\res\\drawable\\play_pause.png"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background_dark.xml",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_dialog_material_background_dark.xml"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\text_border_selector.xml",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\res\\drawable\\text_border_selector.xml"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_light.xml",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_textfield_search_material.xml",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_textfield_search_material.xml"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_light.xml",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_list_selector_holo_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\pressure_icon.png",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\res\\drawable\\pressure_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\spk_setting.png",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\res\\drawable\\spk_setting.png"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_getcode_shape.xml",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\res\\drawable\\btn_getcode_shape.xml"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\sensor.png",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\res\\drawable\\sensor.png"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_radio_material.xml",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_btn_radio_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_spinner_textfield_background_material.xml",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_spinner_textfield_background_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\front_page.jpg",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\res\\drawable\\front_page.jpg"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\border_layer_list.xml",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\res\\drawable\\border_layer_list.xml"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\devicelist_item_selector.xml",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\res\\drawable\\devicelist_item_selector.xml"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\button_selected.xml",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\res\\drawable\\button_selected.xml"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\vacuum.png",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\res\\drawable\\vacuum.png"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_radio_material.xml",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_btn_radio_material.xml"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\temperature_icon.png",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\res\\drawable\\temperature_icon.png"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\button_success.xml",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\res\\drawable\\button_success.xml"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\nodevice.png",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\res\\drawable\\nodevice.png"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_fab_background.xml",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.1.1\\res\\drawable\\design_fab_background.xml"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_track_material.xml",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_seekbar_track_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\volume_up.png",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\res\\drawable\\volume_up.png"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\button_pressed.xml",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\res\\drawable\\button_pressed.xml"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\round_button.xml",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\res\\drawable\\round_button.xml"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\mchp_logo.jpg",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\res\\drawable\\mchp_logo.jpg"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background_dark.xml",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_dialog_material_background_dark.xml"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\button_selected.xml",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\res\\drawable\\button_selected.xml"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_light.xml",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\humidity_icon2.png",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\res\\drawable\\humidity_icon2.png"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\bum.png",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\res\\drawable\\bum.png"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\text_border_default.xml",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\res\\drawable\\text_border_default.xml"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_full_material.xml",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_ratingbar_full_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\sensor.png",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\res\\drawable\\sensor.png"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_full_material.xml",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_ratingbar_full_material.xml"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_borderless_material.xml",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_btn_borderless_material.xml"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\light_icon.png",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\res\\drawable\\light_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_borderless_material.xml",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_btn_borderless_material.xml"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\eye.png",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\res\\drawable\\eye.png"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_internal_bg.xml",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_cab_background_internal_bg.xml"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_tab_indicator_material.xml",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_tab_indicator_material.xml"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\button_default.xml",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\res\\drawable\\button_default.xml"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background_light.xml",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_dialog_material_background_light.xml"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_top_material.xml",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_cab_background_top_material.xml"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\not_checked.png",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\res\\drawable\\not_checked.png"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_cancel_black.xml",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\res\\drawable\\ic_cancel_black.xml"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_light.xml",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_item_background_holo_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\volume_dn.png",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\res\\drawable\\volume_dn.png"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\devicelist_item_selector.xml",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\res\\drawable\\devicelist_item_selector.xml"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\button_blue_long.png",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\res\\drawable\\button_blue_long.png"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_switch_thumb_material.xml",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_switch_thumb_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\temperature_icon.png",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\res\\drawable\\temperature_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\barcode_frame.png",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\res\\drawable\\barcode_frame.png"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_track_material.xml",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_seekbar_track_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_small_material.xml",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_ratingbar_small_material.xml"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\barcode_laser_line.png",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\res\\drawable\\barcode_laser_line.png"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_dark.xml",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_list_selector_background_transition_holo_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\button_back.png",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\res\\drawable\\button_back.png"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_account_circle_white1.png",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\res\\drawable\\ic_account_circle_white1.png"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_default_mtrl_shape.xml",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_btn_default_mtrl_shape.xml"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\eye.png",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\res\\drawable\\eye.png"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\texurenew.png",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\res\\drawable\\texurenew.png"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\text_border_error.xml",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\res\\drawable\\text_border_error.xml"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_cancel_black.xml",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\res\\drawable\\ic_cancel_black.xml"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\check_box_selector.xml",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\res\\drawable\\check_box_selector.xml"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\humidity_icon.png",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\res\\drawable\\humidity_icon.png"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background_light.xml",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_dialog_material_background_light.xml"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\nav_add.png",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\res\\drawable\\nav_add.png"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\button_back.png",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\res\\drawable\\button_back.png"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\text_border_selected.xml",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\res\\drawable\\text_border_selected.xml"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\button_default.xml",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\res\\drawable\\button_default.xml"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_dark.xml",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_list_selector_holo_dark.xml"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_indicator_material.xml",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_ratingbar_indicator_material.xml"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\light_intensity_icon.png",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\res\\drawable\\light_intensity_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_snackbar_background.xml",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.1.1\\res\\drawable\\design_snackbar_background.xml"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_light.xml",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_item_background_holo_light.xml"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\bum.png",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\res\\drawable\\bum.png"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\nav_add.png",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\res\\drawable\\nav_add.png"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\front_page.jpg",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\res\\drawable\\front_page.jpg"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\button_setting.png",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\res\\drawable\\button_setting.png"
+    },
+    {
+        "merged": "C:\\Users\\a16023\\source_code\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\text_border_default.xml",
+        "source": "C:\\Users\\a16023\\source_code\\mobile-app\\res\\drawable\\text_border_default.xml"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\button_setting.png",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\res\\drawable\\button_setting.png"
+    },
+    {
+        "merged": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\build\\intermediates\\res\\merged\\debug\\drawable\\humidity_icon.png",
+        "source": "C:\\github\\aws-iot-winc1500-secure-wifi-board-included-source-files\\mobile-app\\res\\drawable\\humidity_icon.png"
+    }
+]

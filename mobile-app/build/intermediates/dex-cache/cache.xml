@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\tag\aws_zero_touch_kit_with_mobile_app_ver1.0.0\mobile-app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="C:\tag\aws_zero_touch_kit_with_mobile_app_ver1.0.0\mobile-app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.4.0_430e9ecb77aa535dc0253483a4c92d6514ae9b53.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\tag\aws_zero_touch_kit_with_mobile_app_ver1.0.0\mobile-app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="C:\tag\aws_zero_touch_kit_with_mobile_app_ver1.0.0\mobile-app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-23.4.0_a975543760dd21656b511c5a9231fecb35952223.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\a16023\.gradle\caches\modules-2\files-2.1\org.eclipse.paho\org.eclipse.paho.client.mqttv3\1.1.0\89d827ffa47c241f2627421ef1d6c7a8c207a341\org.eclipse.paho.client.mqttv3-1.1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="89d827ffa47c241f2627421ef1d6c7a8c207a341">
+        <dex dex="C:\tag\aws_zero_touch_kit_with_mobile_app_ver1.0.0\mobile-app\build\intermediates\pre-dexed\debug\org.eclipse.paho.client.mqttv3-1.1.0_d7dbf1d16b6d8f18e50e5a06551825b1b2df234f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\github\aws-iot-winc1500-secure-wifi-board-included-source-files\mobile-app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="ec75036c3c52e451d0cde50a5aedaf5fd32354a0">
+        <dex dex="C:\github\aws-iot-winc1500-secure-wifi-board-included-source-files\mobile-app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-23.4.0_fb4302df982d783b55749747ed2a91aef3593efb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\tag\aws_zero_touch_kit_with_mobile_app_ver1.0.0\mobile-app\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="d9ecde39b460470e655de6e47c05573d2d5a8bfb">
+        <dex dex="C:\tag\aws_zero_touch_kit_with_mobile_app_ver1.0.0\mobile-app\build\intermediates\pre-dexed\debug\com.android.support-cardview-v7-23.4.0_be7357e7a57f6324be0f935d308251030d2a8e9e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\a16023\.gradle\caches\modules-2\files-2.1\com.amazonaws\aws-android-sdk-cognitoidentityprovider-asf\1.0.0\d26b361cf5b7e61d14f1836460d7b390b5b9953e\aws-android-sdk-cognitoidentityprovider-asf-1.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="d26b361cf5b7e61d14f1836460d7b390b5b9953e">
+        <dex dex="C:\tag\aws_zero_touch_kit_with_mobile_app_ver1.0.0\mobile-app\build\intermediates\pre-dexed\debug\aws-android-sdk-cognitoidentityprovider-asf-1.0.0_88ab19347ed4157156ba4358bcfeb340d4f015ef.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\a16023\.gradle\caches\modules-2\files-2.1\com.amazonaws\aws-android-sdk-s3\2.8.4\2059630e5bedcdd4d2bd112d898002b2a4fcc22c\aws-android-sdk-s3-2.8.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="2059630e5bedcdd4d2bd112d898002b2a4fcc22c">
+        <dex dex="C:\Users\a16023\source_code\mobile-app\build\intermediates\pre-dexed\debug\aws-android-sdk-s3-2.8.4_6d1b917a0bc48f5a925f4c52d10c68693ff4cc0a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Program Files\Android\Android Studio\gradle\m2repository\com\google\code\gson\gson\2.2.4\gson-2.2.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="a60a5e993c98c864010053cb901b7eab25306568">
+        <dex dex="C:\tag\aws_zero_touch_kit_with_mobile_app_ver1.0.0\mobile-app\build\intermediates\pre-dexed\debug\gson-2.2.4_313aff129984a0a45e086871ec03bfcc02e7284e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\a16023\.gradle\caches\modules-2\files-2.1\com.amazonaws\aws-android-sdk-ddb\2.8.4\3125849f6421daecb85012d6566d803e3be519a6\aws-android-sdk-ddb-2.8.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="3125849f6421daecb85012d6566d803e3be519a6">
+        <dex dex="C:\Users\a16023\source_code\mobile-app\build\intermediates\pre-dexed\debug\aws-android-sdk-ddb-2.8.4_8ac49f1c92e70f9f43b006cd66007b3eee860dc5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\a16023\source_code\mobile-app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="C:\Users\a16023\source_code\mobile-app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-23.4.0_f0eaa195dc618afb71cface2620e428764632590.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\tag\aws_zero_touch_kit_with_mobile_app_ver1.0.0\mobile-app\build\intermediates\exploded-aar\com.android.support\design\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="379471b2bd17d9737c050345c08e8c7d16589784">
+        <dex dex="C:\tag\aws_zero_touch_kit_with_mobile_app_ver1.0.0\mobile-app\build\intermediates\pre-dexed\debug\com.android.support-design-23.1.1_c01e7713dcce5956c2fac661411e9d6abdbbf7ec.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\tag\aws_zero_touch_kit_with_mobile_app_ver1.0.0\mobile-app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="C:\tag\aws_zero_touch_kit_with_mobile_app_ver1.0.0\mobile-app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-23.4.0_35a85a3dea15e277f47e93c3154820bf3d877bbe.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\tag\aws_zero_touch_kit_with_mobile_app_ver1.0.0\mobile-app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="ec75036c3c52e451d0cde50a5aedaf5fd32354a0">
+        <dex dex="C:\tag\aws_zero_touch_kit_with_mobile_app_ver1.0.0\mobile-app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-23.4.0_07732ab0676d5f89ce78502e236fe8da252c63ea.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\a16023\.gradle\caches\modules-2\files-2.1\com.amazonaws\aws-android-sdk-cognitoidentityprovider\2.8.4\c7e7ce8242580e115317ae93fe14331cde9db739\aws-android-sdk-cognitoidentityprovider-2.8.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="c7e7ce8242580e115317ae93fe14331cde9db739">
+        <dex dex="C:\Users\a16023\source_code\mobile-app\build\intermediates\pre-dexed\debug\aws-android-sdk-cognitoidentityprovider-2.8.4_03a2174ea656121742dd4fefd93216d4f1f2e9d0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\github\aws-iot-winc1500-secure-wifi-board-included-source-files\mobile-app\build\intermediates\exploded-aar\com.android.support\design\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="379471b2bd17d9737c050345c08e8c7d16589784">
+        <dex dex="C:\github\aws-iot-winc1500-secure-wifi-board-included-source-files\mobile-app\build\intermediates\pre-dexed\debug\com.android.support-design-23.1.1_fcf015f83d6f3f3dcb660fe4208904608b125459.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\a16023\source_code\mobile-app\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="d9ecde39b460470e655de6e47c05573d2d5a8bfb">
+        <dex dex="C:\Users\a16023\source_code\mobile-app\build\intermediates\pre-dexed\debug\com.android.support-cardview-v7-23.4.0_efe2411c4f6dd8b8cbf59fab2241111df89bf4be.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\github\aws-iot-winc1500-secure-wifi-board-included-source-files\mobile-app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="C:\github\aws-iot-winc1500-secure-wifi-board-included-source-files\mobile-app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-23.4.0_36107ce3e6e51edc909994995bb47c06f9e50ea0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\a16023\.gradle\caches\modules-2\files-2.1\com.amazonaws\aws-android-sdk-kms\2.8.4\128fbd3f74c3d1b9486ae9a8848b118bea0026f1\aws-android-sdk-kms-2.8.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="128fbd3f74c3d1b9486ae9a8848b118bea0026f1">
+        <dex dex="C:\Users\a16023\source_code\mobile-app\build\intermediates\pre-dexed\debug\aws-android-sdk-kms-2.8.4_54142268fa22590642fa33d22395cb8c061e52f4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\a16023\source_code\mobile-app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="ec75036c3c52e451d0cde50a5aedaf5fd32354a0">
+        <dex dex="C:\Users\a16023\source_code\mobile-app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-23.4.0_e0b9fcec5b2fc604955fb8e96cb56c69c3820ac4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\a16023\.gradle\caches\modules-2\files-2.1\org.apache.httpcomponents\httpcore\4.4.4\b31526a230871fbe285fbcbe2813f9c0839ae9b0\httpcore-4.4.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="b31526a230871fbe285fbcbe2813f9c0839ae9b0">
+        <dex dex="C:\tag\aws_zero_touch_kit_with_mobile_app_ver1.0.0\mobile-app\build\intermediates\pre-dexed\debug\httpcore-4.4.4_e83976591309f19db68c17851de42fd567165913.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\a16023\source_code\mobile-app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="C:\Users\a16023\source_code\mobile-app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-23.4.0_820b90cfe96ca76133579af4a2e986861a2adb4a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\github\aws-iot-winc1500-secure-wifi-board-included-source-files\mobile-app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="C:\github\aws-iot-winc1500-secure-wifi-board-included-source-files\mobile-app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-23.4.0_38ba47b63792a11374ab1827060b45915eb5fe02.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\tag\aws_zero_touch_kit_with_mobile_app_ver1.0.0\mobile-app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="C:\tag\aws_zero_touch_kit_with_mobile_app_ver1.0.0\mobile-app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-23.4.0_dd573f91bfab00872398d6348157a0d0c04ad6f1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\a16023\.gradle\caches\modules-2\files-2.1\com.amazonaws\aws-android-sdk-ddb-mapper\2.8.4\2ff1710143f1c67fb54f0ffd69ebfc2dc4cada80\aws-android-sdk-ddb-mapper-2.8.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="2ff1710143f1c67fb54f0ffd69ebfc2dc4cada80">
+        <dex dex="C:\Users\a16023\source_code\mobile-app\build\intermediates\pre-dexed\debug\aws-android-sdk-ddb-mapper-2.8.4_0fa49906ad8eaf890eac6bd2e6aff3dac847652d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\a16023\.gradle\caches\modules-2\files-2.1\com.amazonaws\aws-android-sdk-iot\2.2.22\f0753db8c9be1b837d4922a342e506d51c6bf924\aws-android-sdk-iot-2.2.22.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="f0753db8c9be1b837d4922a342e506d51c6bf924">
+        <dex dex="C:\Users\a16023\source_code\mobile-app\build\intermediates\pre-dexed\debug\aws-android-sdk-iot-2.2.22_1af063faa476a076fe99b334b1897c50989a8d77.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\a16023\AppData\Local\Android\Sdk\extras\android\m2repository\com\android\support\support-annotations\23.4.0\support-annotations-23.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="C:\tag\aws_zero_touch_kit_with_mobile_app_ver1.0.0\mobile-app\build\intermediates\pre-dexed\debug\support-annotations-23.4.0_a726d4963a4031ea89f34f0347493d0b820a424a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\github\aws-iot-winc1500-secure-wifi-board-included-source-files\mobile-app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="C:\github\aws-iot-winc1500-secure-wifi-board-included-source-files\mobile-app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-23.4.0_0d0cb3c71d90df0a1ad12a1f227e3b418afa5656.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\a16023\source_code\mobile-app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\libs\internal_impl-23.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="C:\Users\a16023\source_code\mobile-app\build\intermediates\pre-dexed\debug\internal_impl-23.4.0_54e17330037bf6a1227a13b9eefaf033f1b89ccd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\a16023\source_code\mobile-app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="C:\Users\a16023\source_code\mobile-app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-23.4.0_efc335a91606bcf9cad03a1821adcd46be353013.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\github\aws-iot-winc1500-secure-wifi-board-included-source-files\mobile-app\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="d9ecde39b460470e655de6e47c05573d2d5a8bfb">
+        <dex dex="C:\github\aws-iot-winc1500-secure-wifi-board-included-source-files\mobile-app\build\intermediates\pre-dexed\debug\com.android.support-cardview-v7-23.4.0_a23f56527844a70647f2e03ed5a878d8b64a2b05.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\github\aws-iot-winc1500-secure-wifi-board-included-source-files\mobile-app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="C:\github\aws-iot-winc1500-secure-wifi-board-included-source-files\mobile-app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.4.0_b31afb5deb732080d2d6d03708ceb23f5d7ae560.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\github\aws-iot-winc1500-secure-wifi-board-included-source-files\mobile-app\libs\zxing.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="6fe22c135f19470d05b0816d5996c442ef67da3f">
+        <dex dex="C:\github\aws-iot-winc1500-secure-wifi-board-included-source-files\mobile-app\build\intermediates\pre-dexed\debug\zxing_a1d68f1aa483ce6823b2f12649edc8270a776269.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\a16023\.gradle\caches\modules-2\files-2.1\com.amazonaws\aws-android-sdk-core\2.8.4\2839519133f006adcdadcd40af319832654e293\aws-android-sdk-core-2.8.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="02839519133f006adcdadcd40af319832654e293">
+        <dex dex="C:\Users\a16023\source_code\mobile-app\build\intermediates\pre-dexed\debug\aws-android-sdk-core-2.8.4_5289182a52eafe4f658aa55f335f2f795b96ff6a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\tag\aws_zero_touch_kit_with_mobile_app_ver1.0.0\mobile-app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\libs\internal_impl-23.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="C:\tag\aws_zero_touch_kit_with_mobile_app_ver1.0.0\mobile-app\build\intermediates\pre-dexed\debug\internal_impl-23.4.0_4c598c1ba2c7abfad58a440ec7f8b7922043fbb3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\a16023\source_code\mobile-app\build\intermediates\exploded-aar\com.android.support\design\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="379471b2bd17d9737c050345c08e8c7d16589784">
+        <dex dex="C:\Users\a16023\source_code\mobile-app\build\intermediates\pre-dexed\debug\com.android.support-design-23.1.1_8d70859902d8bb2446a76911defafa7d22832263.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\a16023\source_code\mobile-app\libs\zxing.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="6fe22c135f19470d05b0816d5996c442ef67da3f">
+        <dex dex="C:\Users\a16023\source_code\mobile-app\build\intermediates\pre-dexed\debug\zxing_d5f2213cc1b013526b4b88ae83a7f6a1d211525d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\a16023\source_code\mobile-app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="C:\Users\a16023\source_code\mobile-app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.4.0_5733ed3622b607b87a8e843b89dd535d17a1b229.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\tag\aws_zero_touch_kit_with_mobile_app_ver1.0.0\mobile-app\libs\zxing.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="6fe22c135f19470d05b0816d5996c442ef67da3f">
+        <dex dex="C:\tag\aws_zero_touch_kit_with_mobile_app_ver1.0.0\mobile-app\build\intermediates\pre-dexed\debug\zxing_ef8b3bcf348f13acb9daf32b131dd4c7bc44dc02.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\github\aws-iot-winc1500-secure-wifi-board-included-source-files\mobile-app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\libs\internal_impl-23.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="C:\github\aws-iot-winc1500-secure-wifi-board-included-source-files\mobile-app\build\intermediates\pre-dexed\debug\internal_impl-23.4.0_ea1f7860a1c6747e3facaec04b1334e0d83143d5.jar" />
+    </item>
+
+</items>

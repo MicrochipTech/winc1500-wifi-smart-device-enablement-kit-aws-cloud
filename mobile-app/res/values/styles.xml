@@ -1,0 +1,119 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application thianeme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <item name="android:actionBarStyle">@style/my_actionbar_style</item>
+        <item name="android:actionOverflowButtonStyle">@style/OverFlow</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:typeface">sans</item>
+         <item name="android:actionMenuTextAppearance">@style/MyMenuTextStyle</item>
+
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+    <style name="OverFlow" parent="@android:style/Widget.Holo.ActionButton.Overflow">
+        <item name="android:src">@drawable/nav_add</item>
+    </style>
+    
+    <style name="MyMenuTextStyle">  
+    <item name="android:textColor">@android:color/black</item>  
+    <item name="android:textSize">16sp</item>  
+</style>
+
+    <style name="my_actionbar_style" parent="@android:style/Widget.Holo.Light.ActionBar">
+        <item name="android:background">@color/title_blue</item>
+        <item name="android:titleTextStyle">@style/AcBar_titleStyle</item>
+    </style>
+
+    <style name="AcBar_titleStyle">
+        <item name="android:textSize">18sp</item>
+    </style>
+    <style name="SCBSwitch" parent="Theme.AppCompat.Light">
+        <!-- active thumb & track color (30% transparency) -->
+        <item name="colorControlActivated">#46bdbf</item>
+
+        <!-- inactive thumb color -->
+        <item name="colorSwitchThumbNormal">#f1f1f1
+        </item>
+
+        <!-- inactive track color (30% transparency) -->
+        <item name="android:colorForeground">#42221f1f
+        </item>
+    </style>
+    <style name="ButtonBlue">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:background">@drawable/button_blue_long</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+    </style>
+
+    <style name="AppTheme1" parent="Theme.AppCompat.Light">
+        <item name="android:navigationBarColor">@color/navigation_bar_color</item>
+    </style>
+	<style name="CognitoAppTheme" parent="Base.Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/toolbar_background</item>
+        <item name="colorPrimaryDark">@color/toolbar_background_dark</item>
+        <item name="colorAccent">@color/toolbar_items</item>
+        <item name="android:navigationBarColor">@color/navigation_bar_color</item>
+    </style>
+
+    <style name="AWSCognitoTheme" parent="AppTheme">
+        <item name="android:colorBackground">@color/toolbar_background</item>
+        <item name="android:textColor">@color/toolbar_items</item>
+    </style>
+
+    <style name="AppActionBar">
+        <item name="colorPrimary">@color/toolbar_background</item>
+        <item name="colorPrimaryDark">@color/toolbar_background</item>
+        <item name="colorAccent">@color/toolbar_items</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppNavigationBar">
+        <item name="android:colorBackground">@color/navigation_bar_color</item>
+        <item name="android:textColor">@color/toolbar_items</item>
+
+    </style>
+
+    <style name="CognitoAppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="CognitoAppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="CognitoAppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+    </style>
+
+    <style name="TextViewMessage">
+        <item name="android:textColor">@color/alert</item>
+        <item name="android:textSize">@dimen/activity_text_padding</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAppearance">?android:textAppearanceSmall</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+
+    <style name="TextViewLabel">
+        <item name="android:textSize">@dimen/activity_text_size_small</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAppearance">?android:textAppearanceSmall</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+
+</resources>

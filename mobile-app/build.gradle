@@ -1,0 +1,64 @@
+repositories {
+    jcenter()
+}
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.2.3'
+    }
+}
+
+apply plugin: 'com.android.application'
+
+dependencies {
+    compile 'com.amazonaws:aws-android-sdk-iot:2.9.1'
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.android.support:design:23.1.1'
+    compile 'com.android.support:cardview-v7:23.+'
+    compile 'com.android.support:recyclerview-v7:23.+'
+    compile 'com.amazonaws:aws-android-sdk-cognitoidentityprovider:2.+'
+    compile 'org.apache.httpcomponents:httpcore:4.4.4'
+    compile files('libs/zxing.jar')
+    compile 'com.amazonaws:aws-android-sdk-ddb-mapper:2.+'
+
+}
+
+android {
+    buildToolsVersion "23.0.3"
+    compileSdkVersion 23
+
+    defaultConfig {
+        applicationId "com.amazonaws.mchp.awsprovisionkit"
+        versionCode 1
+        versionName "1.0.0"
+        minSdkVersion 21
+        targetSdkVersion 23
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            java.srcDirs = ['src']
+            resources.srcDirs = ['src']
+            aidl.srcDirs = ['src']
+            renderscript.srcDirs = ['src']
+            res.srcDirs = ['res']
+            assets.srcDirs = ['assets']
+        }
+    }
+}

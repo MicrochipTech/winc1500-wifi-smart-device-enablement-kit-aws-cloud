@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Microchip Wi-Fi Smart Device</string>
+
+	<string name="app_name_cognito">Cognito Identity</string>
+    <string name="app_main_screen">Sign in</string>
+    <string name="app_main_screen_title">Wi-Fi Smart Device Enablement Kit</string>
+    <string name="app_main_desc">User login</string>
+    <string name="nav_drawer_open">Open navigation drawer</string>
+    <string name="nav_drawer_close">Close navigation drawer</string>
+    <string name="title_activity_user">UserActivity</string>
+    <string name="Username">Username</string>
+    <string name="Password">Password</string>
+    <string name="Menu">Menu</string>
+    <string name="title_activity_about_app">AboutApp</string>
+    <string name="about">Firmware version: 1.0.0</string>
+    <string name="more_info">This is a sample app to show the IoT application with Microchip wireless modules</string>
+    <string name="title_activity_sign_up_confirm">SignUpConfirm</string>
+    <string name="title_activity_mfa">MFAActivity</string>
+    <string name="title_activity_forgot_password">ForgotPasswordActivity</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+    <string name="title_activity_change_password">ChangePasswordActivity</string>
+    <string name="title_activity_verify">VerifyActivity</string>
+    <string name="title_activity_add_attribute">AddAttributeActivity</string>
+    <string name="title_activity_device_settings">DeviceSettings</string>
+    <string name="title_activity_new_password">NewPassword</string>
+    <string name="network_provision_step1_description">1. Power on the board\n2. Hold and Press the SW3 Key for 5 second\n3. LD2 blink in RED color</string>
+    <string name="OK">OK</string>
+</resources>

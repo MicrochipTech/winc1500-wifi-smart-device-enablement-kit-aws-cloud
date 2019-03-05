@@ -1,0 +1,13 @@
+Date: 19/2/2017
+MCU Fw Ver: 1.0.1
+
+Description:
+- This is the 2nd version of the Wi-Fi Smart Device Enablement Kit MCU firmware
+
+Bug fix:
+- reconnect AWS cloud is disable after timeout, fixed by reconnect AWS clould without timeout
+- reduce the button debouncing timeout to 1ms to enhance the button response
+
+New features:
+- Blink LED LD2 if the board is disconnect with AWS cloud
+

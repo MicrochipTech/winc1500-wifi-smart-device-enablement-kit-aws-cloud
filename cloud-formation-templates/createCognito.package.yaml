@@ -1,0 +1,271 @@
+AWSTemplateFormatVersion: 2010-09-09
+Outputs:
+  UserPoolClientId:
+    Export:
+      Name: WiFISmartDeviceForAlexaCustomSkillClient::Id
+    Value:
+      Ref: WiFISmartDeviceForAlexaCustomSkillClient
+  UserPoolId:
+    Export:
+      Name: UserPool::Id
+    Value:
+      Ref: UserPool
+Resources:
+  CloudFormationCognitoUserPoolClientSettings:
+    DependsOn: CloudFormationSendResponse
+    Properties:
+      Code:
+        S3Bucket: test835611
+        S3Key: cc74eadf20290221c17dd8abb9e69708
+      FunctionName: CloudFormationCognitoUserPoolClientSettings
+      Handler: CloudFormationCognitoUserPoolClientSettings.handler
+      Role:
+        Fn::GetAtt:
+        - LambdaForCloudFormation
+        - Arn
+      Runtime: nodejs8.10
+    Type: AWS::Lambda::Function
+  CloudFormationCognitoUserPoolDomain:
+    DependsOn: CloudFormationSendResponse
+    Properties:
+      Code:
+        S3Bucket: test835611
+        S3Key: d97c1d6f6e4494733ac0093214e44837
+      FunctionName: CloudFormationCognitoUserPoolDomain
+      Handler: CloudFormationCognitoUserPoolDomain.handler
+      Role:
+        Fn::GetAtt:
+        - LambdaForCloudFormation
+        - Arn
+      Runtime: nodejs8.10
+    Type: AWS::Lambda::Function
+  CloudFormationSendResponse:
+    Properties:
+      Code:
+        S3Bucket: test835611
+        S3Key: 4545c28c3889daa1f7a6c8673b17c345
+      FunctionName: CloudFormationSendResponse
+      Handler: index.handler
+      Role:
+        Fn::GetAtt:
+        - LambdaForCloudFormation
+        - Arn
+      Runtime: nodejs8.10
+    Type: AWS::Lambda::Function
+  CognitoAuthorizedRole:
+    Properties:
+      AssumeRolePolicyDocument:
+        Statement:
+        - Action:
+          - sts:AssumeRoleWithWebIdentity
+          Condition:
+            ForAnyValue:StringLike:
+              cognito-identity.amazonaws.com:amr: authenticated
+            StringEquals:
+              cognito-identity.amazonaws.com:aud:
+                Ref: IdentityPool
+          Effect: Allow
+          Principal:
+            Federated: cognito-identity.amazonaws.com
+        Version: '2012-10-17'
+      ManagedPolicyArns:
+      - arn:aws:iam::aws:policy/AmazonDynamoDBFullAccess
+      Policies:
+      - PolicyDocument:
+          Statement:
+          - Action:
+            - iot:AttachPrincipalPolicy
+            - iot:CreateKeysAndCertificate
+            Effect: Allow
+            Resource: '*'
+          Version: '2012-10-17'
+        PolicyName: policy_for_mobile_app
+      RoleName: Cognito_WiFiSmartDeviceIdentity_Auth_Role
+    Type: AWS::IAM::Role
+  CognitoUnAuthorizedRole:
+    Properties:
+      AssumeRolePolicyDocument:
+        Statement:
+        - Action:
+          - sts:AssumeRoleWithWebIdentity
+          Condition:
+            ForAnyValue:StringLike:
+              cognito-identity.amazonaws.com:amr: unauthenticated
+            StringEquals:
+              cognito-identity.amazonaws.com:aud:
+                Ref: IdentityPool
+          Effect: Allow
+          Principal:
+            Federated: cognito-identity.amazonaws.com
+        Version: '2012-10-17'
+      ManagedPolicyArns:
+      - arn:aws:iam::aws:policy/AmazonDynamoDBFullAccess
+      Policies:
+      - PolicyDocument:
+          Statement:
+          - Action:
+            - iot:AttachPrincipalPolicy
+            - iot:CreateKeysAndCertificate
+            Effect: Allow
+            Resource: '*'
+          Version: '2012-10-17'
+        PolicyName: policy_for_mobile_app
+      RoleName: Cognito_WiFiSmartDeviceIdentity_Unauth_Role
+    Type: AWS::IAM::Role
+  IdentityPool:
+    Properties:
+      AllowUnauthenticatedIdentities: true
+      CognitoIdentityProviders:
+      - ClientId:
+          Ref: WiFISmartDeviceForAlexaSmartHomeSkillClient
+        ProviderName:
+          Fn::GetAtt:
+          - UserPool
+          - ProviderName
+      - ClientId:
+          Ref: WiFISmartDeviceForAlexaCustomSkillClient
+        ProviderName:
+          Fn::GetAtt:
+          - UserPool
+          - ProviderName
+      IdentityPoolName: WiFiSmartDeviceIdentity
+    Type: AWS::Cognito::IdentityPool
+  IdentityPoolRoleMapping:
+    Properties:
+      IdentityPoolId:
+        Ref: IdentityPool
+      Roles:
+        authenticated:
+          Fn::GetAtt:
+          - CognitoAuthorizedRole
+          - Arn
+        unauthenticated:
+          Fn::GetAtt:
+          - CognitoUnAuthorizedRole
+          - Arn
+    Type: AWS::Cognito::IdentityPoolRoleAttachment
+  LambdaForCloudFormation:
+    Properties:
+      AssumeRolePolicyDocument:
+        Statement:
+        - Action: sts:AssumeRole
+          Effect: Allow
+          Principal:
+            Service: lambda.amazonaws.com
+        Version: '2012-10-17'
+      Policies:
+      - PolicyDocument:
+          Statement:
+          - Action:
+            - logs:CreateLogGroup
+            - logs:CreateLogStream
+            - logs:PutLogEvents
+            Effect: Allow
+            Resource: arn:aws:logs:*:*:*
+          Version: '2012-10-17'
+        PolicyName: WriteCloudWatchLogs
+      - PolicyDocument:
+          Statement:
+          - Action: cognito-idp:UpdateUserPoolClient
+            Effect: Allow
+            Resource: arn:aws:cognito-idp:*:*:userpool/*
+          Version: '2012-10-17'
+        PolicyName: UpdateUserPoolClient
+      - PolicyDocument:
+          Statement:
+          - Action: cognito-idp:CreateUserPoolDomain
+            Effect: Allow
+            Resource: arn:aws:cognito-idp:*:*:userpool/*
+          - Action: cognito-idp:DeleteUserPoolDomain
+            Effect: Allow
+            Resource: arn:aws:cognito-idp:*:*:userpool/*
+          - Action: cognito-idp:DescribeUserPoolDomain
+            Effect: Allow
+            Resource: '*'
+          Version: '2012-10-17'
+        PolicyName: ManageUserPoolDomain
+      - PolicyDocument:
+          Statement:
+          - Action: lambda:InvokeFunction
+            Effect: Allow
+            Resource: arn:aws:lambda:*:*:function:*
+          Version: '2012-10-17'
+        PolicyName: InvokeLambdaFunction
+      RoleName: LambdaForCloudFormation
+    Type: AWS::IAM::Role
+  UserPool:
+    Properties:
+      UserPoolName: WiFiSmartDeviceUserPool
+    Type: AWS::Cognito::UserPool
+  UserPoolDomain:
+    Properties:
+      Domain: userpool-test-018903
+      ServiceToken:
+        Fn::GetAtt:
+        - CloudFormationCognitoUserPoolDomain
+        - Arn
+      UserPoolId:
+        Ref: UserPool
+    Type: Custom::CognitoUserPoolDomain
+  WiFISmartDeviceForAlexaCustomSkillClient:
+    Properties:
+      ClientName: WiFISmartDeviceForAlexaCustomSkill
+      GenerateSecret: true
+      UserPoolId:
+        Ref: UserPool
+    Type: AWS::Cognito::UserPoolClient
+  WiFISmartDeviceForAlexaCustomSkillClientSettings:
+    Properties:
+      AllowedOAuthFlows:
+      - code
+      AllowedOAuthFlowsUserPoolClient: true
+      AllowedOAuthScopes:
+      - openid
+      - phone
+      - email
+      - profile
+      - aws.cognito.signin.user.admin
+      CallbackURL: https://layla.amazon.com/api/skill/link/M2TDOWMJ3J2LNM,https://alexa.amazon.co.jp/api/skill/link/M2TDOWMJ3J2LNM,https://pitangui.amazon.com/api/skill/link/M2TDOWMJ3J2LN
+      LogoutURL: https://www.google.com
+      ServiceToken:
+        Fn::GetAtt:
+        - CloudFormationCognitoUserPoolClientSettings
+        - Arn
+      SupportedIdentityProviders:
+      - COGNITO
+      UserPoolClientId:
+        Ref: WiFISmartDeviceForAlexaCustomSkillClient
+      UserPoolId:
+        Ref: UserPool
+    Type: Custom::CognitoUserPoolClientSettings
+  WiFISmartDeviceForAlexaSmartHomeSkillClient:
+    Properties:
+      ClientName: WiFISmartDeviceForAlexaSmartHomeSkill
+      GenerateSecret: true
+      UserPoolId:
+        Ref: UserPool
+    Type: AWS::Cognito::UserPoolClient
+  WiFISmartDeviceForAlexaSmartHomeSkillClientSettings:
+    Properties:
+      AllowedOAuthFlows:
+      - code
+      AllowedOAuthFlowsUserPoolClient: true
+      AllowedOAuthScopes:
+      - openid
+      - phone
+      - email
+      - profile
+      - aws.cognito.signin.user.admin
+      CallbackURL: https://layla.amazon.com/api/skill/link/M2TDOWMJ3J2LNM,https://alexa.amazon.co.jp/api/skill/link/M2TDOWMJ3J2LNM,https://pitangui.amazon.com/api/skill/link/M2TDOWMJ3J2LN
+      LogoutURL: https://www.google.com
+      ServiceToken:
+        Fn::GetAtt:
+        - CloudFormationCognitoUserPoolClientSettings
+        - Arn
+      SupportedIdentityProviders:
+      - COGNITO
+      UserPoolClientId:
+        Ref: WiFISmartDeviceForAlexaSmartHomeSkillClient
+      UserPoolId:
+        Ref: UserPool
+    Type: Custom::CognitoUserPoolClientSettings
