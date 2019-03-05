@@ -1,6 +1,7 @@
-# aws-iot-winc1500-secure-wifi-board
-This package contains all the files (firmware code, python scripts, java pc gui) for the WINC1500 Secure Wi-Fi Board which connect to AWS.
+# WiFi Smart Device Enablement Kit
+This package contains all the files (firmware code, python scripts, mobile app code, lambda function) for the Wi-Fi Smart Device Enablement Kit to connect AWS Cloud.
 
-Go to the [Wiki](https://github.com/MicrochipTech/aws-iot-winc1500-secure-wifi-board-included-source-files/wiki) for a getting started guide.
+You can read [Wi-Fi Smart Device Enablement Kit User Guide](https://github.com/MicrochipTech/wifi-smart-device-enablement-kit) for a getting started guide to test the Kit.
 
-If you want to test the WINC1500 Secure WiFi Board thet get from Microchip MASTERs Conference 2018, you can read [WINC1500 Secure Wi-Fi Board Setup Instruction guide](https://github.com/MicrochipTech/aws-iot-winc1500-secure-wifi-board/tree/master/doc) 
+If you need to customize the application and connect the board to your private AWS account, you need to read [Wi-Fi Smart Device Enablement Kit Developer Guide](https://github.com/MicrochipTech/wifi-smart-device-enablement-kit) to know the devleopment of the Kit .
+
