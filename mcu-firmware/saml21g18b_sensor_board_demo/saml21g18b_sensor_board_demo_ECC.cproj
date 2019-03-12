@@ -41,6 +41,7 @@
           <option id="sam0.drivers.rtc" value="Add" config="count_callback" content-id="Atmel.ASF" />
           <option id="sam0.drivers.sercom.i2c.master" value="Add" config="callback" content-id="Atmel.ASF" />
           <option id="sam0.drivers.wdt" value="Add" config="callback" content-id="Atmel.ASF" />
+          <option id="sam0.drivers.tcc" value="Add" config="callback" content-id="Atmel.ASF" />
           <option id="common.utils" value="Add" config="" content-id="Atmel.ASF" />
           <option id="sam0.utils.cmsis.saml21.source.template" value="Add" config="" content-id="Atmel.ASF" />
         </options>
@@ -346,11 +347,22 @@
           <file path="src/ASF/common/services/usb/class/hid/device/generic/udi_hid_generic_desc.c" framework="" version="3.30.1" source="common\services\usb\class\hid\device\generic\udi_hid_generic_desc.c" changed="False" content-id="Atmel.ASF" />
           <file path="src/ASF/common/services/usb/class/hid/device/generic/udi_hid_generic.h" framework="" version="3.30.1" source="common\services\usb\class\hid\device\generic\udi_hid_generic.h" changed="False" content-id="Atmel.ASF" />
           <file path="src/ASF/common/services/usb/class/hid/device/generic/udi_hid_generic_conf.h" framework="" version="3.30.1" source="common\services\usb\class\hid\device\generic\udi_hid_generic_conf.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/drivers/tcc/tcc_callback.c" framework="" version="3.37" source="sam0\drivers\tcc\tcc_callback.c" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/drivers/tcc/tcc.c" framework="" version="3.37" source="sam0\drivers\tcc\tcc.c" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/drivers/tcc/quick_start_faultn/qs_tcc_faultn.h" framework="" version="3.37" source="sam0\drivers\tcc\quick_start_faultn\qs_tcc_faultn.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/drivers/tcc/quick_start_buffering/qs_tcc_buffering.h" framework="" version="3.37" source="sam0\drivers\tcc\quick_start_buffering\qs_tcc_buffering.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/drivers/tcc/quick_start_timer/qs_tcc_timer.h" framework="" version="3.37" source="sam0\drivers\tcc\quick_start_timer\qs_tcc_timer.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/drivers/tcc/quick_start_faultx/qs_tcc_faultx.h" framework="" version="3.37" source="sam0\drivers\tcc\quick_start_faultx\qs_tcc_faultx.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/drivers/tcc/quick_start_dma/qs_tcc_dma.h" framework="" version="3.37" source="sam0\drivers\tcc\quick_start_dma\qs_tcc_dma.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/drivers/tcc/tcc.h" framework="" version="3.37" source="sam0\drivers\tcc\tcc.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/drivers/tcc/quick_start_callback/qs_tcc_callback.h" framework="" version="3.37" source="sam0\drivers\tcc\quick_start_callback\qs_tcc_callback.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/drivers/tcc/quick_start/qs_tcc_basic.h" framework="" version="3.37" source="sam0\drivers\tcc\quick_start\qs_tcc_basic.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/drivers/tcc/tcc_callback.h" framework="" version="3.37" source="sam0\drivers\tcc\tcc_callback.h" changed="False" content-id="Atmel.ASF" />
         </files>
         <documentation help="http://asf.atmel.com/docs/3.28.2/thirdparty.wireless.ble_sdk.apps.startup_template.saml21_xplained_pro_b/html/index.html" />
         <offline-documentation help="" />
         <dependencies>
-          <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.36.1" />
+          <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.37" />
         </dependencies>
         <project id="thirdparty.wireless.ble_sdk.apps.startup_template.saml21_xplained_pro_b" value="Add" config="" content-id="Atmel.ASF" />
         <board id="board.saml21_xplained_pro_b" value="Add" config="" content-id="Atmel.ASF" />
@@ -439,6 +451,7 @@
       <Value>SPI_CALLBACK_MODE=true</Value>
       <Value>USB_DEVICE_LPM_SUPPORT</Value>
       <Value>UDD_ENABLE</Value>
+      <Value>TCC_ASYNC=true</Value>
     </ListValues>
   </armgcc.compiler.symbols.DefSymbols>
   <armgcc.compiler.directories.IncludePaths>
@@ -520,6 +533,7 @@
       <Value>../src/ASF/common/services/usb/class/hid</Value>
       <Value>../src/ASF/common/services/usb/class/hid/device</Value>
       <Value>../src/ASF/common/services/usb/class/hid/device/generic</Value>
+      <Value>../src/ASF/sam0/drivers/tcc</Value>
     </ListValues>
   </armgcc.compiler.directories.IncludePaths>
   <armgcc.compiler.optimization.level>Optimize for size (-Os)</armgcc.compiler.optimization.level>
@@ -576,9 +590,10 @@
       <Value>../src/ASF/common/services/usb/class/hid</Value>
       <Value>../src/ASF/common/services/usb/class/hid/device</Value>
       <Value>../src/ASF/common/services/usb/class/hid/device/generic</Value>
+      <Value>../src/ASF/sam0/drivers/tcc</Value>
     </ListValues>
   </armgcc.assembler.general.IncludePaths>
-  <armgcc.preprocessingassembler.general.AssemblerFlags>-DARM_MATH_CM0PLUS=true -DBOARD=SAML21_XPLAINED_PRO -DENABLE_POWER_SAVE -DEXTINT_CALLBACK_MODE=true -DNEW_EVT_HANDLER -DSYSTICK_MODE -DTC_ASYNC=true -DUART_FLOWCONTROL_4WIRE_MODE=false -DUART_FLOWCONTROL_6WIRE_MODE=true -DUSART_CALLBACK_MODE=true -D__SAML21J18B__ -DRTC_COUNT_ASYNC=true -DEVENTS_INTERRUPT_HOOKS_MODE=true -DWDT_CALLBACK_MODE=true -DADC_CALLBACK_MODE=true -DI2C_MASTER_CALLBACK_MODE=true -DSPI_CALLBACK_MODE=true -DUSB_DEVICE_LPM_SUPPORT -DUDD_ENABLE</armgcc.preprocessingassembler.general.AssemblerFlags>
+  <armgcc.preprocessingassembler.general.AssemblerFlags>-DARM_MATH_CM0PLUS=true -DBOARD=SAML21_XPLAINED_PRO -DENABLE_POWER_SAVE -DEXTINT_CALLBACK_MODE=true -DNEW_EVT_HANDLER -DSYSTICK_MODE -DTC_ASYNC=true -DUART_FLOWCONTROL_4WIRE_MODE=false -DUART_FLOWCONTROL_6WIRE_MODE=true -DUSART_CALLBACK_MODE=true -D__SAML21J18B__ -DRTC_COUNT_ASYNC=true -DEVENTS_INTERRUPT_HOOKS_MODE=true -DWDT_CALLBACK_MODE=true -DADC_CALLBACK_MODE=true -DI2C_MASTER_CALLBACK_MODE=true -DSPI_CALLBACK_MODE=true -DUSB_DEVICE_LPM_SUPPORT -DUDD_ENABLE -DTCC_ASYNC=true</armgcc.preprocessingassembler.general.AssemblerFlags>
   <armgcc.preprocessingassembler.general.IncludePaths>
     <ListValues>
       <Value>../thirdparty/wireless/ble_sdk/apps/config/saml21</Value>
@@ -658,6 +673,7 @@
       <Value>../src/ASF/common/services/usb/class/hid</Value>
       <Value>../src/ASF/common/services/usb/class/hid/device</Value>
       <Value>../src/ASF/common/services/usb/class/hid/device/generic</Value>
+      <Value>../src/ASF/sam0/drivers/tcc</Value>
     </ListValues>
   </armgcc.preprocessingassembler.general.IncludePaths>
 </ArmGcc>
@@ -702,30 +718,26 @@
       <Value>KIT_PROTOCOL_MESSAGE_MAX=6000</Value>
       <Value>ECC508</Value>
       <Value>AWS_JITR</Value>
+      <Value>TCC_ASYNC=true</Value>
     </ListValues>
   </armgcc.compiler.symbols.DefSymbols>
   <armgcc.compiler.directories.IncludePaths>
     <ListValues>
-      <Value>../thirdparty/wireless/ble_sdk/apps/config/saml21</Value>
       <Value>../src/ASF/sam0/utils/header_files</Value>
       <Value>../src/ASF/sam0/drivers/tc</Value>
       <Value>../src/ASF/common/utils</Value>
       <Value>../src/ASF/sam0/drivers/system/pinmux</Value>
       <Value>../src/ASF/sam0/drivers/system/power</Value>
-      <Value>../src/ASF/thirdparty/wireless/ble_sdk/services/serial/uart</Value>
       <Value>../src/ASF/common2/services/delay/sam0</Value>
-      <Value>../src/ASF/thirdparty/wireless/ble_sdk/ble_services/ble_mgr</Value>
       <Value>../src/ASF/common/boards</Value>
       <Value>../src/ASF/common2/services/delay</Value>
       <Value>../src/ASF/sam0/utils/stdio/stdio_serial</Value>
       <Value>../src/ASF/sam0/drivers/port</Value>
       <Value>../src/ASF/sam0/drivers/sercom/usart</Value>
       <Value>../src/ASF/sam0/drivers/system/clock/clock_saml21</Value>
-      <Value>../src/ASF/thirdparty/wireless/ble_sdk/services/serial_fifo</Value>
       <Value>../src/ASF/sam0/boards</Value>
       <Value>../src/ASF/sam0/utils</Value>
       <Value>../src/ASF/thirdparty/CMSIS/Include</Value>
-      <Value>../src/ASF/thirdparty/wireless/ble_sdk/utils</Value>
       <Value>../src/ASF/sam0/drivers/system/reset/reset_sam_l</Value>
       <Value>../src/config</Value>
       <Value>../src/ASF/thirdparty/CMSIS/Lib/GCC</Value>
@@ -733,35 +745,27 @@
       <Value>../src</Value>
       <Value>../src/ASF/sam0/boards/saml21_xplained_pro_b</Value>
       <Value>../src/ASF/sam0/utils/cmsis/saml21/include_b</Value>
-      <Value>../src/ASF/thirdparty/wireless/ble_sdk/inc</Value>
       <Value>../src/ASF/sam0/drivers/sercom</Value>
       <Value>../src/ASF/sam0/utils/preprocessor</Value>
-      <Value>../src/ASF/thirdparty/wireless/ble_sdk/services/console</Value>
       <Value>../src/ASF/sam0/drivers/system</Value>
       <Value>../src/ASF/common/services/serial</Value>
       <Value>../src/ASF/sam0/drivers/extint</Value>
-      <Value>../src/ASF/thirdparty/wireless/ble_sdk/services/timer</Value>
       <Value>../src/ASF/sam0/drivers/system/clock</Value>
       <Value>../src/ASF/sam0/drivers/system/power/power_sam_l</Value>
       <Value>../src/ASF/sam0/drivers/system/interrupt</Value>
       <Value>../src/ASF/sam0/drivers/system/interrupt/system_interrupt_saml21</Value>
       <Value>../src/ASF/sam0/utils/cmsis/saml21/source</Value>
-      <Value>../src/ble_profile</Value>
       <Value>../src/ASF/sam0/drivers/rtc</Value>
       <Value>../src/ASF/sam0/drivers/rtc/rtc_sam_l_c</Value>
       <Value>../src/ASF/sam0/drivers/events/events_sam_l_c</Value>
       <Value>../src/ASF/sam0/drivers/events</Value>
-      <Value>../src/qtouch</Value>
       <Value>../src/rtc</Value>
       <Value>../src/ASF/sam0/drivers/wdt</Value>
       <Value>../src/ASF/sam0/drivers/adc</Value>
       <Value>../src/ASF/sam0/drivers/adc/adc_sam_l_c</Value>
       <Value>../src/ASF/sam0/drivers/sercom/i2c</Value>
       <Value>../src/ASF/sam0/drivers/sercom/i2c/i2c_sam0</Value>
-      <Value>../src/bme280</Value>
       <Value>../src/veml6080</Value>
-      <Value>../src/bhi160/bhi160_api</Value>
-      <Value>../src/bhi160</Value>
       <Value>../src/i2c</Value>
       <Value>../src/battery</Value>
       <Value>../src/ASF/common/components/wifi/winc1500/bsp</Value>
@@ -805,6 +809,8 @@
       <Value>../src/led</Value>
       <Value>../src/button</Value>
       <Value>../src/iot_message</Value>
+      <Value>../src/ASF/sam0/drivers/tcc</Value>
+      <Value>../src/bme280</Value>
     </ListValues>
   </armgcc.compiler.directories.IncludePaths>
   <armgcc.compiler.optimization.level>Optimize (-O1)</armgcc.compiler.optimization.level>
@@ -817,9 +823,7 @@
   <armgcc.linker.libraries.Libraries>
     <ListValues>
       <Value>libarm_cortexM0l_math</Value>
-      <Value>libble_sdk</Value>
       <Value>libm</Value>
-      <Value>libsaml21_qtouch_gcc</Value>
     </ListValues>
   </armgcc.linker.libraries.Libraries>
   <armgcc.linker.libraries.LibrarySearchPaths>
@@ -831,7 +835,7 @@
   </armgcc.linker.libraries.LibrarySearchPaths>
   <armgcc.linker.optimization.GarbageCollectUnusedSections>True</armgcc.linker.optimization.GarbageCollectUnusedSections>
   <armgcc.linker.memorysettings.ExternalRAM />
-  <armgcc.linker.miscellaneous.LinkerFlags>-Wl,--entry=Reset_Handler -Wl,--cref -mthumb -T../src/ASF/sam0/utils/linker_scripts/saml21/gcc/saml21g18b_flash.ld</armgcc.linker.miscellaneous.LinkerFlags>
+  <armgcc.linker.miscellaneous.LinkerFlags>-Wl,--section-start=.text=0x2000, -Wl,--entry=Reset_Handler -Wl,--cref -mthumb -T../src/ASF/sam0/utils/linker_scripts/saml21/gcc/saml21g18b_flash.ld</armgcc.linker.miscellaneous.LinkerFlags>
   <armgcc.assembler.general.IncludePaths>
     <ListValues>
       <Value>../src/Config</Value>
@@ -865,10 +869,11 @@
       <Value>../src/ASF/common/services/usb/class/hid</Value>
       <Value>../src/ASF/common/services/usb/class/hid/device</Value>
       <Value>../src/ASF/common/services/usb/class/hid/device/generic</Value>
+      <Value>../src/ASF/sam0/drivers/tcc</Value>
     </ListValues>
   </armgcc.assembler.general.IncludePaths>
   <armgcc.assembler.debugging.DebugLevel>Default (-g)</armgcc.assembler.debugging.DebugLevel>
-  <armgcc.preprocessingassembler.general.AssemblerFlags>-DARM_MATH_CM0PLUS=true -DBOARD=SAML21_XPLAINED_PRO -DENABLE_POWER_SAVE -DEXTINT_CALLBACK_MODE=true -DNEW_EVT_HANDLER -DSYSTICK_MODE -DTC_ASYNC=true -DUART_FLOWCONTROL_4WIRE_MODE=false -DUART_FLOWCONTROL_6WIRE_MODE=true -DUSART_CALLBACK_MODE=true -D__SAML21J18B__ -DRTC_COUNT_ASYNC=true -DEVENTS_INTERRUPT_HOOKS_MODE=true -DWDT_CALLBACK_MODE=true -DADC_CALLBACK_MODE=true -DI2C_MASTER_CALLBACK_MODE=true -DSPI_CALLBACK_MODE=true -DUSB_DEVICE_LPM_SUPPORT -DUDD_ENABLE</armgcc.preprocessingassembler.general.AssemblerFlags>
+  <armgcc.preprocessingassembler.general.AssemblerFlags>-DARM_MATH_CM0PLUS=true -DBOARD=SAML21_XPLAINED_PRO -DENABLE_POWER_SAVE -DEXTINT_CALLBACK_MODE=true -DNEW_EVT_HANDLER -DSYSTICK_MODE -DTC_ASYNC=true -DUART_FLOWCONTROL_4WIRE_MODE=false -DUART_FLOWCONTROL_6WIRE_MODE=true -DUSART_CALLBACK_MODE=true -D__SAML21J18B__ -DRTC_COUNT_ASYNC=true -DEVENTS_INTERRUPT_HOOKS_MODE=true -DWDT_CALLBACK_MODE=true -DADC_CALLBACK_MODE=true -DI2C_MASTER_CALLBACK_MODE=true -DSPI_CALLBACK_MODE=true -DUSB_DEVICE_LPM_SUPPORT -DUDD_ENABLE -DTCC_ASYNC=true</armgcc.preprocessingassembler.general.AssemblerFlags>
   <armgcc.preprocessingassembler.general.IncludePaths>
     <ListValues>
       <Value>../thirdparty/wireless/ble_sdk/apps/config/saml21</Value>
@@ -948,6 +953,7 @@
       <Value>../src/ASF/common/services/usb/class/hid</Value>
       <Value>../src/ASF/common/services/usb/class/hid/device</Value>
       <Value>../src/ASF/common/services/usb/class/hid/device/generic</Value>
+      <Value>../src/ASF/sam0/drivers/tcc</Value>
     </ListValues>
   </armgcc.preprocessingassembler.general.IncludePaths>
   <armgcc.preprocessingassembler.debugging.DebugLevel>Default (-Wa,-g)</armgcc.preprocessingassembler.debugging.DebugLevel>
@@ -1045,6 +1051,14 @@
     <Folder Include="src\ASF\sam0\drivers\system\power\power_sam_l\" />
     <Folder Include="src\ASF\sam0\drivers\system\reset\" />
     <Folder Include="src\ASF\sam0\drivers\system\reset\reset_sam_l\" />
+    <Folder Include="src\ASF\sam0\drivers\tcc\" />
+    <Folder Include="src\ASF\sam0\drivers\tcc\quick_start\" />
+    <Folder Include="src\ASF\sam0\drivers\tcc\quick_start_buffering\" />
+    <Folder Include="src\ASF\sam0\drivers\tcc\quick_start_callback\" />
+    <Folder Include="src\ASF\sam0\drivers\tcc\quick_start_dma\" />
+    <Folder Include="src\ASF\sam0\drivers\tcc\quick_start_faultn\" />
+    <Folder Include="src\ASF\sam0\drivers\tcc\quick_start_faultx\" />
+    <Folder Include="src\ASF\sam0\drivers\tcc\quick_start_timer\" />
     <Folder Include="src\ASF\sam0\drivers\tc\" />
     <Folder Include="src\ASF\sam0\drivers\tc\tc_sam_l_c\" />
     <Folder Include="src\ASF\sam0\drivers\usb\" />
@@ -1092,25 +1106,6 @@
     <Folder Include="src\ASF\thirdparty\CMSIS\Include\" />
     <Folder Include="src\ASF\thirdparty\CMSIS\Lib\" />
     <Folder Include="src\ASF\thirdparty\CMSIS\Lib\GCC\" />
-    <Folder Include="src\ASF\thirdparty\wireless\" />
-    <Folder Include="src\ASF\thirdparty\wireless\ble_sdk\" />
-    <Folder Include="src\ASF\thirdparty\wireless\ble_sdk\ble_services\" />
-    <Folder Include="src\ASF\thirdparty\wireless\ble_sdk\ble_services\ble_mgr\" />
-    <Folder Include="src\ASF\thirdparty\wireless\ble_sdk\inc\" />
-    <Folder Include="src\ASF\thirdparty\wireless\ble_sdk\lib\" />
-    <Folder Include="src\ASF\thirdparty\wireless\ble_sdk\lib\cm0p\" />
-    <Folder Include="src\ASF\thirdparty\wireless\ble_sdk\lib\cm0p\gcc\" />
-    <Folder Include="src\ASF\thirdparty\wireless\ble_sdk\services\" />
-    <Folder Include="src\ASF\thirdparty\wireless\ble_sdk\services\console\" />
-    <Folder Include="src\ASF\thirdparty\wireless\ble_sdk\services\console\sam0\" />
-    <Folder Include="src\ASF\thirdparty\wireless\ble_sdk\services\serial\" />
-    <Folder Include="src\ASF\thirdparty\wireless\ble_sdk\services\serial\uart\" />
-    <Folder Include="src\ASF\thirdparty\wireless\ble_sdk\services\serial\uart\sam0\" />
-    <Folder Include="src\ASF\thirdparty\wireless\ble_sdk\services\serial_fifo\" />
-    <Folder Include="src\ASF\thirdparty\wireless\ble_sdk\services\timer\" />
-    <Folder Include="src\ASF\thirdparty\wireless\ble_sdk\services\timer\sam0\" />
-    <Folder Include="src\ASF\thirdparty\wireless\ble_sdk\src\" />
-    <Folder Include="src\ASF\thirdparty\wireless\ble_sdk\utils\" />
     <Folder Include="src\atcalib\" />
     <Folder Include="src\atcalib\" />
     <Folder Include="src\atcalib\" />
@@ -1122,15 +1117,12 @@
     <Folder Include="src\atcalib\arch\" />
     <Folder Include="src\atcalib\arch\samd21\" />
     <Folder Include="src\atcalib\arch\samd21\i2c\" />
-    <Folder Include="src\bhi160\bhi160_api" />
     <Folder Include="src\button\" />
     <Folder Include="src\cert\" />
     <Folder Include="src\cJSON\" />
     <Folder Include="src\cloud_wrapper\" />
     <Folder Include="src\config\" />
-    <Folder Include="src\ble_profile" />
     <Folder Include="src\bme280" />
-    <Folder Include="src\bhi160" />
     <Folder Include="src\cryptoauthlib\" />
     <Folder Include="src\cryptoauthlib\app\" />
     <Folder Include="src\cryptoauthlib\lib\" />
@@ -1150,7 +1142,6 @@
     <Folder Include="src\utilities\" />
     <Folder Include="src\veml6080" />
     <Folder Include="src\rtc" />
-    <Folder Include="src\qtouch" />
     <Folder Include="src\veml60xx\" />
   </ItemGroup>
   <ItemGroup>
@@ -1230,6 +1221,39 @@
       <SubType>compile</SubType>
     </None>
     <None Include="src\ASF\sam0\drivers\usb\usb.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam0\drivers\tcc\quick_start_faultn\qs_tcc_faultn.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam0\drivers\tcc\quick_start_buffering\qs_tcc_buffering.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam0\drivers\tcc\quick_start_timer\qs_tcc_timer.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam0\drivers\tcc\quick_start_faultx\qs_tcc_faultx.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam0\drivers\tcc\quick_start_dma\qs_tcc_dma.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam0\drivers\tcc\quick_start_callback\qs_tcc_callback.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam0\drivers\tcc\quick_start\qs_tcc_basic.h">
+      <SubType>compile</SubType>
+    </None>
+    <Compile Include="src\ASF\sam0\drivers\tcc\tcc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <None Include="src\ASF\sam0\drivers\tcc\tcc.h">
+      <SubType>compile</SubType>
+    </None>
+    <Compile Include="src\ASF\sam0\drivers\tcc\tcc_callback.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <None Include="src\ASF\sam0\drivers\tcc\tcc_callback.h">
       <SubType>compile</SubType>
     </None>
     <Compile Include="src\ASF\sam0\drivers\usb\stack_interface\usb_device_udd.c">
@@ -1532,7 +1556,9 @@
     <Compile Include="src\ecc_provisioning_task.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="src\env_sensor\env_sensor.c" />
+    <Compile Include="src\env_sensor\env_sensor.c">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="src\env_sensor\env_sensor.h">
       <SubType>compile</SubType>
     </Compile>
@@ -1570,12 +1596,6 @@
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="src\main.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="src\motion_sensor.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="src\motion_sensor.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="src\nvm_handle.c">
@@ -1884,42 +1904,6 @@
     <Compile Include="src\battery\adc_measure.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="src\bhi160\bhi160.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="src\bhi160\bhi160.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="src\bhi160\bhi160_api\BHIfw.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="src\bhi160\bhi160_api\bhy.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="src\bhi160\bhi160_api\bhy.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="src\bhi160\bhi160_api\BHy_support.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="src\bhi160\bhi160_api\BHy_support.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="src\bhi160\bhy_uc_driver.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="src\bhi160\bhy_uc_driver.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="src\bhi160\bhy_uc_driver_config.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="src\bhi160\bhy_uc_driver_constants.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="src\bhi160\bhy_uc_driver_types.h">
-      <SubType>compile</SubType>
-    </Compile>
     <Compile Include="src\config\conf_sensor.h">
       <SubType>compile</SubType>
     </Compile>
@@ -1945,9 +1929,6 @@
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="src\veml6080\veml6080.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="src\version.h">
       <SubType>compile</SubType>
     </Compile>
     <None Include="src\ASF\sam0\drivers\wdt\quick_start\qs_wdt_basic.h">
@@ -2019,21 +2000,6 @@
     <Compile Include="src\bme280\bme280_support.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="src\qtouch\touch.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="src\qtouch\touch.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="src\qtouch\touch_api_ptc.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="src\qtouch\touch_app.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="src\qtouch\touch_app.h">
-      <SubType>compile</SubType>
-    </Compile>
     <Compile Include="src\rtc\rtc.c">
       <SubType>compile</SubType>
     </Compile>
@@ -2068,12 +2034,6 @@
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="src\ASF\sam0\drivers\rtc\rtc_sam_l_c\rtc_count_interrupt.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="src\ble_profile\wearable.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="src\ble_profile\wearable.h">
       <SubType>compile</SubType>
     </Compile>
     <None Include="src\asf.h">
@@ -2154,9 +2114,6 @@
     <None Include="src\ASF\thirdparty\CMSIS\README.txt">
       <SubType>compile</SubType>
     </None>
-    <None Include="src\ASF\thirdparty\wireless\ble_sdk\inc\at_ble_trace.h">
-      <SubType>compile</SubType>
-    </None>
     <None Include="src\ASF\sam0\utils\cmsis\saml21\include_b\instance\usb.h">
       <SubType>compile</SubType>
     </None>
@@ -2181,16 +2138,7 @@
     <None Include="src\ASF\sam0\utils\cmsis\saml21\include_b\instance\tcc0.h">
       <SubType>compile</SubType>
     </None>
-    <None Include="src\ASF\thirdparty\wireless\ble_sdk\inc\at_ble_api.h">
-      <SubType>compile</SubType>
-    </None>
     <None Include="src\ASF\sam0\drivers\sercom\usart\quick_start_callback\qs_usart_callback.h">
-      <SubType>compile</SubType>
-    </None>
-    <None Include="src\ASF\thirdparty\wireless\ble_sdk\lib\cm0p\gcc\libble_sdk.a">
-      <SubType>compile</SubType>
-    </None>
-    <None Include="src\ASF\thirdparty\wireless\ble_sdk\services\timer\timer_hw.h">
       <SubType>compile</SubType>
     </None>
     <None Include="src\ASF\sam0\utils\cmsis\saml21\include_b\component\usb.h">
@@ -2253,16 +2201,7 @@
     <None Include="src\ASF\common\utils\interrupt.h">
       <SubType>compile</SubType>
     </None>
-    <None Include="src\ASF\thirdparty\wireless\ble_sdk\inc\at_ble_errno.h">
-      <SubType>compile</SubType>
-    </None>
     <None Include="src\ASF\common2\services\delay\sam0\systick_counter.h">
-      <SubType>compile</SubType>
-    </None>
-    <None Include="src\ASF\thirdparty\wireless\ble_sdk\inc\platform.h">
-      <SubType>compile</SubType>
-    </None>
-    <None Include="src\ASF\thirdparty\wireless\ble_sdk\utils\ble_utils.h">
       <SubType>compile</SubType>
     </None>
     <None Include="src\ASF\sam0\utils\cmsis\saml21\include_b\component\wdt.h">
@@ -2322,19 +2261,10 @@
     <None Include="src\ASF\sam0\utils\cmsis\saml21\include_b\component\ccl.h">
       <SubType>compile</SubType>
     </None>
-    <None Include="src\ASF\thirdparty\wireless\ble_sdk\services\serial_fifo\serial_fifo.h">
-      <SubType>compile</SubType>
-    </None>
     <None Include="src\ASF\sam0\utils\preprocessor\preprocessor.h">
       <SubType>compile</SubType>
     </None>
     <None Include="src\ASF\sam0\utils\cmsis\saml21\include_b\instance\supc.h">
-      <SubType>compile</SubType>
-    </None>
-    <None Include="src\ASF\thirdparty\wireless\ble_sdk\inc\profiles.h">
-      <SubType>compile</SubType>
-    </None>
-    <None Include="src\ASF\thirdparty\wireless\ble_sdk\services\serial\uart\serial_drv.h">
       <SubType>compile</SubType>
     </None>
     <None Include="src\ASF\sam0\utils\cmsis\saml21\include_b\instance\aes.h">
@@ -2403,9 +2333,6 @@
     <None Include="src\ASF\common\services\serial\sam0_usart\usart_serial.h">
       <SubType>compile</SubType>
     </None>
-    <None Include="src\ASF\thirdparty\wireless\ble_sdk\ble_services\ble_mgr\ble_manager.h">
-      <SubType>compile</SubType>
-    </None>
     <None Include="src\ASF\sam0\drivers\system\pinmux\quick_start\qs_pinmux_basic.h">
       <SubType>compile</SubType>
     </None>
@@ -2413,9 +2340,6 @@
       <SubType>compile</SubType>
     </None>
     <None Include="src\ASF\sam0\utils\cmsis\saml21\include_b\instance\tcc2.h">
-      <SubType>compile</SubType>
-    </None>
-    <None Include="src\ASF\thirdparty\wireless\ble_sdk\services\console\console_serial.h">
       <SubType>compile</SubType>
     </None>
     <None Include="src\ASF\sam0\drivers\system\clock\gclk.h">
@@ -2635,24 +2559,6 @@
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="src\ASF\sam0\utils\syscalls\gcc\syscalls.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="src\ASF\thirdparty\wireless\ble_sdk\ble_services\ble_mgr\ble_manager.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="src\ASF\thirdparty\wireless\ble_sdk\services\console\sam0\console_serial.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="src\ASF\thirdparty\wireless\ble_sdk\services\serial\uart\sam0\serial_drv.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="src\ASF\thirdparty\wireless\ble_sdk\services\serial_fifo\serial_fifo.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="src\ASF\thirdparty\wireless\ble_sdk\services\timer\sam0\timer_hw.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="src\ASF\thirdparty\wireless\ble_sdk\src\platform.c">
       <SubType>compile</SubType>
     </Compile>
     <None Include="src\config\conf_rtc.h">
