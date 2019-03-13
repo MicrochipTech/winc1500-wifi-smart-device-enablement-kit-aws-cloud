@@ -60,7 +60,7 @@ static void resolve_cb(uint8_t *hostName, uint32_t hostIp)
 	gbHostIpByName = true;
 	printf("Host IP is %d.%d.%d.%d\r\n", (int)IPV4_BYTE(hostIp, 0), (int)IPV4_BYTE(hostIp, 1),
 			(int)IPV4_BYTE(hostIp, 2), (int)IPV4_BYTE(hostIp, 3));
-	printf("Host Name is %s\r\n", hostName);
+	//printf("Host Name is %s\r\n", hostName);
 }
 
 /**

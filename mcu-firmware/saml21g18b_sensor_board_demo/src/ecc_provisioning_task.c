@@ -1789,7 +1789,6 @@ void ecc_provisioning_task()
                 aws_iot_set_status(AWS_STATE_ATECCx08A_CONFIGURE,
                                    AWS_STATUS_SUCCESS,
                                    "The AWS IoT Zero Touch Demo ATECC508A init was successful.");
-				printf("WARNING: The ATECC508A device has not been provisioned. Waiting ...");
 
                 // Set the next provisioning state
                 g_provisioning_state = AWS_STATE_ATECCx08A_CONFIGURE;

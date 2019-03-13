@@ -2042,7 +2042,6 @@ int wifiTaskExecute()
 		case WIFI_TASK_CONNECT_CLOUD:
             atca_status = provisioning_get_hostname(&hostname_length, hostname);
             
-            printf("hostname=%s\r\n", hostname);
 			ret = cloud_connect(hostname, g_mqtt_client_id);
 
 			if (ret == CLOUD_RC_SUCCESS)
