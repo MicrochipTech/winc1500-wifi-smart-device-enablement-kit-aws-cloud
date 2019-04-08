@@ -70,8 +70,8 @@ Resources:
                   - "iot:DescribeThing"
                   - "iot:DescribeThingType"
                   - "iot:GetPolicy"
- 		  - "iot:CreateThingGroup"
-		  - "iot:AddThingToThingGroup"
+                  - "iot:CreateThingGroup"
+                  - "iot:AddThingToThingGroup"
                 Resource: "*"
       RoleName: ZTLambdaJITRRole
 
