@@ -47,7 +47,6 @@ public class RegisterUser extends AppCompatActivity {
     private EditText givenName;
     private EditText familyName;
     private EditText email;
-    private EditText phone;
 
     private Button signUp;
     private AlertDialog userDialog;
@@ -143,32 +142,7 @@ public class RegisterUser extends AppCompatActivity {
                 }
             }
         });
-        //
-        givenName = (EditText) findViewById(R.id.editTextRegGivenName);
-        givenName.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-                if (s.length() == 0) {
-                    TextView label = (TextView) findViewById(R.id.textViewRegGivenNameLabel);
-                    label.setText(givenName.getHint());
-                    givenName.setBackground(getDrawable(R.drawable.text_border_selector));
-                }
-            }
 
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                TextView label = (TextView) findViewById(R.id.textViewRegGivenNameMessage);
-                label.setText("");
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-                if (s.length() == 0) {
-                    TextView label = (TextView) findViewById(R.id.textViewRegGivenNameLabel);
-                    label.setText("");
-                }
-            }
-        });
         //
         email = (EditText) findViewById(R.id.editTextRegEmail);
         email.addTextChangedListener(new TextWatcher() {
@@ -197,31 +171,6 @@ public class RegisterUser extends AppCompatActivity {
             }
         });
         //
-        phone = (EditText) findViewById(R.id.editTextRegPhone);
-        phone.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-                if (s.length() == 0) {
-                    TextView label = (TextView) findViewById(R.id.textViewRegPhoneLabel);
-                    label.setText(phone.getHint() + " with country code and no seperators");
-                    phone.setBackground(getDrawable(R.drawable.text_border_selector));
-                }
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                TextView label = (TextView) findViewById(R.id.textViewRegPhoneMessage);
-                label.setText("");
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-                if (s.length() == 0) {
-                    TextView label = (TextView) findViewById(R.id.textViewRegPhoneLabel);
-                    label.setText("");
-                }
-            }
-        });
 
         signUp = (Button) findViewById(R.id.signUp);
         signUp.setOnClickListener(new View.OnClickListener() {
@@ -247,24 +196,11 @@ public class RegisterUser extends AppCompatActivity {
                     return;
                 }
 
-                String userInput = givenName.getText().toString();
-                if (userInput != null) {
-                    if (userInput.length() > 0) {
-                        userAttributes.addAttribute(AppHelper.getSignUpFieldsC2O().get(givenName.getHint()).toString(), userInput);
-                    }
-                }
 
-                userInput = email.getText().toString();
+                String userInput = email.getText().toString();
                 if (userInput != null) {
                     if (userInput.length() > 0) {
                         userAttributes.addAttribute(AppHelper.getSignUpFieldsC2O().get(email.getHint()).toString(), userInput);
-                    }
-                }
-
-                userInput = phone.getText().toString();
-                if (userInput != null) {
-                    if (userInput.length() > 0) {
-                        userAttributes.addAttribute(AppHelper.getSignUpFieldsC2O().get(phone.getHint()).toString(), userInput);
                     }
                 }
 

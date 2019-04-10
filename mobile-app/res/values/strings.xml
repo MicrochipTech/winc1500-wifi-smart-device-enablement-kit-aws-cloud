@@ -12,7 +12,7 @@
     <string name="Password">Password</string>
     <string name="Menu">Menu</string>
     <string name="title_activity_about_app">AboutApp</string>
-    <string name="about">Firmware version: 1.0.0</string>
+    <string name="about">Firmware version: 1.0.1</string>
     <string name="more_info">This is a sample app to show the IoT application with Microchip wireless modules</string>
     <string name="title_activity_sign_up_confirm">SignUpConfirm</string>
     <string name="title_activity_mfa">MFAActivity</string>

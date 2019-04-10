@@ -107,38 +107,6 @@
         android:layout_below="@+id/editTextRegUserPassword"
         android:layout_centerHorizontal="true" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textSize="@dimen/activity_text_size_small"
-        android:text=" "
-        android:id="@+id/textViewRegGivenNameLabel"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/textViewUserRegPasswordMessage" />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/activity_text_height"
-        android:paddingLeft="@dimen/activity_text_padding"
-        android:paddingRight="@dimen/activity_text_padding"
-        android:id="@+id/editTextRegGivenName"
-        android:layout_below="@+id/textViewRegGivenNameLabel"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/text_border_selector"
-        android:hint="Given name"
-        android:inputType="textPersonName"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textSize="@dimen/activity_text_padding"
-        android:text=" "
-        android:textColor="@color/alert"
-        android:id="@+id/textViewRegGivenNameMessage"
-        android:layout_below="@+id/editTextRegGivenName"
-        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="match_parent"
@@ -148,7 +116,7 @@
         android:text=" "
         android:id="@+id/textViewRegEmailLabel"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/textViewRegGivenNameMessage" />
+        android:layout_below="@id/textViewUserRegPasswordMessage" />
 
     <EditText
         android:layout_width="match_parent"
@@ -173,43 +141,12 @@
         android:layout_below="@id/editTextRegEmail"
         android:layout_centerHorizontal="true" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textSize="@dimen/activity_text_size_small"
-        android:text=" "
-        android:id="@+id/textViewRegPhoneLabel"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/textViewRegEmailMessage" />
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/activity_text_height"
-        android:paddingLeft="@dimen/activity_text_padding"
-        android:paddingRight="@dimen/activity_text_padding"
-        android:id="@+id/editTextRegPhone"
-        android:layout_below="@id/textViewRegPhoneLabel"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/text_border_selector"
-        android:hint="Phone number"
-        android:inputType="phone"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textSize="@dimen/activity_text_padding"
-        android:text=" "
-        android:textColor="@color/alert"
-        android:id="@+id/textViewRegPhoneMessage"
-        android:layout_below="@id/editTextRegPhone"
-        android:layout_centerHorizontal="true" />
 
     <Space
         android:layout_width="match_parent"
         android:layout_height="@dimen/activity_intra_group_separation"
-        android:layout_below="@id/textViewRegPhoneMessage"
+        android:layout_below="@id/textViewRegEmailMessage"
         android:id="@+id/space_about_2" />
 
     <Button
