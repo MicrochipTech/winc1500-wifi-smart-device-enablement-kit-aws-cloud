@@ -217,6 +217,7 @@ public class WlanAdapter {
 
 	public boolean connectToNewWifi(String ssid)
 	{
+		boolean ret;
 		MyHelper.d(">>>> connectToKnownWifi Enter");
 		this.mTargetSSID = '"' + ssid + '"';
 
@@ -225,6 +226,18 @@ public class WlanAdapter {
 			return false;
 
 		WifiManager wifiManager = (WifiManager) act.getApplicationContext().getSystemService(Context.WIFI_SERVICE);
+		
+		
+final List<WifiConfiguration> configurations = wifiManager.getConfiguredNetworks();
+
+		for (final WifiConfiguration config : configurations) {
+			MyHelper.d( "# configure ssid =" + config.SSID);
+			if (this.mTargetSSID.equals(config.SSID) ) {
+				ret = wifiManager.removeNetwork(config.networkId);
+				MyHelper.d( "# removeNetwork return " + ret);
+			}
+		}
+		
 		WifiConfiguration wifiConfiguration = new WifiConfiguration();
 
 		wifiConfiguration.SSID='"'+ssid+'"';

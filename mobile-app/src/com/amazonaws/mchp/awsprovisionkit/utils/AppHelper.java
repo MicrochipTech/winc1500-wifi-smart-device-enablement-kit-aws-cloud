@@ -79,30 +79,6 @@ public class AppHelper {
     private static Map<String, String> firstTimeLogInUpDatedAttributes;
     private static String firstTimeLoginNewPassword;
 
-    // Change the next three lines of code to run this demo on your user pool
-
-    /**
-     * Add your pool id here
-     */
-    private static final String userPoolId = "us-east-1_6RPZirW0i";
-
-    /**
-     * Add you app id
-     */
-    private static final String clientId = "abjg954aj5op0qjjg2pnh7qlc";
-
-    /**
-     * App secret associated with your app id - if the App id does not have an associated App secret,
-     * set the App secret to null.
-     * e.g. clientSecret = null;
-     */
-    private static final String clientSecret = "sef1i9d3a7fgj50gkuq3dals8reflk76m1g19j24bhbe0591m98";
-
-    /**
-     * Set Your User Pools region.
-     * e.g. if your user pools are in US East (N Virginia) then set cognitoRegion = Regions.US_EAST_1.
-     */
-    //private static final Regions cognitoRegion = Regions.US_EAST_1;
 
     // User details from the service
     private static CognitoUserSession currSession;

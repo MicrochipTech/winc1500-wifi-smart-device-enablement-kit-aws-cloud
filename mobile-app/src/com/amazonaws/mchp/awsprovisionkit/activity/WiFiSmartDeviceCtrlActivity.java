@@ -78,6 +78,7 @@ public class WiFiSmartDeviceCtrlActivity extends AppCompatActivity implements Sw
 
 	private boolean requestGetDevState = false;
 
+
 	wifiSmartDeviceReceiver receiver;
 
 	static int redColor;
@@ -318,14 +319,15 @@ public class WiFiSmartDeviceCtrlActivity extends AppCompatActivity implements Sw
 
 		/*subscribe IoT Shadow /update/delta topic */
 		Intent intent = new Intent(WiFiSmartDeviceCtrlActivity.this, AwsService.class);
-		intent.putExtra(ServiceConstant.AWSThingName,thing_name);
+		intent.putExtra(ServiceConstant.AWSThingName, thing_name);
 		intent.setAction(ServiceConstant.JSONMsgSubscribeShadowDelta);
 		startService(intent);
 
 		/*subscribe IoT Shadow /update topic*/
-		intent.putExtra(ServiceConstant.AWSThingName,thing_name);
+		intent.putExtra(ServiceConstant.AWSThingName, thing_name);
 		intent.setAction(ServiceConstant.JSONMsgSubscribeShadowUpdate);
 		startService(intent);
+
 
 
 		onRefresh();
@@ -341,14 +343,13 @@ public class WiFiSmartDeviceCtrlActivity extends AppCompatActivity implements Sw
 
 		//unsubscribe the channel
 		Intent intent = new Intent(WiFiSmartDeviceCtrlActivity.this, AwsService.class);
-		intent.putExtra(ServiceConstant.AWSThingName,thing_name);
+		intent.putExtra(ServiceConstant.AWSThingName, thing_name);
 		intent.setAction(ServiceConstant.JSONMsgUnSubscribeShadowDelta);
 		startService(intent);
 
-		intent.putExtra(ServiceConstant.AWSThingName,thing_name);
+		intent.putExtra(ServiceConstant.AWSThingName, thing_name);
 		intent.setAction(ServiceConstant.JSONMsgUnSubscribeShadowUpdate);
 		startService(intent);
-
 
 		// TODO GosMessageHandler.getSingleInstance().SetHandler(null);
 
@@ -620,7 +621,10 @@ public class WiFiSmartDeviceCtrlActivity extends AppCompatActivity implements Sw
 			if (intent.getAction().equals(ServiceConstant.CloudStatus)) {
 				String connMessage = intent.getStringExtra(ServiceConstant.CloudStatusConn);
 				if (connMessage.equals("Connected")) {
+					onResume();
+
 				}
+
 			}
 			else if (intent.getAction().equals(ServiceConstant.JSONShadowMsgReport)) {
 

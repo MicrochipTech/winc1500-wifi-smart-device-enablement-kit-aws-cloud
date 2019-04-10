@@ -55,8 +55,7 @@ public class AwsService extends Service {
     static final String LOG_TAG = AwsService.class.getCanonicalName();
 
 /* AWS Related Settings */
-    // AWS Iot CLI describe-endpoint call returns: XXXXXXXXXX.iot.<region>.amazonaws.com
-    private static final String CUSTOMER_SPECIFIC_ENDPOINT = "a3eoywlgsbdhs8.iot.us-east-1.amazonaws.com";
+
     // Filename of KeyStore file on the filesystem
     private static final String KEYSTORE_NAME = "iot_keystore";
     // Password for the private key in the KeyStore
@@ -80,6 +79,7 @@ public class AwsService extends Service {
     AWSIotDataClient iotDataClient;
     private static final String TAG = "AwsService";
     private String idToken;
+    private boolean aws_connect = false;
 
     String customerSpecificEndPointAttr;
     String congnitoPoolId;
@@ -168,7 +168,6 @@ public class AwsService extends Service {
 
 
         Map<String, String> logins = new HashMap<String, String>();
-        //logins.put("cognito-idp.us-east-1.amazonaws.com/us-east-1_6RPZirW0i", idToken);
         logins.put("cognito-idp."+cognitoRegion+".amazonaws.com/"+cognitoUserPoolId, idToken);
         credentialsProvider.setLogins(logins);
 
@@ -287,23 +286,28 @@ public class AwsService extends Service {
                         if (status == AWSIotMqttClientStatus.Connecting) {
                             Log.d(LOG_TAG, "Connecting");
                             sendConnectStatus("Connecting");
+                            aws_connect = false;
                         } else if (status == AWSIotMqttClientStatus.Connected) {
                             Log.d(LOG_TAG, "Connected");
                             sendConnectStatus("Connected");
+                            aws_connect = true;
                             //subscribeTopic(MCHP_IGATEWAY_SUBSCRIBE_TOPIC);
                         } else if (status == AWSIotMqttClientStatus.Reconnecting) {
                             if (throwable != null) {
                                 Log.e(LOG_TAG, "Connection error.", throwable);
                             }
                             sendConnectStatus("Re-Connecting");
+                            aws_connect = false;
                         } else if (status == AWSIotMqttClientStatus.ConnectionLost) {
                             if (throwable != null) {
                                 Log.e(LOG_TAG, "Connection error.", throwable);
                             }
                             sendConnectStatus("Connection Lost");
+                            aws_connect = false;
                         } else {
 //                                tvAwsStatus.setText("Disconnected");
                             sendConnectStatus("Disconnected");
+                            aws_connect = false;
                         }
                         }
                     });
@@ -521,7 +525,8 @@ public class AwsService extends Service {
             Log.d(LOG_TAG, "Receive unsubscribe message command...");
             String channel = intent.getStringExtra(ServiceConstant.MQTTChannelName);
             Log.d(LOG_TAG, "channel =" + channel);
-            mqttManager.unsubscribeTopic(channel);
+            if (aws_connect == true)
+                mqttManager.unsubscribeTopic(channel);
         }
 
         else if(intent.getAction().equals(ServiceConstant.JSONMsgShadowGet)) {
@@ -585,14 +590,16 @@ public class AwsService extends Service {
             Log.e(LOG_TAG, "Receive unsubscribe message command...");
             String thingName = intent.getStringExtra(ServiceConstant.AWSThingName);
             String topic = "$aws/things/"+thingName+"/shadow/update/delta";
-            mqttManager.unsubscribeTopic(topic);
+            if (aws_connect == true)
+                mqttManager.unsubscribeTopic(topic);
         }
         else if(intent.getAction().equals(ServiceConstant.JSONMsgUnSubscribeShadowUpdate)) {
             Log.e(LOG_TAG, "Receive unsubscribe message command...");
             String thingName = intent.getStringExtra(ServiceConstant.AWSThingName);
             Log.e(LOG_TAG, "String =" + thingName);
             String topic = "$aws/things/"+thingName+"/shadow/update/accepted";
-            mqttManager.unsubscribeTopic(topic);
+            if (aws_connect == true)
+                mqttManager.unsubscribeTopic(topic);
         }
         else if (intent.getAction().equals(ServiceConstant.UpdateAcctInfoToDB))
         {

@@ -236,6 +236,19 @@ public class NetworkProvisionStageThreeActivity extends AppCompatActivity {
             if (result.equals("success")){
                 MyHelper.d(">>>> Finish stage 2: finish provisioning");
                 printProgressDiagMsg("Provisioning...");
+
+				handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        // Do something after 1s = 1000ms
+                        clearProgressDiagMsg();
+
+                        Intent intent2DevListActivity = new Intent(NetworkProvisionStageThreeActivity.this, DeviceListActivity.class);
+                        intent2DevListActivity.putExtra(ServiceConstant.CognitoUuid, uuid);
+                        startActivity(intent2DevListActivity);
+
+                    }
+                }, 5000);
                 //Boolean r1 = mWifiAdapter.tryConnectWlan(currentApInfo);
             }
             else{
