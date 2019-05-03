@@ -1,4 +1,24 @@
 /*
+ * \file
+ *
+ * Copyright (c) 2016 Microchip Technology Inc. and its subsidiaries.  You may use this
+ * software and any derivatives exclusively with Microchip products.
+ *
+ *
+ * THIS SOFTWARE IS SUPPLIED BY MICROCHIP "AS IS". NO WARRANTIES,
+ * WHETHER EXPRESS, IMPLIED OR STATUTORY, APPLY TO THIS SOFTWARE,
+ * INCLUDING ANY IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY,
+ * AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT WILL MICROCHIP BE
+ * LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE, INCIDENTAL OR CONSEQUENTIAL
+ * LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND WHATSOEVER RELATED TO THE
+ * SOFTWARE, HOWEVER CAUSED, EVEN IF MICROCHIP HAS BEEN ADVISED OF THE
+ * POSSIBILITY OR THE DAMAGES ARE FORESEEABLE.  TO THE FULLEST EXTENT
+ * ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN ANY WAY
+ * RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
+ * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
+ *
+ */
+/*
  *  Copyright 2013-2016 Amazon.com,
  *  Inc. or its affiliates. All Rights Reserved.
  *
@@ -14,6 +34,8 @@
  *  for the specific language governing permissions and
  *  limitations under the License.
  */
+
+
 
 package com.amazonaws.mchp.awsprovisionkit.activity;
 
@@ -33,6 +55,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.support.design.widget.NavigationView;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AlertDialog;
@@ -60,6 +83,8 @@ import com.amazonaws.mobileconnectors.cognitoidentityprovider.handlers.Authentic
 import com.amazonaws.mobileconnectors.cognitoidentityprovider.handlers.ForgotPasswordHandler;
 
 import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 
@@ -71,6 +96,7 @@ import com.amazonaws.mchp.awsprovisionkit.service.AwsService;
 public class MainActivity extends AppCompatActivity {
     static final int CAMERA_REQUEST_PREMISSION = 1;
     static final int PERMISSIONS_REQUEST_CODE_ACCESS_COARSE_LOCATION = 2;
+    static final int PERMISSION_REQUEST_CODE = 3;
 
     private final String TAG="MainActivity";
 
@@ -151,9 +177,24 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
+        String[] appPermissions ={
+                Manifest.permission.CAMERA,
+                Manifest.permission.ACCESS_COARSE_LOCATION
+        };
 
+        List<String> listPermissionNeeded = new ArrayList<>();
 
-
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            for (String perm : appPermissions) {
+                if (checkSelfPermission(perm) != PackageManager.PERMISSION_GRANTED) {
+                    listPermissionNeeded.add(perm);
+                }
+            }
+            if (!listPermissionNeeded.isEmpty()) {
+                requestPermissions(listPermissionNeeded.toArray(new String[listPermissionNeeded.size()]), PERMISSION_REQUEST_CODE);
+            }
+        }
+/*
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             if (checkSelfPermission(Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
                 requestPermissions(new String[] {Manifest.permission.CAMERA}, CAMERA_REQUEST_PREMISSION);
@@ -162,7 +203,7 @@ public class MainActivity extends AppCompatActivity {
                 requestPermissions(new String[]{Manifest.permission.ACCESS_COARSE_LOCATION}, PERMISSIONS_REQUEST_CODE_ACCESS_COARSE_LOCATION);
             }
         }
-
+*/
         File file = new File(this.getExternalFilesDir(ServiceConstant.ConfigFilePath), ServiceConstant.ConfigFileName);
         if(!file.exists())
             AppHelper.createConfigFileFromAssets(this);
