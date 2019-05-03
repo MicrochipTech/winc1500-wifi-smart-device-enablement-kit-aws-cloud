@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2013-2016 Amazon.com,
+  ~ Inc. or its affiliates. All Rights Reserved.
+  ~
+  ~ Licensed under the Amazon Software License (the "License").
+  ~ You may not use this file except in compliance with the
+  ~ License. A copy of the License is located at
+  ~
+  ~     http://aws.amazon.com/asl/
+  ~
+  ~ or in the "license" file accompanying this file. This file is
+  ~ distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+  ~ CONDITIONS OF ANY KIND, express or implied. See the License
+  ~ for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+    android:layout_marginRight="@dimen/activity_horizontal_margin"
+    android:layout_marginTop="@dimen/activity_vertical_margin"
+    tools:context="com.amazonaws.mchp.awsprovisionkit.activity.NetworkProvisionStageThreeActivity"
+    tools:showIn="@layout/activity_forgot_password">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Device Name"
+        android:id="@+id/textViewForgotPasswordTitle"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/textViewForgotPasswordTitle"
+        android:id="@+id/space_confirm_1" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textSize="@dimen/activity_text_size_small"
+        android:text="Give a friendly name , like 'Dining Room Light'"
+        android:id="@+id/textViewForgotPasswordMessage"
+        android:layout_below="@id/space_confirm_1"
+        android:layout_centerHorizontal="true" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_intra_group_separation"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/textViewForgotPasswordMessage"
+        android:id="@+id/space_confirm_1A" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textSize="@dimen/activity_text_size_small"
+        android:text=" "
+        android:id="@+id/textViewForgotPasswordUserIdLabel"
+        android:layout_below="@id/space_confirm_1A"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_text_height"
+        android:paddingLeft="@dimen/activity_text_padding"
+        android:paddingRight="@dimen/activity_text_padding"
+        android:id="@+id/editTextDeviceName"
+        android:layout_below="@id/textViewForgotPasswordUserIdLabel"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/text_border_selector"
+        android:hint="Device Name" />
+
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_intra_group_separation"
+        android:layout_below="@id/editTextDeviceName"
+        android:id="@+id/space_confirm_2" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_button_height"
+        android:text="Set"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/activity_button_text_size"
+        android:id="@+id/SetDeviceName_button"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/space_confirm_2"
+        android:background="@drawable/button_selector"
+        android:onClick="setDeviceName"/>
+
+</RelativeLayout>

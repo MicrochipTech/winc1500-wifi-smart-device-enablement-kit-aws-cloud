@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\menu\\devicelist_menu.xml",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\res\\menu\\devicelist_menu.xml"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\menu\\activity_user_drawer.xml",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\res\\menu\\activity_user_drawer.xml"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\menu\\activity_main_drawer.xml",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\res\\menu\\activity_main_drawer.xml"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\menu\\activity_user_menu_drawer.xml",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\res\\menu\\activity_user_menu_drawer.xml"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\menu\\devicelist_login.xml",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\res\\menu\\devicelist_login.xml"
+    }
+]

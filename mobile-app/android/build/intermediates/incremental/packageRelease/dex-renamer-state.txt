@@ -1,0 +1,4 @@
+#Thu Apr 11 13:56:55 CST 2019
+base.0=C\:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\transforms\\dex\\release\\folders\\1000\\1f\\main
+renamed.0=classes.dex
+file.0=C\:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\transforms\\dex\\release\\folders\\1000\\1f\\main\\classes.dex

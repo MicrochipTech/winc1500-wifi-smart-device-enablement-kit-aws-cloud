@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\src\main\shaders"/></dataSet><dataSet config="release"><source path="C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\src\release\shaders"/></dataSet></merger>

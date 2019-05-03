@@ -1,0 +1,220 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:2:1-114:12
+	package
+		ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:3:5-49
+		INJECTED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml
+		INJECTED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml
+	android:versionName
+		ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:5:5-30
+		INJECTED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml
+		INJECTED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml
+	android:versionCode
+		ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:4:5-28
+		INJECTED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml
+		INJECTED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:2:11-69
+uses-sdk
+ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:design:23.1.1] C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\build\intermediates\exploded-aar\com.android.support\design\23.1.1\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:appcompat-v7:23.4.0] C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:23.4.0] C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.4.0\AndroidManifest.xml:5:5-44
+MERGED from [com.android.support:support-vector-drawable:23.4.0] C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:cardview-v7:23.4.0] C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.4.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:recyclerview-v7:23.4.0] C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.4.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.4.0] C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:20:5-43
+	tools:overrideLibrary
+		ADDED from [com.android.support:appcompat-v7:23.4.0] C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\AndroidManifest.xml:23:9-75
+	android:targetSdkVersion
+		ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:9:9-38
+		INJECTED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml
+		INJECTED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml
+	android:minSdkVersion
+		ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:8:9-35
+		INJECTED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml
+		INJECTED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml
+uses-permission#android.permission.INTERNET
+ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:11:5-67
+	android:name
+		ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:11:22-64
+uses-permission#android.permission.CAMERA
+ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:12:5-64
+	android:name
+		ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:12:22-62
+uses-permission#android.permission.VIBRATE
+ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:13:5-65
+	android:name
+		ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:13:22-63
+uses-permission#android.permission.FLASHLIGHT
+ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:14:5-68
+	android:name
+		ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:14:22-66
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:15:5-93
+	android:name
+		ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:15:22-73
+uses-permission#android.permission.CHANGE_WIFI_STATE
+ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:16:5-93
+	android:name
+		ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:16:22-73
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:17:5-98
+	android:name
+		ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:17:22-78
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:18:5-79
+	android:name
+		ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:18:22-77
+application
+ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:22:5-112:19
+MERGED from [com.android.support:design:23.1.1] C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\build\intermediates\exploded-aar\com.android.support\design\23.1.1\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:appcompat-v7:23.4.0] C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:animated-vector-drawable:23.4.0] C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.4.0\AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-vector-drawable:23.4.0] C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:cardview-v7:23.4.0] C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.4.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.4.0] C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:22:5-20
+	android:label
+		ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:26:9-41
+	android:supportsRtl
+		ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:27:9-35
+	android:allowBackup
+		ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:24:9-35
+	android:icon
+		ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:25:9-45
+	android:theme
+		ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:28:9-47
+	android:name
+		ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:23:9-71
+activity#com.amazonaws.mchp.awsprovisionkit.activity.MainActivity
+ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:30:9-37:20
+	android:theme
+		ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:31:13-63
+	android:name
+		ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:30:19-90
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:32:13-36:29
+action#android.intent.action.MAIN
+ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:33:17-69
+	android:name
+		ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:33:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:35:17-77
+	android:name
+		ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:35:27-74
+activity#com.amazonaws.mchp.awsprovisionkit.activity.RegisterUser
+ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:39:9-41:66
+	android:theme
+		ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:41:13-63
+	android:name
+		ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:40:13-84
+activity#com.amazonaws.mchp.awsprovisionkit.activity.AboutApp
+ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:42:9-45:66
+	android:label
+		ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:44:13-61
+	android:theme
+		ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:45:13-63
+	android:name
+		ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:43:13-80
+activity#com.amazonaws.mchp.awsprovisionkit.activity.SignUpConfirm
+ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:46:9-49:66
+	android:label
+		ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:48:13-67
+	android:theme
+		ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:49:13-63
+	android:name
+		ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:47:13-85
+activity#com.amazonaws.mchp.awsprovisionkit.activity.MFAActivity
+ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:50:9-53:66
+	android:label
+		ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:52:13-55
+	android:theme
+		ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:53:13-63
+	android:name
+		ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:51:13-83
+activity#com.amazonaws.mchp.awsprovisionkit.activity.ForgotPasswordActivity
+ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:54:9-57:66
+	android:label
+		ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:56:13-67
+	android:theme
+		ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:57:13-63
+	android:name
+		ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:55:13-94
+activity#com.amazonaws.mchp.awsprovisionkit.activity.SettingsActivity
+ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:58:9-61:66
+	android:label
+		ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:60:13-60
+	android:theme
+		ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:61:13-63
+	android:name
+		ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:59:13-88
+activity#com.amazonaws.mchp.awsprovisionkit.activity.ChangePasswordActivity
+ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:62:9-65:66
+	android:label
+		ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:64:13-67
+	android:theme
+		ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:65:13-63
+	android:name
+		ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:63:13-94
+activity#com.amazonaws.mchp.awsprovisionkit.activity.VerifyActivity
+ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:66:9-69:66
+	android:label
+		ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:68:13-58
+	android:theme
+		ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:69:13-63
+	android:name
+		ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:67:13-86
+activity#com.amazonaws.mchp.awsprovisionkit.activity.DeviceListActivity
+ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:71:9-74:20
+	android:theme
+		ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:73:13-63
+	android:name
+		ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:72:13-90
+activity#com.amazonaws.mchp.awsprovisionkit.activity.NewPassword
+ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:75:9-78:65
+	android:label
+		ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:77:13-64
+	android:theme
+		ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:78:13-63
+	android:name
+		ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:76:13-83
+activity#com.amazonaws.mchp.awsprovisionkit.activity.WiFiSmartDeviceCtrlActivity
+ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:80:9-83:20
+	android:theme
+		ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:82:13-63
+	android:name
+		ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:81:13-99
+activity#com.amazonaws.mchp.awsprovisionkit.activity.NetworkProvisionStageOneActivity
+ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:85:9-88:20
+	android:theme
+		ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:87:13-63
+	android:name
+		ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:86:13-104
+activity#com.amazonaws.mchp.awsprovisionkit.activity.NetworkProvisionStageOneOneActivity
+ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:90:9-93:20
+	android:theme
+		ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:92:13-63
+	android:name
+		ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:91:13-107
+activity#com.amazonaws.mchp.awsprovisionkit.activity.NetworkProvisionStageTwoActivity
+ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:95:9-98:20
+	android:theme
+		ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:97:13-63
+	android:name
+		ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:96:13-104
+activity#com.amazonaws.mchp.awsprovisionkit.activity.NetworkProvisionStageThreeActivity
+ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:100:9-103:20
+	android:theme
+		ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:102:13-63
+	android:name
+		ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:101:13-106
+activity#zxing.CaptureActivity
+ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:105:9-107:63
+	android:theme
+		ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:107:13-60
+	android:name
+		ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:106:13-49
+service#com.amazonaws.mchp.awsprovisionkit.service.AwsService
+ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:109:9-111:19
+	android:name
+		ADDED from C:\github\winc1500-wifi-smart-device-enablement-kit\mobile-app\AndroidManifest.xml:110:13-81

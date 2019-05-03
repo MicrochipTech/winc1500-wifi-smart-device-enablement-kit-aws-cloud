@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.amazonaws.mchp.awsprovisionkit"
+    android:versionCode="260010001"
+    android:versionName="1.0.1" >
+
+    <uses-sdk
+        android:minSdkVersion="21"
+        android:targetSdkVersion="26" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:name="com.amazonaws.mchp.awsprovisionkit.base.BaseApp"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/CognitoAppTheme" >
+        <activity
+            android:name="com.amazonaws.mchp.awsprovisionkit.activity.MainActivity"
+            android:theme="@style/CognitoAppTheme.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.amazonaws.mchp.awsprovisionkit.activity.RegisterUser"
+            android:theme="@style/CognitoAppTheme.NoActionBar" />
+        <activity
+            android:name="com.amazonaws.mchp.awsprovisionkit.activity.AboutApp"
+            android:label="@string/title_activity_about_app"
+            android:theme="@style/CognitoAppTheme.NoActionBar" />
+        <activity
+            android:name="com.amazonaws.mchp.awsprovisionkit.activity.SignUpConfirm"
+            android:label="@string/title_activity_sign_up_confirm"
+            android:theme="@style/CognitoAppTheme.NoActionBar" />
+        <activity
+            android:name="com.amazonaws.mchp.awsprovisionkit.activity.MFAActivity"
+            android:label="@string/title_activity_mfa"
+            android:theme="@style/CognitoAppTheme.NoActionBar" />
+        <activity
+            android:name="com.amazonaws.mchp.awsprovisionkit.activity.ForgotPasswordActivity"
+            android:label="@string/title_activity_forgot_password"
+            android:theme="@style/CognitoAppTheme.NoActionBar" />
+        <activity
+            android:name="com.amazonaws.mchp.awsprovisionkit.activity.SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:theme="@style/CognitoAppTheme.NoActionBar" />
+        <activity
+            android:name="com.amazonaws.mchp.awsprovisionkit.activity.ChangePasswordActivity"
+            android:label="@string/title_activity_change_password"
+            android:theme="@style/CognitoAppTheme.NoActionBar" />
+        <activity
+            android:name="com.amazonaws.mchp.awsprovisionkit.activity.VerifyActivity"
+            android:label="@string/title_activity_verify"
+            android:theme="@style/CognitoAppTheme.NoActionBar" />
+        <activity
+            android:name="com.amazonaws.mchp.awsprovisionkit.activity.DeviceListActivity"
+            android:theme="@style/CognitoAppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name="com.amazonaws.mchp.awsprovisionkit.activity.NewPassword"
+            android:label="@string/title_activity_new_password"
+            android:theme="@style/CognitoAppTheme.NoActionBar" />
+        <activity
+            android:name="com.amazonaws.mchp.awsprovisionkit.activity.WiFiSmartDeviceCtrlActivity"
+            android:theme="@style/CognitoAppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name="com.amazonaws.mchp.awsprovisionkit.activity.NetworkProvisionStageOneActivity"
+            android:theme="@style/CognitoAppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name="com.amazonaws.mchp.awsprovisionkit.activity.NetworkProvisionStageOneOneActivity"
+            android:theme="@style/CognitoAppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name="com.amazonaws.mchp.awsprovisionkit.activity.NetworkProvisionStageTwoActivity"
+            android:theme="@style/CognitoAppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name="com.amazonaws.mchp.awsprovisionkit.activity.NetworkProvisionStageThreeActivity"
+            android:theme="@style/CognitoAppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name="zxing.CaptureActivity"
+            android:theme="@android:style/Theme.NoTitleBar" />
+
+        <service android:name="com.amazonaws.mchp.awsprovisionkit.service.AwsService" >
+        </service>
+    </application>
+
+</manifest>

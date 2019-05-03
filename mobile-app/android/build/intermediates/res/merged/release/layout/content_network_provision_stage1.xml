@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2013-2016 Amazon.com,
+  ~ Inc. or its affiliates. All Rights Reserved.
+  ~
+  ~ Licensed under the Amazon Software License (the "License").
+  ~ You may not use this file except in compliance with the
+  ~ License. A copy of the License is located at
+  ~
+  ~     http://aws.amazon.com/asl/
+  ~
+  ~ or in the "license" file accompanying this file. This file is
+  ~ distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+  ~ CONDITIONS OF ANY KIND, express or implied. See the License
+  ~ for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+    android:layout_marginRight="@dimen/activity_horizontal_margin"
+    android:layout_marginTop="@dimen/activity_vertical_margin"
+    android:background="@android:color/transparent"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/networkProvStageOneIcon"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/board_pic_network_provision_mode" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_inter_group_separation"
+        android:layout_below="@+id/networkProvStageOneIcon"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/space_1" />
+
+    <TextView
+        android:id="@+id/textNetworkProvStageOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/space_1"
+        android:gravity="center"
+        android:text="@string/network_provision_step1_description"
+        android:textAlignment="viewStart"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="18sp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_inter_group_separation"
+        android:layout_below="@+id/textNetworkProvStageOne"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/space_2" />
+
+
+    <Button
+        android:id="@+id/button_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/space_2"
+        android:background="@drawable/button_selector"
+        android:onClick="GoNextStage"
+        android:text="Next"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/activity_button_text_size" />
+
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_intra_group_separation"
+        android:layout_below="@+id/text2"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/space5" />
+
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_intra_group_separation"
+        android:layout_below="@+id/space5"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/space6" />
+
+</RelativeLayout>

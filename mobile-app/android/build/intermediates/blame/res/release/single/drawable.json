@@ -1,0 +1,358 @@
+[
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\not_checked.png",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\res\\drawable\\not_checked.png"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\design_snackbar_background.xml",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.1.1\\res\\drawable\\design_snackbar_background.xml"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\new_disconnect.png",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\res\\drawable\\new_disconnect.png"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\abc_switch_thumb_material.xml",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_switch_thumb_material.xml"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\button_setting.png",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\res\\drawable\\button_setting.png"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\pressure_icon.png",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\res\\drawable\\pressure_icon.png"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\front_page.jpg",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\res\\drawable\\front_page.jpg"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\devicelist_item_selector.xml",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\res\\drawable\\devicelist_item_selector.xml"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\forward.png",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\res\\drawable\\forward.png"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\abc_list_selector_holo_light.xml",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_list_selector_holo_light.xml"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\abc_item_background_holo_dark.xml",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_item_background_holo_dark.xml"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\abc_seekbar_thumb_material.xml",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_seekbar_thumb_material.xml"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\temperature_icon2.jpg",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\res\\drawable\\temperature_icon2.jpg"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\uv_icon.png",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\res\\drawable\\uv_icon.png"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\ic_launcher.png",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\res\\drawable\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\abc_cab_background_internal_bg.xml",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_cab_background_internal_bg.xml"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\abc_ratingbar_full_material.xml",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_ratingbar_full_material.xml"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\abc_ratingbar_indicator_material.xml",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_ratingbar_indicator_material.xml"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\check_box_selector.xml",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\res\\drawable\\check_box_selector.xml"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\abc_list_selector_background_transition_holo_dark.xml",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_list_selector_background_transition_holo_dark.xml"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\humidity_icon.png",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\res\\drawable\\humidity_icon.png"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\abc_textfield_search_material.xml",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_textfield_search_material.xml"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\vacuum.png",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\res\\drawable\\vacuum.png"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\button_selector.xml",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\res\\drawable\\button_selector.xml"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\sync.png",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\res\\drawable\\sync.png"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\spk_setting.png",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\res\\drawable\\spk_setting.png"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\abc_ratingbar_small_material.xml",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_ratingbar_small_material.xml"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\side_nav_bar.xml",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\res\\drawable\\side_nav_bar.xml"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\provision_kit.png",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\res\\drawable\\provision_kit.png"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\play_pause.png",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\res\\drawable\\play_pause.png"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\texurenew.png",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\res\\drawable\\texurenew.png"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\abc_text_cursor_material.xml",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_text_cursor_material.xml"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\mspk.jpg",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\res\\drawable\\mspk.jpg"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\board_pic_network_provision_mode.png",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\res\\drawable\\board_pic_network_provision_mode.png"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\ic_cancel_black.xml",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\res\\drawable\\ic_cancel_black.xml"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\button_back.png",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\res\\drawable\\button_back.png"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\temperature_icon.png",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\res\\drawable\\temperature_icon.png"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\light_intensity_icon.png",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\res\\drawable\\light_intensity_icon.png"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\abc_tab_indicator_material.xml",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_tab_indicator_material.xml"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\nodevice.png",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\res\\drawable\\nodevice.png"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\backward.png",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\res\\drawable\\backward.png"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\ic_account_circle_white1.png",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\res\\drawable\\ic_account_circle_white1.png"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\bum.png",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\res\\drawable\\bum.png"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\microchip_logo_vertical_black_red.png",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\res\\drawable\\microchip_logo_vertical_black_red.png"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\text_border_selector.xml",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\res\\drawable\\text_border_selector.xml"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\humidity_icon2.png",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\res\\drawable\\humidity_icon2.png"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\abc_seekbar_track_material.xml",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_seekbar_track_material.xml"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\abc_btn_radio_material.xml",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_btn_radio_material.xml"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\abc_item_background_holo_light.xml",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_item_background_holo_light.xml"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\fourth.png",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\res\\drawable\\fourth.png"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\ic_menu_black.xml",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\res\\drawable\\ic_menu_black.xml"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\abc_btn_check_material.xml",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_btn_check_material.xml"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\barcode_frame.png",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\res\\drawable\\barcode_frame.png"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\light_icon.png",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\res\\drawable\\light_icon.png"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\abc_list_selector_background_transition_holo_light.xml",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\btn_getcode_shape.xml",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\res\\drawable\\btn_getcode_shape.xml"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\button_more.png",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\res\\drawable\\button_more.png"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\round_button.xml",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\res\\drawable\\round_button.xml"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\abc_cab_background_top_material.xml",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_cab_background_top_material.xml"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\volume_dn.png",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\res\\drawable\\volume_dn.png"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\text_border_selected.xml",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\res\\drawable\\text_border_selected.xml"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\abc_dialog_material_background_dark.xml",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_dialog_material_background_dark.xml"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\border_layer_list.xml",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\res\\drawable\\border_layer_list.xml"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\button_pressed.xml",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\res\\drawable\\button_pressed.xml"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\abc_btn_borderless_material.xml",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_btn_borderless_material.xml"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\volume_up.png",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\res\\drawable\\volume_up.png"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\text_border_error.xml",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\res\\drawable\\text_border_error.xml"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\button_selected.xml",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\res\\drawable\\button_selected.xml"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\igateway_icon.png",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\res\\drawable\\igateway_icon.png"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\checked.png",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\res\\drawable\\checked.png"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\mite_saw.jpg",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\res\\drawable\\mite_saw.jpg"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\button_success.xml",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\res\\drawable\\button_success.xml"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\abc_btn_default_mtrl_shape.xml",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_btn_default_mtrl_shape.xml"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\abc_spinner_textfield_background_material.xml",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_spinner_textfield_background_material.xml"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\barcode_laser_line.png",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\res\\drawable\\barcode_laser_line.png"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\abc_list_selector_holo_dark.xml",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_list_selector_holo_dark.xml"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\add.png",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\res\\drawable\\add.png"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\winc1500_secure_wifi_board.jpg",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\res\\drawable\\winc1500_secure_wifi_board.jpg"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\wifi_icon.png",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\res\\drawable\\wifi_icon.png"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\abc_dialog_material_background_light.xml",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_dialog_material_background_light.xml"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\design_fab_background.xml",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.1.1\\res\\drawable\\design_fab_background.xml"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\sensor.png",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\res\\drawable\\sensor.png"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\return_icon.png",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\res\\drawable\\return_icon.png"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\nav_add.png",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\res\\drawable\\nav_add.png"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\button_blue_long.png",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\res\\drawable\\button_blue_long.png"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\text_border_default.xml",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\res\\drawable\\text_border_default.xml"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\button_default.xml",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\res\\drawable\\button_default.xml"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\ic_account_circle_white.png",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\res\\drawable\\ic_account_circle_white.png"
+    },
+    {
+        "merged": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\build\\intermediates\\res\\merged\\release\\drawable\\eye.png",
+        "source": "C:\\github\\winc1500-wifi-smart-device-enablement-kit\\mobile-app\\res\\drawable\\eye.png"
+    }
+]
