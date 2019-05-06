@@ -1,0 +1,724 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		17FC2F801E258FC500174015 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FC2F7F1E258FC500174015 /* AppDelegate.swift */; };
+		17FC2F851E258FC500174015 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17FC2F831E258FC500174015 /* Main.storyboard */; };
+		17FC2F871E258FC500174015 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17FC2F861E258FC500174015 /* Assets.xcassets */; };
+		17FC2F8A1E258FC500174015 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17FC2F881E258FC500174015 /* LaunchScreen.storyboard */; };
+		17FC2F921E25908D00174015 /* CognitoLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 17FC2F911E25908D00174015 /* CognitoLogo.png */; };
+		17FC2F951E2590D800174015 /* MFAViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17FC2F941E2590D800174015 /* MFAViewController.xib */; };
+		17FC2F971E25928900174015 /* MFAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FC2F961E25928900174015 /* MFAViewController.swift */; };
+		17FC2F991E25940900174015 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FC2F981E25940900174015 /* SignInViewController.swift */; };
+		17FC2F9B1E259E0500174015 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FC2F9A1E259E0500174015 /* Constants.swift */; };
+		17FC2F9D1E259E5D00174015 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FC2F9C1E259E5D00174015 /* SignUpViewController.swift */; };
+		17FC2F9F1E259F3200174015 /* ConfirmSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FC2F9E1E259F3200174015 /* ConfirmSignUpViewController.swift */; };
+		17FC2FA11E25A25900174015 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FC2FA01E25A25900174015 /* ForgotPasswordViewController.swift */; };
+		17FC2FA31E25A5D000174015 /* ConfirmForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FC2FA21E25A5D000174015 /* ConfirmForgotPasswordViewController.swift */; };
+		17FC2FA51E25A77600174015 /* UserDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FC2FA41E25A77600174015 /* UserDetailTableViewController.swift */; };
+		17FC2FA71E25A9A200174015 /* DevicesDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FC2FA61E25A9A200174015 /* DevicesDetailTableViewController.swift */; };
+		992318D40721A6AB6ED95E32 /* Pods_WiFiOTDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4354D53DBFBBC6920F2D8F7C /* Pods_WiFiOTDemo.framework */; };
+		A612F19E2244C017002FF064 /* app_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A612F19D2244C017002FF064 /* app_icon.png */; };
+		A625094F224B7BAA00078C54 /* LEDControlTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A625094E224B7BAA00078C54 /* LEDControlTableViewCell.swift */; };
+		A6507019221E49F400D31E08 /* ProvisionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6507018221E49F400D31E08 /* ProvisionViewController.swift */; };
+		A650701C221E54A100D31E08 /* AmazonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A650701B221E54A100D31E08 /* AmazonService.swift */; };
+		A6548303221FC8D900886B92 /* ConfirmForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FC2FA21E25A5D000174015 /* ConfirmForgotPasswordViewController.swift */; };
+		A6548304221FC8D900886B92 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FC2FA01E25A25900174015 /* ForgotPasswordViewController.swift */; };
+		A6548305221FC8D900886B92 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FC2F9C1E259E5D00174015 /* SignUpViewController.swift */; };
+		A6548306221FC8D900886B92 /* ConfirmSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FC2F9E1E259F3200174015 /* ConfirmSignUpViewController.swift */; };
+		A6548307221FC8D900886B92 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FC2F9A1E259E0500174015 /* Constants.swift */; };
+		A6548308221FC8D900886B92 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FC2F981E25940900174015 /* SignInViewController.swift */; };
+		A6548309221FC8D900886B92 /* ProvisionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6507018221E49F400D31E08 /* ProvisionViewController.swift */; };
+		A654830A221FC8D900886B92 /* SocialIdentityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66BE79521E9E8D500134DE6 /* SocialIdentityManager.swift */; };
+		A654830B221FC8D900886B92 /* MFAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FC2F961E25928900174015 /* MFAViewController.swift */; };
+		A654830C221FC8D900886B92 /* IoTDeviceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66E407921EC3B8B00C62B74 /* IoTDeviceModel.swift */; };
+		A654830D221FC8D900886B92 /* AmazonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A650701B221E54A100D31E08 /* AmazonService.swift */; };
+		A654830E221FC8D900886B92 /* CognitoIdentityPoolController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66BE79321E9E5D500134DE6 /* CognitoIdentityPoolController.swift */; };
+		A654830F221FC8D900886B92 /* DevicesDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FC2FA61E25A9A200174015 /* DevicesDetailTableViewController.swift */; };
+		A6548310221FC8D900886B92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FC2F7F1E258FC500174015 /* AppDelegate.swift */; };
+		A6548311221FC8D900886B92 /* UserDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FC2FA41E25A77600174015 /* UserDetailTableViewController.swift */; };
+		A6548315221FC8D900886B92 /* icons8-3-60.png in Resources */ = {isa = PBXBuildFile; fileRef = A6958907221BCC4400366821 /* icons8-3-60.png */; };
+		A6548316221FC8D900886B92 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = A6958903221BB1F600366821 /* settings.png */; };
+		A6548317221FC8D900886B92 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17FC2F881E258FC500174015 /* LaunchScreen.storyboard */; };
+		A6548318221FC8D900886B92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17FC2F861E258FC500174015 /* Assets.xcassets */; };
+		A6548319221FC8D900886B92 /* CognitoLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 17FC2F911E25908D00174015 /* CognitoLogo.png */; };
+		A654831A221FC8D900886B92 /* icons8-2-60.png in Resources */ = {isa = PBXBuildFile; fileRef = A6958906221BCC4400366821 /* icons8-2-60.png */; };
+		A654831B221FC8D900886B92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17FC2F831E258FC500174015 /* Main.storyboard */; };
+		A654831C221FC8D900886B92 /* ic_launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = A695890B221BD1F700366821 /* ic_launcher.png */; };
+		A654831D221FC8D900886B92 /* mchp_logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A6E9863B22117D3A009FBDF0 /* mchp_logo.jpg */; };
+		A654831E221FC8D900886B92 /* MFAViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17FC2F941E2590D800174015 /* MFAViewController.xib */; };
+		A654831F221FC8D900886B92 /* board_pic_network_provisiong_mode.png in Resources */ = {isa = PBXBuildFile; fileRef = A6958901221BA10600366821 /* board_pic_network_provisiong_mode.png */; };
+		A6548320221FC8D900886B92 /* icons8-1-60.png in Resources */ = {isa = PBXBuildFile; fileRef = A6958905221BCC4400366821 /* icons8-1-60.png */; };
+		A66BE79421E9E5D500134DE6 /* CognitoIdentityPoolController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66BE79321E9E5D500134DE6 /* CognitoIdentityPoolController.swift */; };
+		A66BE79621E9E8D600134DE6 /* SocialIdentityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66BE79521E9E8D500134DE6 /* SocialIdentityManager.swift */; };
+		A66E407A21EC3B8B00C62B74 /* IoTDeviceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66E407921EC3B8B00C62B74 /* IoTDeviceModel.swift */; };
+		A692C6642223877F00E6F51D /* rsz_winc1500_secure_wifi_board.png in Resources */ = {isa = PBXBuildFile; fileRef = A692C6632223877F00E6F51D /* rsz_winc1500_secure_wifi_board.png */; };
+		A692C6652223884800E6F51D /* rsz_winc1500_secure_wifi_board.png in Resources */ = {isa = PBXBuildFile; fileRef = A692C6632223877F00E6F51D /* rsz_winc1500_secure_wifi_board.png */; };
+		A6958902221BA10600366821 /* board_pic_network_provisiong_mode.png in Resources */ = {isa = PBXBuildFile; fileRef = A6958901221BA10600366821 /* board_pic_network_provisiong_mode.png */; };
+		A6958904221BB1F600366821 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = A6958903221BB1F600366821 /* settings.png */; };
+		A6958908221BCC4400366821 /* icons8-1-60.png in Resources */ = {isa = PBXBuildFile; fileRef = A6958905221BCC4400366821 /* icons8-1-60.png */; };
+		A6958909221BCC4400366821 /* icons8-2-60.png in Resources */ = {isa = PBXBuildFile; fileRef = A6958906221BCC4400366821 /* icons8-2-60.png */; };
+		A695890A221BCC4400366821 /* icons8-3-60.png in Resources */ = {isa = PBXBuildFile; fileRef = A6958907221BCC4400366821 /* icons8-3-60.png */; };
+		A695890C221BD1F800366821 /* ic_launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = A695890B221BD1F700366821 /* ic_launcher.png */; };
+		A695CC012248851800E451FA /* app_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A612F19D2244C017002FF064 /* app_icon.png */; };
+		A6BD317E224DBEDD00F518C7 /* Network_provision_mode.png in Resources */ = {isa = PBXBuildFile; fileRef = A6BD317D224DBEDC00F518C7 /* Network_provision_mode.png */; };
+		A6BD317F224DBEEE00F518C7 /* Network_provision_mode.png in Resources */ = {isa = PBXBuildFile; fileRef = A6BD317D224DBEDC00F518C7 /* Network_provision_mode.png */; };
+		A6C1C0D4222796A1001AB507 /* light_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A6C1C0D3222796A0001AB507 /* light_icon.png */; };
+		A6C1C0D6222796B9001AB507 /* temperature_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A6C1C0D5222796B9001AB507 /* temperature_icon.png */; };
+		A6C1C0D8222796CD001AB507 /* humidity_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A6C1C0D7222796CD001AB507 /* humidity_icon.png */; };
+		A6C1C0DA222796FC001AB507 /* uv_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A6C1C0D9222796FC001AB507 /* uv_icon.png */; };
+		A6C1C0DC2227970B001AB507 /* pressure_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A6C1C0DB2227970B001AB507 /* pressure_icon.png */; };
+		A6C1C0DE2227A706001AB507 /* DeviceControlTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C1C0DD2227A706001AB507 /* DeviceControlTableViewCell.swift */; };
+		A6C1C0DF2227AF87001AB507 /* pressure_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A6C1C0DB2227970B001AB507 /* pressure_icon.png */; };
+		A6C1C0E02227AF87001AB507 /* uv_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A6C1C0D9222796FC001AB507 /* uv_icon.png */; };
+		A6C1C0E12227AF87001AB507 /* humidity_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A6C1C0D7222796CD001AB507 /* humidity_icon.png */; };
+		A6C1C0E22227AF87001AB507 /* light_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A6C1C0D3222796A0001AB507 /* light_icon.png */; };
+		A6C1C0E32227AF87001AB507 /* temperature_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A6C1C0D5222796B9001AB507 /* temperature_icon.png */; };
+		A6C277D0225AEAE200C1A84B /* AddDeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C277CF225AEAE200C1A84B /* AddDeviceViewController.swift */; };
+		A6C277D2225AEE9600C1A84B /* NetworkSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C277D1225AEE9600C1A84B /* NetworkSettingViewController.swift */; };
+		A6E0E583222B773D00DB7CD4 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E0E582222B773D00DB7CD4 /* MainTableViewCell.swift */; };
+		A6E9863C22117D3A009FBDF0 /* mchp_logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A6E9863B22117D3A009FBDF0 /* mchp_logo.jpg */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0D27E3FDC965261379B617D0 /* Pods-WiFiOTDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WiFiOTDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-WiFiOTDemo/Pods-WiFiOTDemo.release.xcconfig"; sourceTree = "<group>"; };
+		17FC2F7C1E258FC500174015 /* CognitoYourUserPoolsSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CognitoYourUserPoolsSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		17FC2F7F1E258FC500174015 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		17FC2F841E258FC500174015 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		17FC2F861E258FC500174015 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		17FC2F891E258FC500174015 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		17FC2F8B1E258FC500174015 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17FC2F911E25908D00174015 /* CognitoLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CognitoLogo.png; sourceTree = "<group>"; };
+		17FC2F941E2590D800174015 /* MFAViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MFAViewController.xib; sourceTree = "<group>"; };
+		17FC2F961E25928900174015 /* MFAViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MFAViewController.swift; sourceTree = "<group>"; };
+		17FC2F981E25940900174015 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		17FC2F9A1E259E0500174015 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		17FC2F9C1E259E5D00174015 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		17FC2F9E1E259F3200174015 /* ConfirmSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmSignUpViewController.swift; sourceTree = "<group>"; };
+		17FC2FA01E25A25900174015 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		17FC2FA21E25A5D000174015 /* ConfirmForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		17FC2FA41E25A77600174015 /* UserDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailTableViewController.swift; sourceTree = "<group>"; };
+		17FC2FA61E25A9A200174015 /* DevicesDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DevicesDetailTableViewController.swift; sourceTree = "<group>"; };
+		4354D53DBFBBC6920F2D8F7C /* Pods_WiFiOTDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WiFiOTDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A60F1E04226725BF0074569A /* WiFiOTDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WiFiOTDemo.entitlements; sourceTree = "<group>"; };
+		A612F19D2244C017002FF064 /* app_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = app_icon.png; sourceTree = "<group>"; };
+		A625094E224B7BAA00078C54 /* LEDControlTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LEDControlTableViewCell.swift; sourceTree = "<group>"; };
+		A6507018221E49F400D31E08 /* ProvisionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvisionViewController.swift; sourceTree = "<group>"; };
+		A650701B221E54A100D31E08 /* AmazonService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmazonService.swift; sourceTree = "<group>"; };
+		A6548325221FC8D900886B92 /* WiFiOTDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WiFiOTDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6548326221FC8D900886B92 /* WiFiOTDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "WiFiOTDemo-Info.plist"; path = "/Users/testpc/Downloads/aws-sdk-ios-samples-master/CognitoYourUserPools-Sample/Swift/WiFiOTDemo-Info.plist"; sourceTree = "<absolute>"; };
+		A66BE79321E9E5D500134DE6 /* CognitoIdentityPoolController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CognitoIdentityPoolController.swift; sourceTree = "<group>"; };
+		A66BE79521E9E8D500134DE6 /* SocialIdentityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialIdentityManager.swift; sourceTree = "<group>"; };
+		A66E407921EC3B8B00C62B74 /* IoTDeviceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IoTDeviceModel.swift; sourceTree = "<group>"; };
+		A692C6632223877F00E6F51D /* rsz_winc1500_secure_wifi_board.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rsz_winc1500_secure_wifi_board.png; sourceTree = "<group>"; };
+		A6958901221BA10600366821 /* board_pic_network_provisiong_mode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = board_pic_network_provisiong_mode.png; sourceTree = "<group>"; };
+		A6958903221BB1F600366821 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
+		A6958905221BCC4400366821 /* icons8-1-60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-1-60.png"; sourceTree = "<group>"; };
+		A6958906221BCC4400366821 /* icons8-2-60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-2-60.png"; sourceTree = "<group>"; };
+		A6958907221BCC4400366821 /* icons8-3-60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-3-60.png"; sourceTree = "<group>"; };
+		A695890B221BD1F700366821 /* ic_launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_launcher.png; sourceTree = "<group>"; };
+		A6BD317D224DBEDC00F518C7 /* Network_provision_mode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Network_provision_mode.png; sourceTree = "<group>"; };
+		A6C1C0D3222796A0001AB507 /* light_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = light_icon.png; sourceTree = "<group>"; };
+		A6C1C0D5222796B9001AB507 /* temperature_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = temperature_icon.png; sourceTree = "<group>"; };
+		A6C1C0D7222796CD001AB507 /* humidity_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = humidity_icon.png; sourceTree = "<group>"; };
+		A6C1C0D9222796FC001AB507 /* uv_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = uv_icon.png; sourceTree = "<group>"; };
+		A6C1C0DB2227970B001AB507 /* pressure_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pressure_icon.png; sourceTree = "<group>"; };
+		A6C1C0DD2227A706001AB507 /* DeviceControlTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceControlTableViewCell.swift; sourceTree = "<group>"; };
+		A6C277CF225AEAE200C1A84B /* AddDeviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDeviceViewController.swift; sourceTree = "<group>"; };
+		A6C277D1225AEE9600C1A84B /* NetworkSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSettingViewController.swift; sourceTree = "<group>"; };
+		A6E0E582222B773D00DB7CD4 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		A6E9863B22117D3A009FBDF0 /* mchp_logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mchp_logo.jpg; sourceTree = "<group>"; };
+		AB8F26771F0FF8105FC402DD /* Pods_CognitoYourUserPoolsSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CognitoYourUserPoolsSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE18C6EF195E1ED9DB702BBC /* Pods-WiFiOTDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WiFiOTDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WiFiOTDemo/Pods-WiFiOTDemo.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		17FC2F791E258FC500174015 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6548312221FC8D900886B92 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				992318D40721A6AB6ED95E32 /* Pods_WiFiOTDemo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		17FC2F731E258FC500174015 = {
+			isa = PBXGroup;
+			children = (
+				A60F1E04226725BF0074569A /* WiFiOTDemo.entitlements */,
+				17FC2F7E1E258FC500174015 /* CognitoYourUserPoolsSample */,
+				17FC2F7D1E258FC500174015 /* Products */,
+				DB539DB17300E4375A37CCA6 /* Pods */,
+				2B50A37AC16AACF9427C4F0F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		17FC2F7D1E258FC500174015 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				17FC2F7C1E258FC500174015 /* CognitoYourUserPoolsSample.app */,
+				A6548325221FC8D900886B92 /* WiFiOTDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		17FC2F7E1E258FC500174015 /* CognitoYourUserPoolsSample */ = {
+			isa = PBXGroup;
+			children = (
+				17FC2F941E2590D800174015 /* MFAViewController.xib */,
+				17FC2F831E258FC500174015 /* Main.storyboard */,
+				17FC2F861E258FC500174015 /* Assets.xcassets */,
+				17FC2F881E258FC500174015 /* LaunchScreen.storyboard */,
+				17FC2F8B1E258FC500174015 /* Info.plist */,
+				A6C277CF225AEAE200C1A84B /* AddDeviceViewController.swift */,
+				A6C277D1225AEE9600C1A84B /* NetworkSettingViewController.swift */,
+				17FC2F7F1E258FC500174015 /* AppDelegate.swift */,
+				17FC2F961E25928900174015 /* MFAViewController.swift */,
+				A66E407921EC3B8B00C62B74 /* IoTDeviceModel.swift */,
+				17FC2F981E25940900174015 /* SignInViewController.swift */,
+				17FC2F9A1E259E0500174015 /* Constants.swift */,
+				A6C1C0DD2227A706001AB507 /* DeviceControlTableViewCell.swift */,
+				A625094E224B7BAA00078C54 /* LEDControlTableViewCell.swift */,
+				A6E0E582222B773D00DB7CD4 /* MainTableViewCell.swift */,
+				17FC2F9C1E259E5D00174015 /* SignUpViewController.swift */,
+				17FC2F9E1E259F3200174015 /* ConfirmSignUpViewController.swift */,
+				17FC2FA01E25A25900174015 /* ForgotPasswordViewController.swift */,
+				17FC2FA21E25A5D000174015 /* ConfirmForgotPasswordViewController.swift */,
+				17FC2FA41E25A77600174015 /* UserDetailTableViewController.swift */,
+				17FC2FA61E25A9A200174015 /* DevicesDetailTableViewController.swift */,
+				A650701B221E54A100D31E08 /* AmazonService.swift */,
+				A6507018221E49F400D31E08 /* ProvisionViewController.swift */,
+				A66BE79321E9E5D500134DE6 /* CognitoIdentityPoolController.swift */,
+				A66BE79521E9E8D500134DE6 /* SocialIdentityManager.swift */,
+				A6548326221FC8D900886B92 /* WiFiOTDemo-Info.plist */,
+				17FC2F931E25909300174015 /* Supporting Files */,
+			);
+			path = CognitoYourUserPoolsSample;
+			sourceTree = "<group>";
+		};
+		17FC2F931E25909300174015 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A6BD317D224DBEDC00F518C7 /* Network_provision_mode.png */,
+				A612F19D2244C017002FF064 /* app_icon.png */,
+				A6C1C0DB2227970B001AB507 /* pressure_icon.png */,
+				A6C1C0D9222796FC001AB507 /* uv_icon.png */,
+				A6C1C0D7222796CD001AB507 /* humidity_icon.png */,
+				A6C1C0D3222796A0001AB507 /* light_icon.png */,
+				A6C1C0D5222796B9001AB507 /* temperature_icon.png */,
+				A695890B221BD1F700366821 /* ic_launcher.png */,
+				A6958905221BCC4400366821 /* icons8-1-60.png */,
+				A6958906221BCC4400366821 /* icons8-2-60.png */,
+				A6958907221BCC4400366821 /* icons8-3-60.png */,
+				A6958903221BB1F600366821 /* settings.png */,
+				A6E9863B22117D3A009FBDF0 /* mchp_logo.jpg */,
+				A6958901221BA10600366821 /* board_pic_network_provisiong_mode.png */,
+				17FC2F911E25908D00174015 /* CognitoLogo.png */,
+				A692C6632223877F00E6F51D /* rsz_winc1500_secure_wifi_board.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2B50A37AC16AACF9427C4F0F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AB8F26771F0FF8105FC402DD /* Pods_CognitoYourUserPoolsSample.framework */,
+				4354D53DBFBBC6920F2D8F7C /* Pods_WiFiOTDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DB539DB17300E4375A37CCA6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DE18C6EF195E1ED9DB702BBC /* Pods-WiFiOTDemo.debug.xcconfig */,
+				0D27E3FDC965261379B617D0 /* Pods-WiFiOTDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		17FC2F7B1E258FC500174015 /* CognitoYourUserPoolsSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17FC2F8E1E258FC500174015 /* Build configuration list for PBXNativeTarget "CognitoYourUserPoolsSample" */;
+			buildPhases = (
+				17FC2F781E258FC500174015 /* Sources */,
+				17FC2F791E258FC500174015 /* Frameworks */,
+				17FC2F7A1E258FC500174015 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CognitoYourUserPoolsSample;
+			productName = CognitoYourUserPoolsSample;
+			productReference = 17FC2F7C1E258FC500174015 /* CognitoYourUserPoolsSample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A6548300221FC8D900886B92 /* WiFiOTDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A6548322221FC8D900886B92 /* Build configuration list for PBXNativeTarget "WiFiOTDemo" */;
+			buildPhases = (
+				439B5337E3885B4213970AE4 /* [CP] Check Pods Manifest.lock */,
+				A6548302221FC8D900886B92 /* Sources */,
+				A6548312221FC8D900886B92 /* Frameworks */,
+				A6548314221FC8D900886B92 /* Resources */,
+				EE6E0E6C58EACE78DF770AC6 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WiFiOTDemo;
+			productName = CognitoYourUserPoolsSample;
+			productReference = A6548325221FC8D900886B92 /* WiFiOTDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		17FC2F741E258FC500174015 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Dubal, Rohan";
+				TargetAttributes = {
+					17FC2F7B1E258FC500174015 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = L66JB2G4FM;
+						LastSwiftMigration = 0820;
+						ProvisioningStyle = Automatic;
+					};
+					A6548300221FC8D900886B92 = {
+						DevelopmentTeam = K3G2PB8DXV;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.AccessWiFi = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 17FC2F771E258FC500174015 /* Build configuration list for PBXProject "CognitoYourUserPoolsSample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 17FC2F731E258FC500174015;
+			productRefGroup = 17FC2F7D1E258FC500174015 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				17FC2F7B1E258FC500174015 /* CognitoYourUserPoolsSample */,
+				A6548300221FC8D900886B92 /* WiFiOTDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		17FC2F7A1E258FC500174015 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A695890A221BCC4400366821 /* icons8-3-60.png in Resources */,
+				A692C6642223877F00E6F51D /* rsz_winc1500_secure_wifi_board.png in Resources */,
+				A6958904221BB1F600366821 /* settings.png in Resources */,
+				17FC2F8A1E258FC500174015 /* LaunchScreen.storyboard in Resources */,
+				A6C1C0DA222796FC001AB507 /* uv_icon.png in Resources */,
+				17FC2F871E258FC500174015 /* Assets.xcassets in Resources */,
+				A6C1C0D4222796A1001AB507 /* light_icon.png in Resources */,
+				17FC2F921E25908D00174015 /* CognitoLogo.png in Resources */,
+				A6958909221BCC4400366821 /* icons8-2-60.png in Resources */,
+				17FC2F851E258FC500174015 /* Main.storyboard in Resources */,
+				A6C1C0D8222796CD001AB507 /* humidity_icon.png in Resources */,
+				A6BD317E224DBEDD00F518C7 /* Network_provision_mode.png in Resources */,
+				A612F19E2244C017002FF064 /* app_icon.png in Resources */,
+				A695890C221BD1F800366821 /* ic_launcher.png in Resources */,
+				A6E9863C22117D3A009FBDF0 /* mchp_logo.jpg in Resources */,
+				A6C1C0DC2227970B001AB507 /* pressure_icon.png in Resources */,
+				17FC2F951E2590D800174015 /* MFAViewController.xib in Resources */,
+				A6958902221BA10600366821 /* board_pic_network_provisiong_mode.png in Resources */,
+				A6958908221BCC4400366821 /* icons8-1-60.png in Resources */,
+				A6C1C0D6222796B9001AB507 /* temperature_icon.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6548314221FC8D900886B92 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6BD317F224DBEEE00F518C7 /* Network_provision_mode.png in Resources */,
+				A695CC012248851800E451FA /* app_icon.png in Resources */,
+				A6C1C0DF2227AF87001AB507 /* pressure_icon.png in Resources */,
+				A6C1C0E02227AF87001AB507 /* uv_icon.png in Resources */,
+				A6C1C0E12227AF87001AB507 /* humidity_icon.png in Resources */,
+				A6C1C0E22227AF87001AB507 /* light_icon.png in Resources */,
+				A6C1C0E32227AF87001AB507 /* temperature_icon.png in Resources */,
+				A692C6652223884800E6F51D /* rsz_winc1500_secure_wifi_board.png in Resources */,
+				A6548315221FC8D900886B92 /* icons8-3-60.png in Resources */,
+				A6548316221FC8D900886B92 /* settings.png in Resources */,
+				A6548317221FC8D900886B92 /* LaunchScreen.storyboard in Resources */,
+				A6548318221FC8D900886B92 /* Assets.xcassets in Resources */,
+				A6548319221FC8D900886B92 /* CognitoLogo.png in Resources */,
+				A654831A221FC8D900886B92 /* icons8-2-60.png in Resources */,
+				A654831B221FC8D900886B92 /* Main.storyboard in Resources */,
+				A654831C221FC8D900886B92 /* ic_launcher.png in Resources */,
+				A654831D221FC8D900886B92 /* mchp_logo.jpg in Resources */,
+				A654831E221FC8D900886B92 /* MFAViewController.xib in Resources */,
+				A654831F221FC8D900886B92 /* board_pic_network_provisiong_mode.png in Resources */,
+				A6548320221FC8D900886B92 /* icons8-1-60.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		439B5337E3885B4213970AE4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WiFiOTDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EE6E0E6C58EACE78DF770AC6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-WiFiOTDemo/Pods-WiFiOTDemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AWSCognito/AWSCognito.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSCognitoIdentityProvider/AWSCognitoIdentityProvider.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSCognitoIdentityProviderASF/AWSCognitoIdentityProviderASF.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSCore/AWSCore.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSDynamoDB/AWSDynamoDB.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSIoT/AWSIoT.framework",
+				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftSocket/SwiftSocket.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCognito.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCognitoIdentityProvider.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCognitoIdentityProviderASF.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSDynamoDB.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSIoT.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftSocket.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WiFiOTDemo/Pods-WiFiOTDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		17FC2F781E258FC500174015 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17FC2FA31E25A5D000174015 /* ConfirmForgotPasswordViewController.swift in Sources */,
+				17FC2FA11E25A25900174015 /* ForgotPasswordViewController.swift in Sources */,
+				17FC2F9D1E259E5D00174015 /* SignUpViewController.swift in Sources */,
+				17FC2F9F1E259F3200174015 /* ConfirmSignUpViewController.swift in Sources */,
+				17FC2F9B1E259E0500174015 /* Constants.swift in Sources */,
+				17FC2F991E25940900174015 /* SignInViewController.swift in Sources */,
+				A6507019221E49F400D31E08 /* ProvisionViewController.swift in Sources */,
+				A66BE79621E9E8D600134DE6 /* SocialIdentityManager.swift in Sources */,
+				17FC2F971E25928900174015 /* MFAViewController.swift in Sources */,
+				A66E407A21EC3B8B00C62B74 /* IoTDeviceModel.swift in Sources */,
+				A650701C221E54A100D31E08 /* AmazonService.swift in Sources */,
+				A66BE79421E9E5D500134DE6 /* CognitoIdentityPoolController.swift in Sources */,
+				17FC2FA71E25A9A200174015 /* DevicesDetailTableViewController.swift in Sources */,
+				17FC2F801E258FC500174015 /* AppDelegate.swift in Sources */,
+				17FC2FA51E25A77600174015 /* UserDetailTableViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6548302221FC8D900886B92 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6548303221FC8D900886B92 /* ConfirmForgotPasswordViewController.swift in Sources */,
+				A6548304221FC8D900886B92 /* ForgotPasswordViewController.swift in Sources */,
+				A6548305221FC8D900886B92 /* SignUpViewController.swift in Sources */,
+				A6548306221FC8D900886B92 /* ConfirmSignUpViewController.swift in Sources */,
+				A6548307221FC8D900886B92 /* Constants.swift in Sources */,
+				A6548308221FC8D900886B92 /* SignInViewController.swift in Sources */,
+				A6E0E583222B773D00DB7CD4 /* MainTableViewCell.swift in Sources */,
+				A6548309221FC8D900886B92 /* ProvisionViewController.swift in Sources */,
+				A6C277D2225AEE9600C1A84B /* NetworkSettingViewController.swift in Sources */,
+				A6C277D0225AEAE200C1A84B /* AddDeviceViewController.swift in Sources */,
+				A654830A221FC8D900886B92 /* SocialIdentityManager.swift in Sources */,
+				A654830B221FC8D900886B92 /* MFAViewController.swift in Sources */,
+				A654830C221FC8D900886B92 /* IoTDeviceModel.swift in Sources */,
+				A625094F224B7BAA00078C54 /* LEDControlTableViewCell.swift in Sources */,
+				A654830D221FC8D900886B92 /* AmazonService.swift in Sources */,
+				A654830E221FC8D900886B92 /* CognitoIdentityPoolController.swift in Sources */,
+				A654830F221FC8D900886B92 /* DevicesDetailTableViewController.swift in Sources */,
+				A6548310221FC8D900886B92 /* AppDelegate.swift in Sources */,
+				A6C1C0DE2227A706001AB507 /* DeviceControlTableViewCell.swift in Sources */,
+				A6548311221FC8D900886B92 /* UserDetailTableViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		17FC2F831E258FC500174015 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				17FC2F841E258FC500174015 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		17FC2F881E258FC500174015 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				17FC2F891E258FC500174015 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		17FC2F8C1E258FC500174015 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		17FC2F8D1E258FC500174015 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		17FC2F8F1E258FC500174015 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L66JB2G4FM;
+				INFOPLIST_FILE = CognitoYourUserPoolsSample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.microchip.aws;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		17FC2F901E258FC500174015 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L66JB2G4FM;
+				INFOPLIST_FILE = CognitoYourUserPoolsSample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.microchip.aws;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		A6548323221FC8D900886B92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE18C6EF195E1ED9DB702BBC /* Pods-WiFiOTDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = WiFiOTDemo.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K3G2PB8DXV;
+				INFOPLIST_FILE = "WiFiOTDemo-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "$(inherited) -D Debug \"-D\" \"COCOAPODS\"";
+				PRODUCT_BUNDLE_IDENTIFIER = com.microchip.WifiSmartDevice;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		A6548324221FC8D900886B92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D27E3FDC965261379B617D0 /* Pods-WiFiOTDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = WiFiOTDemo.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K3G2PB8DXV;
+				INFOPLIST_FILE = "WiFiOTDemo-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "$(inherited) -D Debug \"-D\" \"COCOAPODS\"";
+				PRODUCT_BUNDLE_IDENTIFIER = com.microchip.WifiSmartDevice;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		17FC2F771E258FC500174015 /* Build configuration list for PBXProject "CognitoYourUserPoolsSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17FC2F8C1E258FC500174015 /* Debug */,
+				17FC2F8D1E258FC500174015 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		17FC2F8E1E258FC500174015 /* Build configuration list for PBXNativeTarget "CognitoYourUserPoolsSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17FC2F8F1E258FC500174015 /* Debug */,
+				17FC2F901E258FC500174015 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A6548322221FC8D900886B92 /* Build configuration list for PBXNativeTarget "WiFiOTDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A6548323221FC8D900886B92 /* Debug */,
+				A6548324221FC8D900886B92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 17FC2F741E258FC500174015 /* Project object */;
+}
