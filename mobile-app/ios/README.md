@@ -1,4 +1,4 @@
-# The Amazon Cognito User Pools Sample
+# The iOS Smartphone APP Sample
 
 This directory contains all the source files for the iOS smartphone APP that used to sign-up/ sign-in account, register the Wi-Fi Smart Device Enablement Kit to the account, perfrom network provisioning and control or monitor the Wi-Fi Smart Device Enablement Kit. These features are implemented with the AWS Mobile SDK.
 
@@ -22,12 +22,17 @@ This directory contains all the source files for the iOS smartphone APP that use
 
 4. Open `CognitoYourUserPoolsSample.xcworkspace`.
 
-5. Open **Constants.swift**. Set **CognitoIdentityUserPoolRegion**, **CognitoIdentityUserPoolId**, **CognitoIdentityUserPoolAppClientId** and **CognitoIdentityUserPoolAppClientSecret** to the values obtained when you created your user pool.
+5. Open **Constants.swift**. Set **CognitoIdentityUserPoolId**, **CognitoIdentityUserPoolAppClientId** and **CognitoIdentityUserPoolAppClientSecret**, **CognitoRegion**, **PoolId**, **AWSRegion**, **IOT_ENDPOINT**, **PolicyName** to the values obtained when you created your user pool.
 ```swift
-		let CognitoIdentityUserPoolRegion: AWSRegionType = .Unknown
+		
 		let CognitoIdentityUserPoolId = "YOUR_USER_POOL_ID"
 		let CognitoIdentityUserPoolAppClientId = "YOUR_APP_CLIENT_ID"
 		let CognitoIdentityUserPoolAppClientSecret = "YOUR_APP_CLIENT_SECRET"
+		let CognitoRegion = "YOUR_COGNITO_REGION"  
+		let PoolId = "YOUR_IDENTITY_POOL_ID"  
+		let AWSRegion = "YOUR_AWS_IOT_REGION"  
+		let IOT_ENDPOINT = "YOUR_AWS_IOT_ENDPOINT" 
+		let PolicyName = "YOUR_AWS_IOT_POLICY_NAME" 
 ```
 
 6. Build and run the sample app.
