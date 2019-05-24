@@ -626,7 +626,7 @@ function handleDiscovery(request, context)
                     }
                     for (; i < 5;i++)
                     {
-                        delete myDevices.endpoints[i];
+                        myDevices.endpoints.pop();
                     }
                     console.log("myDevices",JSON.stringify(myDevices));
                     
