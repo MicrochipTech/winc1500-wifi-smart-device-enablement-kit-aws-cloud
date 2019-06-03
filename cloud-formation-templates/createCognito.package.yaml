@@ -15,8 +15,8 @@ Resources:
     DependsOn: CloudFormationSendResponse
     Properties:
       Code:
-        S3Bucket: test835611
-        S3Key: cc74eadf20290221c17dd8abb9e69708
+        S3Bucket: test93567
+        S3Key: 0816e5ef80d026a0a5096f0160f21ef7
       FunctionName: CloudFormationCognitoUserPoolClientSettings
       Handler: CloudFormationCognitoUserPoolClientSettings.handler
       Role:
@@ -29,8 +29,8 @@ Resources:
     DependsOn: CloudFormationSendResponse
     Properties:
       Code:
-        S3Bucket: test835611
-        S3Key: d97c1d6f6e4494733ac0093214e44837
+        S3Bucket: test93567
+        S3Key: 7d064d1e7ec94f1b53a48972bb271aab
       FunctionName: CloudFormationCognitoUserPoolDomain
       Handler: CloudFormationCognitoUserPoolDomain.handler
       Role:
@@ -42,8 +42,8 @@ Resources:
   CloudFormationSendResponse:
     Properties:
       Code:
-        S3Bucket: test835611
-        S3Key: 4545c28c3889daa1f7a6c8673b17c345
+        S3Bucket: test93567
+        S3Key: ff317d705b6aa06f6d55b5589b9d5c29
       FunctionName: CloudFormationSendResponse
       Handler: index.handler
       Role:
@@ -199,7 +199,7 @@ Resources:
     Type: AWS::Cognito::UserPool
   UserPoolDomain:
     Properties:
-      Domain: userpool-test-018903
+      Domain: userpool-test-01890323
       ServiceToken:
         Fn::GetAtt:
         - CloudFormationCognitoUserPoolDomain
@@ -225,7 +225,7 @@ Resources:
       - email
       - profile
       - aws.cognito.signin.user.admin
-      CallbackURL: https://layla.amazon.com/api/skill/link/M2TDOWMJ3J2LNM,https://alexa.amazon.co.jp/api/skill/link/M2TDOWMJ3J2LNM,https://pitangui.amazon.com/api/skill/link/M2TDOWMJ3J2LN
+      CallbackURL: https://layla.amazon.com/api/skill/link/M2TDOWMJ3J2LNM,https://alexa.amazon.co.jp/api/skill/link/M2TDOWMJ3J2LNM,https://pitangui.amazon.com/api/skill/link/M2TDOWMJ3J2LNM
       LogoutURL: https://www.google.com
       ServiceToken:
         Fn::GetAtt:
@@ -256,7 +256,7 @@ Resources:
       - email
       - profile
       - aws.cognito.signin.user.admin
-      CallbackURL: https://layla.amazon.com/api/skill/link/M2TDOWMJ3J2LNM,https://alexa.amazon.co.jp/api/skill/link/M2TDOWMJ3J2LNM,https://pitangui.amazon.com/api/skill/link/M2TDOWMJ3J2LN
+      CallbackURL: https://layla.amazon.com/api/skill/link/M2TDOWMJ3J2LNM,https://alexa.amazon.co.jp/api/skill/link/M2TDOWMJ3J2LNM,https://pitangui.amazon.com/api/skill/link/M2TDOWMJ3J2LNM
       LogoutURL: https://www.google.com
       ServiceToken:
         Fn::GetAtt:

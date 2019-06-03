@@ -19,28 +19,28 @@ Resources:
   CloudFormationLambdaforAlexaCustom:
     Properties:
       Code:
-        S3Bucket: test835611
-        S3Key: 68a943ec915ba4d4ac724dceacab2624
-      FunctionName: LambdaforAlexaCustomSkill
+        S3Bucket: test93567
+        S3Key: 99a72403601ce6c1edb628851652af39
+      FunctionName: WiFi-Smart-Device-Kit-Custom-Skill
       Handler: index.handler
       Role:
         Fn::GetAtt:
         - LambdaForBasicExecution
         - Arn
-      Runtime: nodejs6.10
+      Runtime: nodejs8.10
     Type: AWS::Lambda::Function
   CloudFormationLambdaforAlexaSmartHome:
     Properties:
       Code:
-        S3Bucket: test835611
-        S3Key: 68a943ec915ba4d4ac724dceacab2624
-      FunctionName: LambdaforAlexaSmartHomeSkill
+        S3Bucket: test93567
+        S3Key: 99a72403601ce6c1edb628851652af39
+      FunctionName: WiFi-Smart-Device-Kit-Smart-Home-Skill
       Handler: index.handler
       Role:
         Fn::GetAtt:
         - LambdaForBasicExecution
         - Arn
-      Runtime: nodejs6.10
+      Runtime: nodejs8.10
     Type: AWS::Lambda::Function
   LambdaForBasicExecution:
     Properties:
@@ -54,5 +54,5 @@ Resources:
       ManagedPolicyArns:
       - arn:aws:iam::aws:policy/CloudWatchLogsFullAccess
       - arn:aws:iam::aws:policy/AWSLambdaFullAccess
-      RoleName: lambda_basic_execution_1
+      RoleName: lambda_basic_execution
     Type: AWS::IAM::Role

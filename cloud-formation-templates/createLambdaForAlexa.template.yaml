@@ -19,7 +19,7 @@ Resources:
     Type: 'AWS::Lambda::Function'
     Properties:
       FunctionName: WiFi-Smart-Device-Kit-Custom-Skill
-      Runtime: nodejs6.10
+      Runtime: nodejs8.10
       Code: ./alexa-smart-home-skill.zip
       Handler: index.handler
       Role: !GetAtt LambdaForBasicExecution.Arn
@@ -34,7 +34,7 @@ Resources:
     Type: 'AWS::Lambda::Function'
     Properties:
       FunctionName: WiFi-Smart-Device-Kit-Smart-Home-Skill
-      Runtime: nodejs6.10
+      Runtime: nodejs8.10
       Code: ./alexa-smart-home-skill.zip
       Handler: index.handler
       Role: !GetAtt LambdaForBasicExecution.Arn

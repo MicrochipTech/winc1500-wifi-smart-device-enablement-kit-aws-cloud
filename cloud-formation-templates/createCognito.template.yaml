@@ -106,7 +106,7 @@ Resources:
       SupportedIdentityProviders:
         - COGNITO
       CallbackURL: 'https://layla.amazon.com/api/skill/link/M2TDOWMJ3J2LNM,https://alexa.amazon.co.jp/api/skill/link/M2TDOWMJ3J2LNM,https://pitangui.amazon.com/api/skill/link/M2TDOWMJ3J2LNM'
-      LogoutURL: ''
+      LogoutURL: 'https://www.google.com'
       AllowedOAuthFlowsUserPoolClient: true
       AllowedOAuthFlows:
         - code
@@ -131,7 +131,7 @@ Resources:
       SupportedIdentityProviders:
         - COGNITO
       CallbackURL: 'https://layla.amazon.com/api/skill/link/M2TDOWMJ3J2LNM,https://alexa.amazon.co.jp/api/skill/link/M2TDOWMJ3J2LNM,https://pitangui.amazon.com/api/skill/link/M2TDOWMJ3J2LNM'
-      LogoutURL: ''
+      LogoutURL: 'https://www.google.com'
       AllowedOAuthFlowsUserPoolClient: true
       AllowedOAuthFlows:
         - code
@@ -146,7 +146,7 @@ Resources:
     Properties:
       ServiceToken: !GetAtt CloudFormationCognitoUserPoolDomain.Arn
       UserPoolId: !Ref UserPool
-      Domain: 'userpool-test-018903'
+      Domain: 'userpool-test-01890323'
 
   # Creates a federeated Identity pool
   IdentityPool:
