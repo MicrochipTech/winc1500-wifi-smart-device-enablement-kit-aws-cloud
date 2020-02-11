@@ -78,6 +78,7 @@ MQTTPublishParams Params;
 
 /** Wi-Fi status variable. */
 extern bool gbConnectedWifi,receivedTime;
+static bool g_cloud_connect = false;
 
 static bool toggle = false;
 
@@ -87,9 +88,13 @@ static void (*mqtt_subscribe_cb)(int topic_len, char* topic_name, int payload_le
 static void disconnectCallbackHandler(void) {
 	printf("MQTT Disconnect");
 	IoT_Error_t rc = NONE_ERROR;
+	
 	if(aws_iot_is_autoreconnect_enabled()){
 		printf("Auto Reconnect is enabled, Reconnecting attempt will start now");
 		}else{
+		
+		if (!gbConnectedWifi)
+			return;
 		printf("Auto Reconnect not enabled. Starting manual reconnect...");
 		rc = aws_iot_mqtt_attempt_reconnect();
 		if(RECONNECT_SUCCESSFUL == rc){
@@ -133,7 +138,6 @@ static void jsonMessagePublish(char* channel, cJSON *message)
 Cloud_RC cloud_connect(char* hostname, char* mqtt_client_id)
 {
 	IoT_Error_t rc = NONE_ERROR;
-	
 
     if (strstr(hostname,"amazonaws.com") == NULL)    // hostname do not have the correct AWS IoT EndPoint
     {
@@ -178,11 +182,14 @@ Cloud_RC cloud_connect(char* hostname, char* mqtt_client_id)
 			printf("Error(%d) connecting to %s:%d", rc, connectParams.pHostURL, connectParams.port);
 			return rc;
 		}
+		g_cloud_connect = true;
 		/*
 		* Enable Auto Reconnect functionality. Minimum and Maximum time of Exponential backoff are set in aws_iot_config.h
 		*  #AWS_IOT_MQTT_MIN_RECONNECT_WAIT_INTERVAL
 		*  #AWS_IOT_MQTT_MAX_RECONNECT_WAIT_INTERVAL
 		*/
+		
+		
 		rc = aws_iot_mqtt_autoreconnect_set_status(true);
 		if (NONE_ERROR != rc) {
 			printf("Unable to set Auto Reconnect to true - %d", rc);
@@ -205,6 +212,10 @@ Cloud_RC cloud_mqtt_yield(int timeout)
 Cloud_RC cloud_mqtt_publish(char* channel, void* message)
 {
 	IoT_Error_t rc = NONE_ERROR;
+	
+	if (!gbConnectedWifi)
+		return rc;
+	
 	jsonMessagePublish(channel, message);
 	
 	return rc;
@@ -266,7 +277,24 @@ Cloud_RC cloud_create_search_topic(char* full_path, char* acct_uuid, char* topic
 Cloud_RC cloud_disconnect()
 {
 	IoT_Error_t rc = NONE_ERROR;
+	if (g_cloud_connect)
+	{
+		rc = aws_iot_mqtt_disconnect();
+		g_cloud_connect = false;
+	}
+	aws_iot_mqtt_autoreconnect_set_status(false);
+	return rc;
+}
+
+Cloud_RC cloud_force_disconnect()
+{
+	IoT_Error_t rc = NONE_ERROR;
 	
-	rc = aws_iot_mqtt_disconnect();
+	if (g_cloud_connect)
+	{
+		rc = aws_iot_mqtt_force_disconnect();
+		g_cloud_connect = false;
+	}
+	aws_iot_mqtt_autoreconnect_set_status(false);
 	return rc;
 }

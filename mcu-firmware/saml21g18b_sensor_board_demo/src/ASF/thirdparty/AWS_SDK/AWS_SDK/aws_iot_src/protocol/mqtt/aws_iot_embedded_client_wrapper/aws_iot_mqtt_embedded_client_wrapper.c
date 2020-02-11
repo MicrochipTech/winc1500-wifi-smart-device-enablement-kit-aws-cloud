@@ -224,6 +224,14 @@ IoT_Error_t aws_iot_mqtt_disconnect() {
 	return rc;
 }
 
+IoT_Error_t aws_iot_mqtt_force_disconnect() {
+	IoT_Error_t rc = NONE_ERROR;
+
+	MQTTForceDisconnect(&c);
+
+	return rc;
+}
+
 IoT_Error_t aws_iot_mqtt_yield(int timeout) {
 	MQTTReturnCode pahoRc = MQTTYield(&c, timeout);
 	IoT_Error_t rc = NONE_ERROR;

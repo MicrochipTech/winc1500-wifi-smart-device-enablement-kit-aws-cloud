@@ -62,5 +62,6 @@ Cloud_RC cloud_create_topic(char* full_path, char* device_type, char* device_id,
 Cloud_RC cloud_create_topic_shadow(char* full_path, char* device_type, char* device_id, char* topic_name);
 Cloud_RC cloud_create_search_topic(char* full_path, char* acct_uuid, char* topic_name);
 Cloud_RC cloud_disconnect();
+Cloud_RC cloud_force_disconnect();
 
 #endif /*__WIFI_APP_H__*/

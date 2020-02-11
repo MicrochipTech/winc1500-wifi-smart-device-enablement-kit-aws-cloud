@@ -64,6 +64,7 @@ MQTTReturnCode MQTTSubscribe(Client *c, const char *topicFilter, QoS qos,
 MQTTReturnCode MQTTResubscribe(Client *c);
 MQTTReturnCode MQTTUnsubscribe(Client *c, const char *topicFilter);
 MQTTReturnCode MQTTDisconnect (Client *);
+void MQTTForceDisconnect (Client *);
 MQTTReturnCode MQTTYield (Client *, uint32_t);
 MQTTReturnCode MQTTAttemptReconnect(Client *c);
 

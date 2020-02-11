@@ -232,6 +232,7 @@ IoT_Error_t aws_iot_mqtt_attempt_reconnect(void);
  */
 IoT_Error_t aws_iot_mqtt_disconnect(void);
 
+IoT_Error_t aws_iot_mqtt_force_disconnect(void);
 /**
  * @brief Yield to the MQTT client
  *

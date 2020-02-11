@@ -43,7 +43,7 @@ uint32_t gu32HostIp = 0;
 uint32_t sent_bytes = 0,received_bytes = 0;
 static uint8_t gau8SocketTestBuffer[1460];
 static uint8_t* buf_ptr = &gau8SocketTestBuffer;
-
+static int8_t g_quit = 0;
 
 /**
  * \brief Callback function of IP address.
@@ -134,7 +134,7 @@ static void wait_for_event(uint8_t msg)
 	while(1)
 	{
 		m2m_wifi_handle_events(NULL);
-		if(state == msg)
+		if(state == msg || g_quit)
 		{
 			return;
 		}
@@ -193,6 +193,7 @@ int iot_tls_connect(Network *pNetwork, TLSConnectParams params) {
 			close(tls_socket);
 			return SSL_CONNECT_ERROR;
 		}
+		g_quit = 0;
 		wait_for_event(SOCKET_MSG_CONNECT);
 		if(err == 0)
 		{
@@ -309,6 +310,7 @@ void iot_tls_disconnect(Network *pNetwork) {
 		return;
 	}
 	close(pNetwork->my_socket);
+	g_quit = 1;
 }
 
 int iot_tls_destroy(Network *pNetwork) {

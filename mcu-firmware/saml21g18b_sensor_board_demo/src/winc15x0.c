@@ -1571,6 +1571,7 @@ static void m2m_wifi_socket_handler(SOCKET sock, uint8 u8Msg, void *pvMsg)
  */
 static void wifi_cb(uint8_t u8MsgType, void *pvMsg)
 {
+	IoT_Error_t ret;
 	switch (u8MsgType) {
 	case M2M_WIFI_RESP_CON_STATE_CHANGED:
 	{
@@ -1598,7 +1599,7 @@ static void wifi_cb(uint8_t u8MsgType, void *pvMsg)
 			{
 				led_ctrl_set_color(LED_COLOR_BLUE, LED_MODE_BLINK_NORMAL);
 				gbConnectedWifi = false;
-				m2m_wifi_disconnect();
+				cloud_force_disconnect();
 				m2m_wifi_connect((char *)gDefaultSSID, strlen((char *)gDefaultSSID), \
 				gAuthType, (char *)gDefaultKey, M2M_WIFI_CH_ALL);
 			}
@@ -1924,7 +1925,7 @@ int wifiInit(void)
 	
 	cloud_create_topic(gSubscribe_Channel, DEVICE_TYPE, gAwsMqttClientId, SUBSCRIBE_TOPIC);
 	cloud_create_topic(gPublish_Channel, DEVICE_TYPE, gAwsMqttClientId, PUBLISH_TOPIC);
-
+	
 
 	
 	//DBG_LOG("gSubscribe_Channel: %s\r\n", gSubscribe_Channel);
@@ -2041,9 +2042,8 @@ int wifiTaskExecute()
 			
 		case WIFI_TASK_CONNECT_CLOUD:
             atca_status = provisioning_get_hostname(&hostname_length, hostname);
-            
 			ret = cloud_connect(hostname, g_mqtt_client_id);
-
+			
 			if (ret == CLOUD_RC_SUCCESS)
 			{
 				led_ctrl_set_mode(LED_MODE_TURN_ON);

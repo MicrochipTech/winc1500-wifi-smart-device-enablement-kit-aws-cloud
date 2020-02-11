@@ -17,7 +17,7 @@
 #include "MQTTClient.h"
 #include <string.h>
 
-static void MQTTForceDisconnect(Client *c);
+//static void MQTTForceDisconnect(Client *c);
 
 void NewMessageData(MessageData *md, MQTTString *aTopicName, MQTTMessage *aMessage, pApplicationHandler_t applicationHandler) {
     md->topicName = aTopicName;
@@ -294,7 +294,8 @@ MQTTReturnCode handleDisconnect(Client *c) {
     MQTTReturnCode rc = MQTTDisconnect(c);
     if(rc != SUCCESS){
     	// If the sendPacket prevents us from sending a disconnect packet then we have to clean the stack
-    	MQTTForceDisconnect(c);
+		if (rc != MQTT_NETWORK_DISCONNECTED_ERROR)
+    		MQTTForceDisconnect(c);
     }
 
     if(NULL != c->disconnectHandler) {
@@ -911,7 +912,7 @@ MQTTReturnCode MQTTPublish(Client *c, const char *topicName, MQTTMessage *messag
 /**
  * This is for the case when the sendPacket Fails.
  */
-static void MQTTForceDisconnect(Client *c){
+void MQTTForceDisconnect(Client *c){
 	c->isConnected = 0;
 	c->networkStack.disconnect(&(c->networkStack));
 	c->networkStack.destroy(&(c->networkStack));
