@@ -1,0 +1,7 @@
+{
+    "main": "index.js",
+    "dependencies": {
+        "bluebird": "^3.5.1",
+        "redis": "^2.8.0"
+    }
+}

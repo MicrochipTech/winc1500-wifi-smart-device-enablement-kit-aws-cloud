@@ -1,5 +1,19 @@
 'use strict';
 
+var redis = require('redis');
+var bluebird = require('bluebird');
+bluebird.promisifyAll(redis.RedisClient.prototype);
+bluebird.promisifyAll(redis.Multi.prototype);
+
+const GLOBAL_KEY = 'lambda-test';
+const redisOptions = {
+    host: "xxxxxxxxxxxxxxx.xxxx.xxxx.xxxx.cache.amazonaws.com",
+    port: 6379
+}
+
+redis.debug_mode = true;
+
+
 var jwt_decode = require("jwt-decode");
 const main_table = 'SensorBoardAcctTable';
 
@@ -7,10 +21,13 @@ const main_table = 'SensorBoardAcctTable';
 
 var config = {};
 
-config.IOT_BROKER_ENDPOINT = "xxxxxxxxxxx.iot.us-east-1.amazonaws.com".toLowerCase();
+config.IOT_BROKER_ENDPOINT = "at5oi5gztccgr.iot.us-east-1.amazonaws.com".toLowerCase();
 
 config.IOT_BROKER_REGION = "us-east-1";
 
+//config.IOT_THING_NAME = "89600207b3eba6d86e2847a136ad18128eb7f1a7";  //Sensor board #2  DRY6 account
+config.IOT_THING_NAME = "c922c14c3e65b718aa8ddb835603a7af88af77f9";  //Sensor board Rev C0 DR6 Account
+//config.IOT_THING_NAME = "2f5554c82bdc77dc086cafaf1464c70539d6ff3e";  //Sensor board Rev C0 DR6 Account
 
 // Load AWS SDK libraries
 var AWS = require('aws-sdk');
@@ -30,7 +47,7 @@ function getCongitoUUID(token)
 {
   var accessToken;
   accessToken = jwt_decode(token);
-  return accessToken.sub; 
+  return accessToken.sub;
 }
 /* -------------------- end: Get Cognito UUID from the access token --------------- */
 
@@ -67,7 +84,7 @@ function getCongitoUUID(token)
 {
   var accessToken;
   accessToken = jwt_decode(token);
-  return accessToken.sub; 
+  return accessToken.sub;
 }
 /* -------------------- end: Get Cognito UUID from the access token --------------- */
 
@@ -126,8 +143,8 @@ function getWelcomeResponse(callback)
     // If we wanted to initialize the session to have some attributes we could add those here.
     const sessionAttributes = {Session:"New session"};
     const cardTitle = 'Welcome  to Microchip Sensor board';
-    const speechOutput = 'Welcome to Microchip Sensor board Skill. This skill is used to control and get the sensor data from WINC1500 Secure Wi-Fi Board, showed in Microchip Master\'s workshop';
-            
+    const speechOutput = 'Welcome to Microchip Sensor board Skill. This skill is used to control and get the sensor data from WINC1500 Wi-Fi Smart Device Enablement Kit';
+
     // If the user either does not reply to the welcome message or says something that is not understood, they will be prompted again with this text.
     const repromptText = 'Please tell me if you want the light on or off by saying, turn the light on';
     const shouldEndSession = false;
@@ -144,7 +161,7 @@ function getUnknownResponse(callback)
     const sessionAttributes = {Session:"New session"};
     const cardTitle = '';
     const speechOutput = 'Please try again or say help for a list of possible commands';
-            
+
     // If the user either does not reply to the welcome message or says something that is not understood, they will be prompted again with this text.
     const repromptText = 'Please try again or say help for a list of possible commands';
     const shouldEndSession = false;
@@ -159,12 +176,12 @@ function getHelpResponse(callback)
 
     // If we wanted to initialize the session to have some attributes we could add those here.
     const sessionAttributes = {};
-    
+
     const speechOutput = 'The options are. Ask Sensor board to turn the light red, green, blue, yellow, on or off.'+
                             ' You can ask what is the temperature or humidity,'+
                             ' the light state or color,' +
                             ' or you can ask what are the buttons state.';
-    const cardTitle = speechOutput;        
+    const cardTitle = speechOutput;
     // If the user either does not reply to the welcome message or says something that is not understood, they will be prompted again with this text.
     const repromptText = 'Please tell me if you want the light on or off by saying, turn the light on';
     const shouldEndSession = false;
@@ -180,7 +197,7 @@ function createFavoriteLEDStatusAttributes(desiredLEDStatus)
  var response =     {
         desiredLEDStatus,
     };
-    
+
     return response;
 
 
@@ -193,7 +210,7 @@ function setGPIO(intent, session, callback, thingId)
 {
 
     console.log("Slots =>", intent.slots);
-    
+
     var cardTitle = intent.name;
     let saml21PORT = intent.slots.port.value;
     let desiredGPIOSlotValue = intent.slots.number.value;
@@ -201,13 +218,13 @@ function setGPIO(intent, session, callback, thingId)
     let shadowLED_R = 0;
     let shadowLED_G = 0;
     let shadowLED_B = 0;
-    let repromptText = '';
-    let sessionAttributes = {};    
-    
-                                    
+    let repromptText = 'Please provide other commands';
+    let sessionAttributes = {};
+
+
     const shouldEndSession = false;
     let speechOutput = '';
-    
+
     saml21PORT = saml21PORT.replace('.', '');
     saml21PORT = saml21PORT.toUpperCase();
     desiredGPIOSlotValue = parseInt (desiredGPIOSlotValue);
@@ -220,80 +237,109 @@ function setGPIO(intent, session, callback, thingId)
         cardTitle = speechOutput;
     }else
     {
-        speechOutput = "PORT \"" + saml21PORT + "\" " + desiredGPIOSlotValue +" is not available.  PORT 'a' 17 20 21, and PORT 'b' 22 and 23 are available. " + '<break time="0.5s"/>'  + "Please provide other command";
+        speechOutput = "PORT \"" + saml21PORT + "\" " + desiredGPIOSlotValue +" is not available.  PORT 'a' 17 20 21, and PORT 'b' 22 and 23 are available. ";
         cardTitle = "PORT \"" + saml21PORT + "\" " + desiredGPIOSlotValue +" is not available.  PORT 'a' 17 20 21, and PORT 'b' 22 and 23 are available";
         const cardType = 'Simple';
-        
+
         callback(sessionAttributes, buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession, cardType));
         return;
     }
-   
+
     if (!((saml21PORT === 'A')||(saml21PORT ==='B')))
     {
- 
-        speechOutput = "Only PORT A and B are available." + '<break time="1s"/>'  + " Please provide other command";
+
+        speechOutput = "Only PORT A and B are available." ;
         cardTitle = "Only PORT A and B are available";
         const cardType = 'Simple';
-        
+
         callback(sessionAttributes, buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession, cardType));
         return;
-    
-    
+
+
     }
-    
+
     var payloadObj = {"state" :
         { "desired" :
-            { 
-                
+            {
+
             }}};
     var PORTbit = "P"+saml21PORT;
     desiredGPIOSlotValue = (set_clear_GPIO == "clear") ? (0-desiredGPIOSlotValue):(desiredGPIOSlotValue);
-    
+
 
     payloadObj.state.desired = {[PORTbit]: desiredGPIOSlotValue};
-        
-    speechOutput = speechOutput + '<break time="1s"/>'  + " Please provide other command";
+
+    speechOutput = speechOutput ;
     console.log("Alexa will say =>",speechOutput);
 
 
         //Prepare the parameters of the update call
         var paramsUpdate = {
-    
+
             "thingName" : thingId,
             "payload" : JSON.stringify(payloadObj)
-    
+
         };
-    
+
         // Update IoT Device Shadow
         console.log("AWS-IOT => ",paramsUpdate);
-        
+
         iotData.updateThingShadow(paramsUpdate, function(err, data)
         {
-    
+
             if (err)
             {
                 console.log(err); // Handle any errors
             } else
             {
                 console.log("UpdateThingShadow=>",data);
-                console.log("Calling callback from updateThingShadow returns");
-                
-                callback(sessionAttributes, buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession, "Simple"));
-                //context.succeed(buildResponse(sessionAttributes, buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession)));
-            
-                console.log("buildSpeechletResponse returns =>",buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession, "Simple"));
-                console.log("returning from callback from updateThingShadow returns");
-                
+                var shadowData = JSON.parse(data.payload);
+                    //console.log("LED state is =>",shadowData.state.desired.setLED);
+                    //console.log("LED state is =>",data.payload);
+                    paramsUpdate = {
+                        "thingName" : thingId,
+                    };
+
+                    // Get Status of thing to verify if online or offline
+                    iotData.getThingShadow(paramsUpdate, function(err, data)
+                    {
+
+                        if (err)
+                        {
+                            console.log(err); // Handle any errors
+                        } else
+                        {
+                            console.log("AWS-IOT returned value=>", data);
+
+                            var shadowData = JSON.parse(data.payload);
+                            //console.log("LED state is =>",shadowData.state.desired.setLED);
+                            //console.log("LED state is =>",data.payload);
+
+
+
+                            if (shadowData.state.reported.State == "offline")
+                            {
+                                speechOutput = "The device is off line!";
+                                cardTitle = speechOutput;
+                                shouldEndSession = true;
+                            }
+
+                            console.log("Calling callback from updateThingShadow returns");
+
+                            callback(sessionAttributes, buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession, "Simple"));
+                            //context.succeed(buildResponse(sessionAttributes, buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession)));
+
+                            console.log("buildSpeechletResponse returns =>",buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession, "Simple"));
+                            console.log("returning from callback from updateThingShadow returns");
+
+                        }
+
+                    });
+
+
             }
-    
+
         });
-        
-            
-        //repromptText = "I'm not sure if you want the light on or off. You can tell me if you " +
-                'want the light on or off by saying, turn the light on';
-
-    //callback(sessionAttributes, buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession));
-
 }
 
 
@@ -315,19 +361,19 @@ function scanThingId(cognitoUuid)
         }
     };
 
-    
+
     docClient.scan(scanParams, onScan);
     function onScan(err, data) {
         if (err) {
             console.error("Unable to scan the table. Error JSON:", JSON.stringify(err, null, 2));
-        } 
+        }
         else
         {
             console.log("Scan succeeded.");
               if (data.Items.length == 0)
               {
                   console.error("Cannot find devices for this congito account");
-                  
+
               }
               else
               {
@@ -337,7 +383,7 @@ function scanThingId(cognitoUuid)
 
         }
     }
-    
+
     return null;
 }
 /**
@@ -346,16 +392,16 @@ function scanThingId(cognitoUuid)
 function setLEDState(intent, session, callback, thingId)
 {
 
-    const cardTitle = "Change LED value";//intent.name;
+    let cardTitle = "Change LED value";//intent.name;
     const desiredLEDStateSlot = intent.slots.lightState;
     let shadowLED_R = 0;
     let shadowLED_G = 0;
     let shadowLED_B = 0;
     let shadowLight = 0;
-    let repromptText = '';
-    let sessionAttributes = {};                                    
-                                    
-    const shouldEndSession = false;
+    let repromptText = 'Please provide other commands';
+    let sessionAttributes = {};
+
+    let shouldEndSession = false;
     let speechOutput = '';
 
 
@@ -364,20 +410,15 @@ function setLEDState(intent, session, callback, thingId)
 
         const desiredLEDState = desiredLEDStateSlot.value;
         sessionAttributes = createFavoriteLEDStatusAttributes(desiredLEDState);
-        
-        repromptText = ""; //You can ask me if the light is on or off by saying, is the light on or off?";
-        
 
-        
-        
         if ((desiredLEDState == 'red'))
         {
             shadowLED_R = 1;
             shadowLED_G = 0;
             shadowLED_B = 0;
             shadowLight = 1;
-            speechOutput = "The Sensor board light is red. " + '<break time="1s"/>'  + "Please provide other command" ;
-            
+            speechOutput = "The Sensor board light is red. " ;
+
         }else
         if ((desiredLEDState == 'green'))
         {
@@ -385,8 +426,8 @@ function setLEDState(intent, session, callback, thingId)
             shadowLED_G = 1;
             shadowLED_B = 0;
             shadowLight = 1;
-            speechOutput = "The Sensor board  light is green. " + '<break time="1s"/>'  + "Please provide other command" ;
-            
+            speechOutput = "The Sensor board  light is green. " ;
+
         }else
         if ((desiredLEDState == 'blue'))
         {
@@ -394,8 +435,8 @@ function setLEDState(intent, session, callback, thingId)
             shadowLED_G = 0;
             shadowLED_B = 1;
             shadowLight = 1;
-            speechOutput = "The Sensor board light is blue. " + '<break time="1s"/>'  + "Please provide other command";
-            
+            speechOutput = "The Sensor board light is blue. ";
+
         }else
         if ((desiredLEDState == 'yellow'))
         {
@@ -403,8 +444,8 @@ function setLEDState(intent, session, callback, thingId)
             shadowLED_G = 1;
             shadowLED_B = 0;
             shadowLight = 1;
-            speechOutput = "The Sensor board  light is yellow. " + '<break time="1s"/>'  + "Please provide other command";
-            
+            speechOutput = "The Sensor board  light is yellow. ";
+
         }else
         if ((desiredLEDState == 'cyan'))
         {
@@ -412,8 +453,8 @@ function setLEDState(intent, session, callback, thingId)
             shadowLED_G = 1;
             shadowLED_B = 1;
             shadowLight = 1;
-            speechOutput = "The Sensor board  light is yellow. " + '<break time="1s"/>'  + "Please provide other command";
-            
+            speechOutput = "The Sensor board  light is cyan. ";
+
         }else
         if ((desiredLEDState == 'magenta'))
         {
@@ -421,8 +462,8 @@ function setLEDState(intent, session, callback, thingId)
             shadowLED_G = 0;
             shadowLED_B = 1;
             shadowLight = 1;
-            speechOutput = "The Sensor board  light is yellow. " + '<break time="1s"/>'  + "Please provide other command";
-            
+            speechOutput = "The Sensor board  light is magenta. ";
+
         }else
         if ((desiredLEDState == 'white'))
         {
@@ -430,8 +471,8 @@ function setLEDState(intent, session, callback, thingId)
             shadowLED_G = 1;
             shadowLED_B = 1;
             shadowLight = 1;
-            speechOutput = "The Sensor board  light is " + desiredLEDState + '<break time="1s"/>'  + " Please provide other command";
-            
+            speechOutput = "The Sensor board  light is " + desiredLEDState ;
+
         }else
         if ((desiredLEDState == 'on')||(desiredLEDState == 'open'))
         {
@@ -439,8 +480,8 @@ function setLEDState(intent, session, callback, thingId)
             shadowLED_G = -1;
             shadowLED_B = -1;
             shadowLight = 1;
-            speechOutput = "The Sensor board  light is on" + '<break time="1s"/>'  + " Please provide other command";
-            
+            speechOutput = "The Sensor board  light is on" ;
+
         }else
         if ((desiredLEDState == 'off')||(desiredLEDState == 'close'))
         {
@@ -448,8 +489,8 @@ function setLEDState(intent, session, callback, thingId)
             shadowLED_G = -1;
             shadowLED_B = -1;
             shadowLight = 0;
-            speechOutput = "The Sensor board  light has been turned off" + '<break time="1s"/>'  + "Please provide other command";
-            
+            speechOutput = "The Sensor board  light has been turned off";
+
         }else
         {
             speechOutput = "I'm not sure what you want. Please try again.";
@@ -458,21 +499,21 @@ function setLEDState(intent, session, callback, thingId)
             callback(sessionAttributes, buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession, "Simple"));
             return;
         }
-        
+
         /*
          * Update AWS IoT
          */
-        
+
         var payloadObj;
-        
+
         console.log("Alexa will say =>",speechOutput);
         if ((shadowLED_R == -1) && (shadowLED_G == -1) && (shadowLED_B == -1))
         {
             payloadObj = {"state" :
             { "desired" :
-                { 
+                {
                   "Light" : shadowLight
-                    
+
                 }}};
         }
         else
@@ -483,7 +524,7 @@ function setLEDState(intent, session, callback, thingId)
                   "LED_G" : shadowLED_G,
                   "LED_B" : shadowLED_B,
                   "Light" : shadowLight
-                    
+
                 }}};
         }
 
@@ -497,7 +538,7 @@ function setLEDState(intent, session, callback, thingId)
 
         // Update IoT Device Shadow
         console.log("AWS-IOT => ",paramsUpdate);
-        
+
         iotData.updateThingShadow(paramsUpdate, function(err, data)
         {
 
@@ -507,19 +548,56 @@ function setLEDState(intent, session, callback, thingId)
             } else
             {
                 console.log("UpdateThingShadow=>",data);
-                console.log("Calling callback from updateThingShadow returns");
-                
-                callback(sessionAttributes, buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession, "Simple"));
-                //context.succeed(buildResponse(sessionAttributes, buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession)));
-            
-                console.log("buildSpeechletResponse returns =>",buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession, "Simple"));
-                console.log("returning from callback from updateThingShadow returns");
-                
+                var shadowData = JSON.parse(data.payload);
+                    //console.log("LED state is =>",shadowData.state.desired.setLED);
+                    //console.log("LED state is =>",data.payload);
+                    paramsUpdate = {
+                        "thingName" : thingId,
+                    };
+
+                    // Get Status of thing to verify if online or offline
+                    iotData.getThingShadow(paramsUpdate, function(err, data)
+                    {
+
+                        if (err)
+                        {
+                            console.log(err); // Handle any errors
+                        } else
+                        {
+                            console.log("AWS-IOT returned value=>", data);
+
+                            var shadowData = JSON.parse(data.payload);
+                            //console.log("LED state is =>",shadowData.state.desired.setLED);
+                            //console.log("LED state is =>",data.payload);
+
+                            // Get Status of thing to verify if online or offline
+
+
+
+                            if (shadowData.state.reported.State == "offline")
+                            {
+                                speechOutput = "The device is off line!";
+                                cardTitle = speechOutput;
+                                shouldEndSession = true;
+                            }
+
+                            console.log("Calling callback from updateThingShadow returns");
+
+                            callback(sessionAttributes, buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession, "Simple"));
+                            //context.succeed(buildResponse(sessionAttributes, buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession)));
+
+                            console.log("buildSpeechletResponse returns =>",buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession, "Simple"));
+                            console.log("returning from callback from updateThingShadow returns");
+
+
+                        }
+
+                    });
             }
 
         });
-        
-        
+
+
     } else
     {
 
@@ -533,15 +611,14 @@ function setLEDState(intent, session, callback, thingId)
 
 }
 
-function getLEDStatusFromShadow(intent, session, callback, thingId) {
+function getLEDStatusFromShadow(intent, session, callback, thingId)
+{
     let cardTitle = "Get LED";
     let desiredLEDStatus ="Test";
-    const repromptText = null;
+    const repromptText = "Please provide other commands";
     const sessionAttributes = {};
     let shouldEndSession = false;
     let speechOutput = '';
-
-
     
     //Prepare the parameters of the update call
     var paramsUpdate = {
@@ -558,73 +635,189 @@ function getLEDStatusFromShadow(intent, session, callback, thingId) {
             } else
             {
                 console.log(data);
-                var newdata = JSON.parse(data.payload);
-                console.log("LED RED state is =>",newdata.state.reported.LED_R);
-                console.log("LED GREEN state is =>",newdata.state.reported.LED_G);
-                console.log("LED BLEU state is =>",newdata.state.reported.LED_B);
+                var shadowData = JSON.parse(data.payload);
+                console.log("LED RED state is =>",shadowData.state.reported.LED_R);
+                console.log("LED GREEN state is =>",shadowData.state.reported.LED_G);
+                console.log("LED BLEU state is =>",shadowData.state.reported.LED_B);
                 //console.log("LED state is =>",data.payload);
-                var redLED = newdata.state.reported.LED_R;
-                var greenLED = newdata.state.reported.LED_G;
-                var blueLED = newdata.state.reported.LED_B;
-                var Light = newdata.state.reported.Light;
+                var redLED = shadowData.state.reported.LED_R;
+                var greenLED = shadowData.state.reported.LED_G;
+                var blueLED = shadowData.state.reported.LED_B;
+                var Light = shadowData.state.reported.Light;
                 var ledState;
-                
+
+
                 if (intent.slots.lightType.value == "state")
                 {
                     if(Light == 0)
                         ledState ="off";
                     else
                         ledState ="on";
-                    
-                    speechOutput = `The Sensor Board light is ${ledState}.` +  `<break time="2s"/>`  + ` Please provide other command`
-                
+
+                    speechOutput = `The Sensor Board light is ${ledState}.` 
+
                 }else
                 if (intent.slots.lightType.value == "color")
                 {
                     if (redLED == 1 && greenLED == 0 && blueLED == 0)
                         ledState = "red";
-                    else 
+                    else
                     if (redLED == 0 && greenLED == 1 && blueLED == 0)
                         ledState = "green";
-                    else 
+                    else
                     if (redLED == 0 && greenLED == 0 && blueLED == 1)
                         ledState = "blue";
-                    else 
+                    else
                     if (redLED == 1 && greenLED == 1 && blueLED == 1)
                         ledState = "white";
-                    else 
+                    else
                     if (redLED == 0 && greenLED == 0 && blueLED == 0)
                         ledState = "black";
-                    else 
+                    else
                     if (redLED == 1 && greenLED == 1 && blueLED == 0)
                         ledState = "yellow";
-                    else 
+                    else
                     if (redLED == 0 && greenLED == 1 && blueLED == 1)
                         ledState = "cyan";
-                    else 
+                    else
                     if (redLED == 1 && greenLED == 0 && blueLED == 1)
                         ledState = "magenta";
-                    
-                    speechOutput = `The Sensor Board light is ${ledState}.` +  `<break time="2s"/>`  + ` Please provide other command`
-                
+
+                    speechOutput = `The Sensor Board light is ${ledState}.`
+
                 }else
                     speechOutput = "Ask me, what is the light color or state";
-     
-                
-                
+
+
+                // Get Status of thing to verify if online or offline
+
+
+                if (shadowData.state.reported.State == "offline")
+                {
+                    speechOutput = "The device is off line!";
+                    cardTitle = speechOutput;
+                    shouldEndSession = true;
+                }
+
                 //shouldEndSession = true;
                 console.log("UpdateThingShadow=>",data);
                 console.log("Calling callback from updateThingShadow returns");
-                
+
                 //callback(sessionAttributes, buildSpeechletResponse(intent.name, speechOutput, repromptText, shouldEndSession));
                 callback(sessionAttributes, buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession, "Simple"));
-                
+
                 console.log("buildSpeechletResponse returns =>",buildSpeechletResponse(intent.name, speechOutput, repromptText, shouldEndSession, "Simple"));
                 console.log("returning from callback from updateThingShadow returns");
-                
+
             }
 
         });
+    
+}
+function getLEDStatus(intent, session, callback, thingId) {
+    let cardTitle = "Get LED";
+    let desiredLEDStatus ="Test";
+    const repromptText = "Please provide other commands";
+    const sessionAttributes = {};
+    let shouldEndSession = false;
+    let speechOutput = '';
+
+    var client = redis.createClient(redisOptions);
+    let redis_val = {};
+
+    client.hgetAsync(GLOBAL_KEY, thingId).then(res => {
+        console.info('step1: Redis responses for get single: ', res);
+        
+        if (res != null)
+        {
+            redis_val = JSON.parse(res);
+            
+            var redLED = redis_val.LED_R;
+            var greenLED = redis_val.LED_G;
+            var blueLED = redis_val.LED_B;
+            var Light = redis_val.Light;
+            var State = redis_val.State;
+            var ledState;
+            
+            console.log("Redis result: r:", redLED)
+            console.log("Redis result: g:", greenLED)
+            console.log("Redis result: b:", blueLED)
+            console.log("Redis result: l:", Light)
+            
+            if (intent.slots.lightType.value == "state")
+            {
+                if(Light == 0)
+                    ledState ="off";
+                else
+                    ledState ="on";
+
+                speechOutput = `The Sensor Board light is ${ledState}.` 
+
+            }else
+            if (intent.slots.lightType.value == "color")
+            {
+                if (redLED == 1 && greenLED == 0 && blueLED == 0)
+                    ledState = "red";
+                else
+                if (redLED == 0 && greenLED == 1 && blueLED == 0)
+                    ledState = "green";
+                else
+                if (redLED == 0 && greenLED == 0 && blueLED == 1)
+                    ledState = "blue";
+                else
+                if (redLED == 1 && greenLED == 1 && blueLED == 1)
+                    ledState = "white";
+                else
+                if (redLED == 0 && greenLED == 0 && blueLED == 0)
+                    ledState = "black";
+                else
+                if (redLED == 1 && greenLED == 1 && blueLED == 0)
+                    ledState = "yellow";
+                else
+                if (redLED == 0 && greenLED == 1 && blueLED == 1)
+                    ledState = "cyan";
+                else
+                if (redLED == 1 && greenLED == 0 && blueLED == 1)
+                    ledState = "magenta";
+
+                speechOutput = `The Sensor Board light is ${ledState}.`
+
+            }else
+                speechOutput = "Ask me, what is the light color or state";
+
+
+            // Get Status of thing to verify if online or offline
+
+
+            if (State == "offline")
+            {
+                speechOutput = "The device is off line!";
+                cardTitle = speechOutput;
+                shouldEndSession = true;
+            }
+
+            //callback(sessionAttributes, buildSpeechletResponse(intent.name, speechOutput, repromptText, shouldEndSession));
+            callback(sessionAttributes, buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession, "Simple"));
+        }    
+        
+        else
+        {
+            getLEDStatusFromShadow(intent, session, callback, thingId)
+        }
+        
+    }).catch(err => {
+        console.error("Failed to get single: ", err)
+    }).finally(() => {
+        console.info('Disconnect to Redis');
+        client.quit();
+    });
+    
+    
+    //////////////////
+
+
+
+    
 
 
     // Setting repromptText to null signifies that we do not want to reprompt the user.
@@ -637,19 +830,19 @@ function getButtonStatusFromShadow(intent, session, callback, thingId) {
 
     let cardTitle = "Get BUTTON";
     let desiredLEDStatus;
-    let repromptText = null;
+    let repromptText = "Please provide other commands";
     const sessionAttributes = {};
     let shouldEndSession = false;
     let speechOutput = '';
 
 
-    
+
     //Prepare the parameters of the update call
     var paramsUpdate = {
         "thingName" : thingId,
         //"payload" : JSON.stringify(payloadObj)
     };
-    
+
     iotData.getThingShadow(paramsUpdate, function(err, data)
         {
 
@@ -659,27 +852,35 @@ function getButtonStatusFromShadow(intent, session, callback, thingId) {
             } else
             {
                 console.log(data);
-                var newdata = JSON.parse(data.payload);
-                console.log("BUTTON_1 state is =>",newdata.state.reported.BUTTON_1);
-                console.log("BUTTON_2 state is =>",newdata.state.reported.BUTTON_2);
-                console.log("BUTTON_3 state is =>",newdata.state.reported.BUTTON_3);
+                var shadowData = JSON.parse(data.payload);
+                console.log("BUTTON_1 state is =>",shadowData.state.reported.BUTTON_1);
+                console.log("BUTTON_2 state is =>",shadowData.state.reported.BUTTON_2);
+                console.log("BUTTON_3 state is =>",shadowData.state.reported.BUTTON_3);
                 //console.log("LED state is =>",data.payload);
-                var buttonstate = newdata.state.reported.setLED;
+                var buttonstate = shadowData.state.reported.setLED;
                 var button1 = "up";
                 var button2 = "up";
                 var button3 = "up";
-                if (newdata.state.reported.BUTTON_1 == 0)
+                if (shadowData.state.reported.BUTTON_1 == 0)
                     button1 = "down";
-                if (newdata.state.reported.BUTTON_2 == 0)
+                if (shadowData.state.reported.BUTTON_2 == 0)
                     button2 = "down";
-                if (newdata.state.reported.BUTTON_3 == 0)
+                if (shadowData.state.reported.BUTTON_3 == 0)
                     button3 = "down";
                 speechOutput = "The button states are, button1 is "+ button1 +
                                                     ",button2 is " + button2 +
-                                                    ",button3 is " + button3 + ' <break time="2s"/>'  + " Please provide other command?";
-                
-                repromptText = "Any other command";
-                //shouldEndSession = true;
+                                                    ",button3 is " + button3 ;
+
+
+                // Get Status of thing to verify if online or offline
+
+                if (shadowData.state.reported.State == "offline")
+                {
+                    speechOutput = "The device is off line!";
+                    cardTitle = speechOutput;
+                    shouldEndSession = true;
+                }
+
                 callback(sessionAttributes, buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession, "Simple"));
 
             }
@@ -693,24 +894,97 @@ function getButtonStatusFromShadow(intent, session, callback, thingId) {
     //callback(sessionAttributes, buildSpeechletResponse(intent.name, speechOutput, repromptText, shouldEndSession));
 
 }
+
+
+function getButtonStatus(intent, session, callback, thingId) {
+
+    let cardTitle = "Get BUTTON";
+    let desiredLEDStatus;
+    let repromptText = "Please provide other commands";
+    const sessionAttributes = {};
+    let shouldEndSession = false;
+    let speechOutput = '';
+
+
+    var client = redis.createClient(redisOptions);
+    let redis_val = {};
+
+    client.hgetAsync(GLOBAL_KEY, thingId).then(res => {
+        console.info('step1: Redis responses for get single: ', res);
+        
+        if (res != null)
+        {
+            redis_val = JSON.parse(res);
+            
+            var button1 = "up";
+            var button2 = "up";
+            var button3 = "up";
+            
+            if (redis_val.BUTTON_1 == 0)
+                button1 = "down";
+            if (redis_val.BUTTON_2 == 0)
+                button2 = "down";
+            if (redis_val.BUTTON_3 == 0)
+                button3 = "down";
+            speechOutput = "The button states are, button1 is "+ button1 +
+                                                ",button2 is " + button2 +
+                                                ",button3 is " + button3 ;
+
+
+            // Get Status of thing to verify if online or offline
+
+            if (redis_val.State == "offline")
+            {
+                speechOutput = "The device is off line!";
+                cardTitle = speechOutput;
+                shouldEndSession = true;
+            }
+
+            callback(sessionAttributes, buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession, "Simple"));
+
+        }    
+        
+        else
+        {
+            getButtonStatusFromShadow(intent, session, callback, thingId)
+        }
+        
+    }).catch(err => {
+        console.error("Failed to get single: ", err)
+    }).finally(() => {
+        console.info('Disconnect to Redis');
+        client.quit();
+    });
+    
+    
+    
+
+
+    // Setting repromptText to null signifies that we do not want to reprompt the user.
+    // If the user does not respond or says something that is not understood, the session
+    // will end.
+    //callback(sessionAttributes, buildSpeechletResponse(intent.name, speechOutput, repromptText, shouldEndSession));
+
+}
+
 
 function getSensorStatusFromShadow(intent, session, callback, thingId) {
 
     let cardTitle = "Get SENSOR";
     let desiredLEDStatus;
-    const repromptText = null;
+    const repromptText = "Please provide other commands";
     const sessionAttributes = {};
     let shouldEndSession = false;
     let speechOutput = '';
 
 
-    
+
     //Prepare the parameters of the update call
     var paramsUpdate = {
         "thingName" : thingId,
         //"payload" : JSON.stringify(payloadObj)
     };
-    
+
     iotData.getThingShadow(paramsUpdate, function(err, data)
         {
 
@@ -720,22 +994,30 @@ function getSensorStatusFromShadow(intent, session, callback, thingId) {
             } else
             {
                 console.log(data);
-                var newdata = JSON.parse(data.payload);
-                console.log("Temperature value is =>",newdata.state.reported.temp);
-                console.log("BUTTON_2 state is =>",newdata.state.reported.hum);
+                var shadowData = JSON.parse(data.payload);
+                console.log("Temperature value is =>",shadowData.state.reported.temp);
+                console.log("BUTTON_2 state is =>",shadowData.state.reported.hum);
                 //console.log("LED state is =>",data.payload);
-                
+
                 if (intent.slots.sensorType.value == "temperature")
                 {
-                    speechOutput = 'The temperature is '+ parseFloat((newdata.state.reported.temp/100)*1.8 + 32).toFixed(1) + " degrees Farenheit. " + ' <break time="2s"/>'  + "Please provide other command" ;
+                    speechOutput = 'The temperature is '+ parseFloat((shadowData.state.reported.temp/100)*1.8 + 32).toFixed(1) + " degrees Farenheit. ";
                 }else
                 if (intent.slots.sensorType.value == "humidity")
                 {
-                    speechOutput = 'The humidity is '+ newdata.state.reported.hum + " percent. " + ' <break time="2s"/>'  + "Please provide other command";
+                    speechOutput = 'The humidity is '+ shadowData.state.reported.hum + " percent. " ;
                 }else
                     speechOutput = 'Ask me,  what is the temperature or humidity';
-                    
-                //shouldEndSession = true;
+
+                // Get Status of thing to verify if online or offline
+
+                if (shadowData.state.reported.State == "offline")
+                {
+                    speechOutput = "The device is off line!";
+                    cardTitle = speechOutput;
+                    shouldEndSession = true;
+                }
+
                 callback(sessionAttributes, buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession, "Simple"));
 
             }
@@ -750,6 +1032,70 @@ function getSensorStatusFromShadow(intent, session, callback, thingId) {
 
 }
 
+function getSensorStatus(intent, session, callback, thingId) {
+
+    let cardTitle = "Get SENSOR";
+    let desiredLEDStatus;
+    const repromptText = "Please provide other commands";
+    const sessionAttributes = {};
+    let shouldEndSession = false;
+    let speechOutput = '';
+
+
+    var client = redis.createClient(redisOptions);
+    let redis_val = {};
+
+    client.hgetAsync(GLOBAL_KEY, thingId).then(res => {
+        console.info('step1: Redis responses for get single: ', res);
+        
+        if (res != null)
+        {
+            redis_val = JSON.parse(res);
+            
+
+            if (intent.slots.sensorType.value == "temperature")
+                {
+                    speechOutput = 'The temperature is '+ parseFloat((redis_val.temp/100)*1.8 + 32).toFixed(1) + " degrees Farenheit. ";
+                }else
+                if (intent.slots.sensorType.value == "humidity")
+                {
+                    speechOutput = 'The humidity is '+ redis_val.hum + " percent. " ;
+                }else
+                    speechOutput = 'Ask me,  what is the temperature or humidity';
+
+                // Get Status of thing to verify if online or offline
+
+                if (redis_val.State == "offline")
+                {
+                    speechOutput = "The device is off line!";
+                    cardTitle = speechOutput;
+                    shouldEndSession = true;
+                }
+
+            callback(sessionAttributes, buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession, "Simple"));
+
+        }    
+        
+        else
+        {
+            getSensorStatusFromShadow(intent, session, callback, thingId)
+        }
+        
+    }).catch(err => {
+        console.error("Failed to get single: ", err)
+    }).finally(() => {
+        console.info('Disconnect to Redis');
+        client.quit();
+    });
+    
+
+
+    // Setting repromptText to null signifies that we do not want to reprompt the user.
+    // If the user does not respond or says something that is not understood, the session
+    // will end.
+    //callback(sessionAttributes, buildSpeechletResponse(intent.name, speechOutput, repromptText, shouldEndSession));
+
+}
 /* --------- end: Functions that control the skill's behavior --------------- */
 
 
@@ -794,41 +1140,41 @@ function handleSessionEndRequest(callback) {
 function deviceTooMuchResponse(intentName, callback)
 {
     const sessionAttributes = {};
-    let speechOutput = "More than one device are registered to your account, we cannot report the status";
+    let speechOutput = "More than one device are registered to your account, we cannot control the device or report the status, please make sure only one device is registered to your account";
     let repromptText = "";
     let shouldEndSession = true;
-      
+
       callback(sessionAttributes, buildSpeechletResponse(intentName, speechOutput, repromptText, shouldEndSession, "Simple"));
-    
+
 }
 
 function handleAcctNotLinkCase(intentRequest, session, callback)
 {
     const intent = intentRequest.intent;
     const intentName = intentRequest.intent.name;
-    
+
     if (intentName === 'LEDStateChangeIntent' || intentName === 'GPIOControl' || intentName === 'WhatsLEDStatusIntent' || intentName === 'WhatsButtonStatusIntent' || intentName === 'WhatsSensorStatusIntent')
     {
         const sessionAttributes = {};
         let speechOutput = "Account is not linked. The link account card was delivered to home section, please complete the account linking by following the steps showed in the link account card";
         let repromptText = "";
         let shouldEndSession = true;
-                      
+
         callback(sessionAttributes, buildSpeechletResponse("LinkAccount", speechOutput, repromptText, shouldEndSession, "LinkAccount"));
     }
     else if ((intentName === 'AMAZON.HelpIntent')) {
         getHelpResponse(callback);
-                        
+
     }
     else if (intentName === 'AMAZON.StopIntent' || intentName === 'AMAZON.CancelIntent') {
         handleSessionEndRequest(callback);
-        
-    } 
+
+    }
     else if(intentName === 'closeSession')
     {
         handleSessionEndRequest(callback);
     }
-    else 
+    else
     {
         //throw new Error('Invalid intent');
         getUnknownResponse(callback);
@@ -845,23 +1191,23 @@ function onIntent(intentRequest, session, callback)
 
     const intent = intentRequest.intent;
     const intentName = intentRequest.intent.name;
-    
+
     console.log("inIntent =>",intentName);
-    
+
     if (session.user.accessToken == null)
     {
         handleAcctNotLinkCase(intentRequest, session, callback);
-        
+
          return;
     }
-    
+
     const congitoUUID = getCongitoUUID(session.user.accessToken);
     console.log("congitoUUID =>",congitoUUID);
     //var result = scanThingId(congitoUUID);
-    
+
     if (intentName === 'LEDStateChangeIntent' || intentName === 'GPIOControl' || intentName === 'WhatsLEDStatusIntent' || intentName === 'WhatsButtonStatusIntent' || intentName === 'WhatsSensorStatusIntent')
     {
-        
+
         var scanParams = {
             TableName: main_table,
             //ProjectionExpression: "#yr, title, info.rating",
@@ -873,13 +1219,13 @@ function onIntent(intentRequest, session, callback)
                  ":cognitoUUID": congitoUUID,
             }
         };
-    
-        
+
+
         docClient.scan(scanParams, onScan);
         function onScan(err, data) {
             if (err) {
                 console.error("Unable to scan the table. Error JSON:", JSON.stringify(err, null, 2));
-            } 
+            }
             else
             {
                 console.log("Scan succeeded.");
@@ -891,80 +1237,80 @@ function onIntent(intentRequest, session, callback)
                       let speechOutput = "Your device cannot be found";
                       let repromptText = "";
                       let shouldEndSession = false;
-                      
+
                       callback(sessionAttributes, buildSpeechletResponse(intent.name, speechOutput, repromptText, shouldEndSession, "Simple"));
-                     
+
                   }
                   else
                   {
                         console.log("Able to find " + data.Items.length + " device");
-    
+
                         console.log("thing ID =>",data.Items[0].thingID);
                         // Dispatch to your skill's intent handlers
                         // Dispatch to your skill's intent handlers
-                        
+
                         if (intentName === 'LEDStateChangeIntent') {
                             if (data.Items.length > 1)
                                 deviceTooMuchResponse(intent.name, callback);
                             else
                                 setLEDState(intent, session, callback, data.Items[0].thingID);
-                            
+
                         }
                         else if (intentName === 'GPIOControl') {
                             if (data.Items.length > 1)
                                 deviceTooMuchResponse(intent.name, callback);
                             else
                                 setGPIO(intent, session, callback, data.Items[0].thingID);
-        
+
                         }
                         else if (intentName === 'WhatsLEDStatusIntent') {
                             if (data.Items.length > 1)
                                 deviceTooMuchResponse(intent.name, callback);
                             else
-                                getLEDStatusFromShadow(intent, session, callback, data.Items[0].thingID);
-                            
+                                getLEDStatus(intent, session, callback, data.Items[0].thingID);
+
                         }
                         else if (intentName === 'WhatsButtonStatusIntent') {
                             if (data.Items.length > 1)
                                 deviceTooMuchResponse(intent.name, callback);
                             else
-                                getButtonStatusFromShadow(intent, session, callback, data.Items[0].thingID);
-                            
+                                getButtonStatus(intent, session, callback, data.Items[0].thingID);
+
                         }
                         else if (intentName === 'WhatsSensorStatusIntent') {
                             if (data.Items.length > 1)
                                 deviceTooMuchResponse(intent.name, callback);
                             else
-                                getSensorStatusFromShadow(intent, session, callback, data.Items[0].thingID);
-                            
+                                getSensorStatus(intent, session, callback, data.Items[0].thingID);
+
                         }
-                        
-                      
+
+
                   }
-    
+
             }
         }
     }
     else if ((intentName === 'AMAZON.HelpIntent')) {
         getHelpResponse(callback);
-                        
+
     }
     else if (intentName === 'AMAZON.StopIntent' || intentName === 'AMAZON.CancelIntent') {
         handleSessionEndRequest(callback);
-        
-    } 
+
+    }
     else if(intentName === 'closeSession')
     {
         handleSessionEndRequest(callback);
     }
-    else 
+    else
     {
         //throw new Error('Invalid intent');
         getUnknownResponse(callback);
     }
-    
-    
-    
+
+
+
 }
 
 /**
@@ -990,14 +1336,14 @@ exports.handler = (event, context, callback) =>
 {
 
     try{
-        
+
         console.log("\rStarting handler =>\r");
         //return;
-        console.log("Events", event);
+        console.log("Events", JSON.stringify(event));
         console.log("Context", context);
         console.log("callback", callback);
-        
-        
+
+
         /**
          * Uncomment this if statement and populate with your skill's application ID to
          * prevent someone else from configuring a skill that sends requests to this function.
@@ -1024,12 +1370,12 @@ exports.handler = (event, context, callback) =>
                     (sessionAttributes, speechletResponse) =>{
                         console.log("Returning from onIntent");
                         console.log("buildResponse returns =>",buildResponse(sessionAttributes, speechletResponse));
-                        
+
                         //callback(null, buildResponse(sessionAttributes, speechletResponse));
                         context.succeed(buildResponse(sessionAttributes, speechletResponse));
-            
+
                         console.log("Returning from callback");
-                        
+
             });
         } else if (event.request.type == 'SessionEndedRequest')
         {
