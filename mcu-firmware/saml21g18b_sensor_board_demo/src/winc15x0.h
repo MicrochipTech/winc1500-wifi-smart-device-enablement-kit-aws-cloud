@@ -54,7 +54,7 @@
 #include "socket/include/m2m_socket_host_if.h"
 
 #define SUBSCRIBE_TOPIC "dataControl"
-#define PUBLISH_TOPIC	"dataReport"
+#define PUBLISH_TOPIC	"datareport"
 #define SUBSCRIBE_TOPIC_SHADOW "shadow/update/delta"
 #define SUBSCRIBE_TOPIC_SHADOW_GET "shadow/get/accepted"
 #define PUBLISH_TOPIC_SHADOW	"shadow/update"

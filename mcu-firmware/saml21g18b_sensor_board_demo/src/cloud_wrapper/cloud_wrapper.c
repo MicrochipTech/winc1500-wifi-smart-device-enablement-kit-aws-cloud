@@ -259,7 +259,8 @@ Cloud_RC cloud_create_topic(char* full_path, char* device_type, char* device_id,
 {
 	IoT_Error_t rc = NONE_ERROR;
 	
-	sprintf(full_path, "winc1500Iot/%s/%s/%s\0", device_type, device_id, topic_name);
+	//sprintf(full_path, "winc1500Iot/%s/%s/%s\0", device_type, device_id, topic_name);
+	sprintf(full_path, "%s/%s",device_id,topic_name);
 	//sprintf(full_path, "$aws/things/%s/shadow/update",device_id);
 	
 	return rc;

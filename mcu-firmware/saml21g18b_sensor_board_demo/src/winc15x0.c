@@ -673,8 +673,9 @@ static void EnvSensorCallbackHandler(environment_data_t sensor_data, unsigned ch
 
 
 
-	item = iot_message_reportInfo_shadow(DEVICE_TYPE, gAwsMqttClientId, cnt, &node_info);
+	item = iot_message_reportInfo_shadow(DEVICE_TYPE, g_thing_name, gAwsMqttClientId, cnt, &node_info, 0);
 	cloud_mqtt_publish(gPublish_Channel_shadow,item);
+	cloud_mqtt_publish(gPublish_Channel,item);
 	cJSON_Delete(item);
 #endif
 
@@ -1006,8 +1007,9 @@ printf("DBG command = %d\n", json_key->valueint);
 	}
 	
 	if (cnt){
-		item = iot_message_reportInfo_shadow(DEVICE_TYPE, gAwsMqttClientId, cnt, &node_info);
+		item = iot_message_reportInfo_shadow(DEVICE_TYPE, g_thing_name, gAwsMqttClientId, cnt, &node_info, 0);
 		cloud_mqtt_publish(gPublish_Channel_shadow,item);
+		cloud_mqtt_publish(gPublish_Channel,item);
 		cJSON_Delete(item);
 	}
 	if (json)
@@ -1160,20 +1162,26 @@ static void MQTTSubscribeCBCallbackHandler_shadow_get(MQTTCallbackParams params)
 			cnt++;
 		}
 		
-		if (cnt){
-			item = iot_message_reportInfo_shadow(DEVICE_TYPE, gAwsMqttClientId, cnt, &node_info);
-			cloud_mqtt_publish(gPublish_Channel_shadow,item);
-			cJSON_Delete(item);
+		if (json)
+		{
+			cJSON_Delete(json);
+
 		}
 		
+		
+		if (cnt){
+			item = iot_message_reportInfo_shadow(DEVICE_TYPE, g_thing_name, gAwsMqttClientId, cnt, &node_info, 0);
+			cloud_mqtt_publish(gPublish_Channel_shadow,item);
+			cloud_mqtt_publish(gPublish_Channel,item);
+			cJSON_Delete(item);
+		}
+		printf("DBG log 6\r\n");
 	}
 	
-	if (json)
-	{
-		cJSON_Delete(json);
-	}
 	
+	g_publish_init_state = 1;
 	
+#if 0
 	if (g_publish_init_state)
 	{
 		
@@ -1212,16 +1220,62 @@ static void MQTTSubscribeCBCallbackHandler_shadow_get(MQTTCallbackParams params)
 		strcpy(node[i].dataType,"Light");
 		node[i].value = g_light_state;
 		i++;
-		
-		item = iot_message_reportInfo_shadow(DEVICE_TYPE, gAwsMqttClientId, i, &node);
+		printf("DBG log 9\r\n");
+		item = iot_message_reportInfo_shadow(DEVICE_TYPE, g_thing_name, gAwsMqttClientId, i, &node, 0);
 		printf("publish the init value to the channel\r\n");
 		cloud_mqtt_publish(gPublish_Channel_shadow,item);
+		cloud_mqtt_publish(gPublish_Channel,item);
 		cJSON_Delete(item);
 	}
-	
-	
+	printf("DBG log 10\r\n");
+#endif
 	return;
 	
+}
+
+static void publish_init_state()
+{
+	NodeInfo node[8];
+	int i= 0;
+	cJSON* item;
+	
+	strcpy(node[i].dataType,"BUTTON_1");
+	node[i].value = g_button1_state;
+	i++;
+	
+	strcpy(node[i].dataType,"BUTTON_2");
+	node[i].value = g_button2_state;
+	i++;
+	
+	strcpy(node[i].dataType,"BUTTON_3");
+	node[i].value = g_button3_state;
+	i++;
+	
+	strcpy(node[i].dataType,"LED_R");
+	node[i].value = g_red_led_value;
+	i++;
+	
+	strcpy(node[i].dataType,"LED_G");
+	node[i].value = g_green_led_value;
+	i++;
+	
+	strcpy(node[i].dataType,"LED_B");
+	node[i].value = g_blue_led_value;
+	i++;
+	
+	strcpy(node[i].dataType,"LED_INTENSITY");
+	node[i].value = g_light_intensity;
+	i++;
+	
+	strcpy(node[i].dataType,"Light");
+	node[i].value = g_light_state;
+	i++;
+	
+	item = iot_message_reportInfo_shadow(DEVICE_TYPE, g_thing_name, gAwsMqttClientId, i, &node, 1);
+	printf("[%s] publish the init value to the channel\r\n", __func__);
+	cloud_mqtt_publish(gPublish_Channel_shadow,item);
+	cloud_mqtt_publish(gPublish_Channel,item);
+	cJSON_Delete(item);
 }
 
 
@@ -1790,8 +1844,9 @@ void buttonSW1Handle()
 	cnt++;
 
 	
-	item = iot_message_reportInfo_shadow(DEVICE_TYPE, gAwsMqttClientId, cnt, &node_info);
+	item = iot_message_reportInfo_shadow(DEVICE_TYPE, g_thing_name, gAwsMqttClientId, cnt, &node_info, 0);
 	cloud_mqtt_publish(gPublish_Channel_shadow,item);
+	cloud_mqtt_publish(gPublish_Channel,item);
 	cJSON_Delete(item);
 	//unRegButtonPressDetectCallback(detSw0Sock);
 	
@@ -1815,8 +1870,9 @@ void buttonSW2Handle()
 	cnt++;
 
 	
-	item = iot_message_reportInfo_shadow(DEVICE_TYPE, gAwsMqttClientId, cnt, &node_info);
+	item = iot_message_reportInfo_shadow(DEVICE_TYPE, g_thing_name, gAwsMqttClientId, cnt, &node_info, 0);
 	cloud_mqtt_publish(gPublish_Channel_shadow,item);
+	cloud_mqtt_publish(gPublish_Channel,item);
 	cJSON_Delete(item);
 	//unRegButtonPressDetectCallback(detSw0Sock);
 	
@@ -1840,8 +1896,9 @@ void buttonSW3Handle()
 	cnt++;
 
 	
-	item = iot_message_reportInfo_shadow(DEVICE_TYPE, gAwsMqttClientId, cnt, &node_info);
+	item = iot_message_reportInfo_shadow(DEVICE_TYPE, g_thing_name, gAwsMqttClientId, cnt, &node_info, 0);
 	cloud_mqtt_publish(gPublish_Channel_shadow,item);
+	cloud_mqtt_publish(gPublish_Channel,item);
 	cJSON_Delete(item);
 	//unRegButtonPressDetectCallback(detSw0Sock);
 	
@@ -1923,8 +1980,8 @@ int wifiInit(void)
 	DBG_LOG("gAwsMqttClientId Address: %s\r\n",gAwsMqttClientId);
 	//strcpy(gAwsMqttClientId,"f8f005e45e4c");
 	
-	cloud_create_topic(gSubscribe_Channel, DEVICE_TYPE, gAwsMqttClientId, SUBSCRIBE_TOPIC);
-	cloud_create_topic(gPublish_Channel, DEVICE_TYPE, gAwsMqttClientId, PUBLISH_TOPIC);
+	//cloud_create_topic(gSubscribe_Channel, DEVICE_TYPE, gAwsMqttClientId, SUBSCRIBE_TOPIC);
+	//cloud_create_topic(gPublish_Channel, DEVICE_TYPE, gAwsMqttClientId, PUBLISH_TOPIC);
 	
 
 	
@@ -1996,6 +2053,8 @@ int wifiInit(void)
 	cloud_create_topic_shadow(gSubscribe_Channel_shadow_get, DEVICE_TYPE, g_thing_name, SUBSCRIBE_TOPIC_SHADOW_GET);
 	cloud_create_topic_shadow(gPublish_Channel_shadow, DEVICE_TYPE, g_thing_name, PUBLISH_TOPIC_SHADOW);
 	cloud_create_topic_shadow(gPublish_Channel_shadow_get, DEVICE_TYPE, g_thing_name, PUBLISH_TOPIC_SHADOW_GET);
+	cloud_create_topic(gPublish_Channel, DEVICE_TYPE, g_thing_name, PUBLISH_TOPIC);
+	DBG_LOG("gPublish_Channel: %s\r\n", gPublish_Channel);
 #endif		
 
 	
@@ -2065,7 +2124,8 @@ int wifiTaskExecute()
 			jsonObj=cJSON_CreateObject();
 			cloud_mqtt_publish(gPublish_Channel_shadow_get,jsonObj);
 			cJSON_Delete(jsonObj);
-			g_publish_init_state = 1;
+			
+			
 #else
 			ret = cloud_mqtt_subscribe(gSubscribe_Channel, MQTTSubscribeCBCallbackHandler);
 #endif
@@ -2095,7 +2155,12 @@ int wifiTaskExecute()
 			break;
 			
 		case WIFI_TASK_MQTT_RUNNING:
-			
+			if (g_publish_init_state)
+			{
+				g_publish_init_state = 0;
+				publish_init_state();
+				
+			}
 			//Max time the yield function will wait for read messages
 			ret = cloud_mqtt_yield(100);
 			if(CLOUD_RC_NETWORK_ATTEMPTING_RECONNECT == ret){

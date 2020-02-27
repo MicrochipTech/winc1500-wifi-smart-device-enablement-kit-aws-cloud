@@ -392,7 +392,7 @@ cJSON* iot_message_reportInfo(char* device_type, char* mac_addr, int report_data
 	return json2CloudData;
 }
 
-cJSON* iot_message_reportInfo_shadow(char* device_type, char* mac_addr, int report_data_num, NodeInfo data_info[])
+cJSON* iot_message_reportInfo_shadow(char* device_type, char* thing_id, char* mac_addr, int report_data_num, NodeInfo data_info[], int init_flg)
 {
 	cJSON *jsonObjReported;
 	cJSON *jsonObjState;
@@ -408,7 +408,11 @@ cJSON* iot_message_reportInfo_shadow(char* device_type, char* mac_addr, int repo
 		while(1);
 	}
 	// Add MAC address if WIN1500 to json object  "macAddr":"1122334455667788"
-	cJSON_AddStringToObject(jsonObj, ATTR_MAC_ADDR_NAME, mac_addr);
+	cJSON_AddStringToObject(jsonObj, ATTR_THING_ID_NAME, thing_id);
+	if (init_flg)
+	{
+		cJSON_AddStringToObject(jsonObj, ATTR_MAC_ADDR_NAME, mac_addr);	
+	}
 
 
 	for (int i=0; i<report_data_num; i++)

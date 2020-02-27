@@ -57,6 +57,7 @@
 #define ATTR_DATATYPE_NAME	"dataType"
 #define ATTR_VALUE_NAME	"value"
 #define ATTR_MAC_ADDR_NAME	"macAddr"
+#define ATTR_THING_ID_NAME	"thingId"
 #define ATTR_INFO_NAME	"info"
 #define ATTR_UUID_NAME	"uuid"
 
@@ -115,7 +116,7 @@ cJSON* iot_message_searchResp(char* device_type, char* mac_addr, char* device_na
 cJSON* iot_message_searchResp_with_temp_uv(char* device_type, char* mac_addr, int temp, int uv, char* dev_name);
 cJSON* iot_message_reportAllInfo(char* device_type, char* mac_addr, int num_of_data, NodeInfo data[], char* device_name, unsigned char* uuid);
 cJSON* iot_message_reportInfo(char* device_type, char* mac_addr, int report_data_num, NodeInfo data_info[], char* device_name, unsigned char* uuid);
-cJSON* iot_message_reportInfo_shadow(char* device_type, char* mac_addr, int report_data_num, NodeInfo data_info[]);
+cJSON* iot_message_reportInfo_shadow(char* device_type, char* thing_id, char* mac_addr, int report_data_num, NodeInfo data_info[], int init_flg);
 cJSON* iot_message_reportDisconnect(int report_dev_num, NodeInfo endnode_info[]);
 
 #endif /*__WIFI_APP_H__*/

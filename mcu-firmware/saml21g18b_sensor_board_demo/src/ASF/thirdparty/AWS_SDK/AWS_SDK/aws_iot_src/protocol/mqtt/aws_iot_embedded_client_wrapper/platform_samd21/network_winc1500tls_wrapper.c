@@ -287,9 +287,40 @@ int iot_tls_read(Network *pNetwork, unsigned char *pMsg, int len, int timeout_ms
 		 }
 	 }
 	 else{
-		 memcpy(pMsg,buf_ptr,len);
-		 received_bytes -= len;
-		 buf_ptr += len;
+		 //printf("len = %d, received_bytes = %d\r\n", len, received_bytes);
+		 if (len > received_bytes)
+		 {
+			int rem_len = 0;
+			
+			memcpy(pMsg,buf_ptr,received_bytes);
+			rem_len = len - received_bytes;
+			pMsg += received_bytes;
+			
+			buf_ptr = &gau8SocketTestBuffer;
+			received_bytes = 0;
+			ret = recv(tls_socket, gau8SocketTestBuffer,sizeof(gau8SocketTestBuffer), timeout_ms);
+			if( ret < 0)
+			{
+				return SSL_READ_ERROR;
+			}
+			wait_for_event(SOCKET_MSG_RECV);
+			if (err == -1) {
+				return SSL_READ_ERROR;
+			}
+			else{
+				memcpy(pMsg,buf_ptr,rem_len);
+				pMsg -= len;
+				received_bytes -= rem_len;
+				buf_ptr += rem_len;
+			}
+		 }
+		 else
+		 {
+			 memcpy(pMsg,buf_ptr,len);
+			 received_bytes -= len;
+			 buf_ptr += len;
+		 }
+		 
 
 #ifdef ENABLE_LOGS		 
 		  printf("read->%d:",received_bytes);
