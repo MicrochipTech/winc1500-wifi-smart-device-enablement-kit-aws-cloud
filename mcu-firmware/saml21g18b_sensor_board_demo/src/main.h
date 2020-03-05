@@ -54,8 +54,8 @@ printf
 
 
 #define FIRMWARE_MAJOR_VER	"1"
-#define FIRMWARE_MINOR_VER	"0"
-#define FIRMWARE_PATCH_VER	"1"
+#define FIRMWARE_MINOR_VER	"1"
+#define FIRMWARE_PATCH_VER	"0"
 
 #define CRYPTO_LIB_MAJOR_VERSION  2    //! AWS IoT Zero Touch major version number
 #define CRYPTO_LIB_API_VERSION    2    //! AWS IoT Zero Touch API version number
