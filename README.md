@@ -1,3 +1,5 @@
+This page has a demo/example for WINC1500. Please click [here](https://github.com/search?q=topic:winc1500+org:MicrochipTech) for more demos/examples.
+
 # WiFi Smart Device Enablement Kit
 This package contains all the files (firmware code, python scripts, mobile app code, lambda function) for the Wi-Fi Smart Device Enablement Kit to connect AWS Cloud.
 
